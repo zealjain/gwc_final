@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--key is AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI-->
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href = "map.css">
+    <script src="new_map.js"></script>
+    <title>Meet w/ Maps</title>
+    <style>
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 630px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="home.html"><img src="favicon.png" style="width:30px;height:35px"></a></li>
+      <div id ="center">
+      <li><a href="instruction.html">Instructions</a></li>
+      <li><a href="map.html">MeetMap</a></li>
+      <li><a href="about.html">About Us</a></li>
+      </div>
+    </ul>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+  <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+<div id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initAutocomplete"
+         async defer></script>
+
+  </body>
+</html>
