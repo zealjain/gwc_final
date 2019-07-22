@@ -19,6 +19,8 @@ div {
   display: block;
 }
 .returning {
+  float: left;
+  width: 50%;
 }
 /* Add a background color when the inputs get focus */
 input[type=text]:focus, input[type=password]:focus {
