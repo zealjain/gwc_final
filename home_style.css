@@ -1,1 +1,35 @@
 
+nav ul{
+  list-style: none;
+  width: 100%
+  margin-right: 2em;
+  position: inherit;
+}
+nav li{
+  display: inline;
+  margin: 1em;
+  padding: 1em;
+  display: inline-block;
+}
+a {
+  color: inherit;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+#Title_page {
+  text-align: center;
+  background-color: #D9FFF8;
+  background-size: cover;
+}
+.Title {
+  font-size: 10em;
+  font-family: 'Julius Sans One', sans-serif;
+  margin: 0em;
+}
