@@ -22,6 +22,11 @@ div {
   float: left;
   width: 50%;
 }
+
+.new {
+  float: right;
+  width: 50%
+}
 /* Add a background color when the inputs get focus */
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
