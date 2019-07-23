@@ -51,7 +51,7 @@ button:hover {
 
 /* Extra styles for the cancel button */
 .cancelbtn {
-  padding: 14px 20px;
+  /* padding: 14px 20px; */
   background-color: #C2CFB2;
 }
 
@@ -64,6 +64,9 @@ button:hover {
 /* Add padding to container elements */
 .container {
   padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 
 /* The Modal (background) */
