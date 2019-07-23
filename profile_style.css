@@ -35,10 +35,6 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* Set a style for all buttons */
 button {
-<<<<<<< HEAD
-=======
-  color: white;
->>>>>>> d24c5b01585b3009d36a723d9b2f03c43cab082a
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -60,11 +56,8 @@ button:hover {
   width: 50%;
 }
 .signupbtn {
-<<<<<<< HEAD
-  color: white;
-=======
   background-color: #C2CFB2;
->>>>>>> d24c5b01585b3009d36a723d9b2f03c43cab082a
+  color: white;
   float: right;
   width: 50%;
 }
