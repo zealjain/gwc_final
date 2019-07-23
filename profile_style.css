@@ -14,6 +14,7 @@ h1 {
 
 h2 {
   font-size: 100%;
+  font-weight: 100;
 }
 div {
   display: block;
@@ -22,7 +23,9 @@ div {
   float: left;
   width: 50%;
 }
-
+b {
+  font-weight: 100;
+}
 .new {
   float: right;
   width: 50%
@@ -35,10 +38,6 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* Set a style for all buttons */
 button {
-<<<<<<< HEAD
-=======
-  color: white;
->>>>>>> d24c5b01585b3009d36a723d9b2f03c43cab082a
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -60,11 +59,8 @@ button:hover {
   width: 50%;
 }
 .signupbtn {
-<<<<<<< HEAD
-  color: white;
-=======
   background-color: #C2CFB2;
->>>>>>> d24c5b01585b3009d36a723d9b2f03c43cab082a
+  color: white;
   float: right;
   width: 50%;
 }
@@ -73,7 +69,7 @@ button:hover {
   padding: 16px;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 70%;
 }
 
 /* The Modal (background) */
@@ -109,7 +105,6 @@ hr {
   right: 35px;
   top: 15px;
   font-size: 40px;
-  font-weight: bold;
   color: #f1f1f1;
 }
 
@@ -131,4 +126,18 @@ hr {
   .cancelbtn, .signupbtn {
     width: 100%;
   }
+}
+
+@media (min-width: 1024px) {
+  .col-md-6 {
+      width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+.col-xs-12 {
+    width: 100%;
 }
