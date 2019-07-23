@@ -7,8 +7,10 @@ h1 {
 }
 
 .Section_header {
-  margin-top: 3.5em;
+  margin-top: 5em;
 }
+
+/* Nav Bar */
 
 header {
   margin: 0em;
@@ -34,18 +36,7 @@ nav li{
   padding: 0.5em;
   display: inline-block;
 }
-/* nav ul{
-  list-style: none;
-  width: 100%
-  margin-right: 2em;
-  position: inherit;
-}
-nav li{
-  display: inline;
-  margin: 1em;
-  padding: 1em;
-  display: inline-block;
-} */
+
 a {
   color: inherit;
 }
@@ -58,11 +49,13 @@ a:hover {
   font-weight: bold;
 }
 
+/* Title Page */
+
 #Title_page {
   text-align: center;
   background-color: #8DB580;
   background-size: cover;
-  padding: 20em;
+  padding: 15em;
   margin:0em;
 }
 
@@ -77,33 +70,37 @@ a:hover {
     font-size: 2.5em;
 }
 
+/* About Section */
+
 .About_section {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-around;
   justify-content: space-evenly;
-  flex-direction: row;
-  align-items: stretch;
+  align-content: stretch;
   background-color: blue;
 }
 
-.About_items {
-  background-color: yellow;
+#About_image_section {
+  background-color: green;
 }
 
-.about_photo {
+#About_image {
   width: 30em;
   height: 35em;
+  margin: 1.1em;
 }
 
 #About_text {
-  flex-grow: 2;
   width: 30em;
   height: 10em;
   font-size: 1.5em;
   padding-left: 2em;
   padding-right: 2em;
+  background-color: purple;
+  align-items: stretch;
 }
+
+/* How To  */
 
 .Circle {
   background-color: white ;
@@ -120,6 +117,10 @@ a:hover {
   width: 22em;
   height: 25em;
   margin: 0.5em;
+}
+
+.How_to_text {
+  padding: 1.5em;
 }
 
 .How_to_boxes {
