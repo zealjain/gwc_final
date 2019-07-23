@@ -7,22 +7,36 @@
     <link rel="stylesheet" href="postStyle.css">
     <script src = "post.js"> </script>
 
-
   </head>
 
   <body>
     <script type= "text/javascript" >
       postBackgroundColor()
     </script>
-    <h1> Do you have some Fruit you have to make others fruitFULL? Post here!</h1>
-    <button onclick="document.getElementbyId('id01').stype.display='block'">Make a Post!</button>
+    <div class="container">
+      <div class="returning col-md-6 col-sm-12 col-xs-12">
+        <h1>Do you have some Fruit you have to make others fruitFULL?</h1>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h1>CREATE A POST</h1>
+        <button class="signupbtn" onclick="document.getElementById('id01').style.display='block'">Create a Post</button>
+        <!-- The Modal (contains the Sign Up form) -->
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+          <form class="modal-content" action="/action_page.php">
+            <div class="container">
+
+    <h1> <center> Do you have some Fruit you have to make others fruitFULL? <center> </h1>
+
     <!-- //The Modal (contains the Sign Up form)
     //<div id="id01" class="modal"> -->
     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
     <form class="modal-content" action="/action_page.php">
       <div class="container">
+        <script type= "text/javascript" >
+            postBackgroundColor()
+        </script>
         <h1> <center> POST! </center> </h1>
-        <p> <center> Ready to make a post? Fill out the boxes below! </center> </p>
         <hr>
         <center>
         <label for="fruitType"><b>Fruit Type</b></label> <p>
@@ -50,14 +64,11 @@
 
         <p>
 
-        <div class="clearfix">
+        <div class="postcancel">
           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
           <button type="button" class="makePost.style.display='none'">Post!</button>
           <h4> Stay Fruity! </h4>
         </div>
-      </center>
-
-      </div>
 
 
         <!-- The Modal (contains the Sign Up form) -->
