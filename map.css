@@ -1,18 +1,43 @@
+
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
+
+h1 {
+  text-align: center;
+}
+
+.Header_title {
+  margin-top: 2em;
+}
+
+/* Nav Bar */
+
+header {
+  margin: 0em;
+  /* position: fixed; */
+  padding: 0.5em;
+  width: 100%
+}
+
+header::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
 nav ul{
   list-style: none;
-  width: 100%
+  float: right;
   margin-right: 2em;
-  position: inherit;
 }
 nav li{
   display: inline;
   margin: 1em;
-  padding: 1em;
+  padding: 0.5em;
   display: inline-block;
 }
+
 a {
   color: inherit;
 }
