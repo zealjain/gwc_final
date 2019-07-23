@@ -3,7 +3,7 @@
 
   input[type=text], input[type=notes] {
   width: 50%;
-  padding: 15px;
+  padding: 12px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
@@ -12,9 +12,9 @@
 
 
 button {
-  background-color: #C2CFB2;
+  background-color: #D9FFF8;
   color: white;
-  padding: 14px 20px;
+  padding: 10px 16px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -103,7 +103,7 @@ hr {
 }
 
 /* The Close Button (x) */
-.close {
+/* .close {
   position: absolute;
   right: 35px;
   top: 15px;
@@ -126,8 +126,8 @@ hr {
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
+/* @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
     width: 100%;
   }
-}
+} */ */
