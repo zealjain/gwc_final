@@ -5,6 +5,10 @@ html {
 h1 {
   text-align: center;
 }
+
+.Section_header {
+  margin-top: 3.5em;
+}
 nav ul{
   list-style: none;
   width: 100%
@@ -42,8 +46,19 @@ a:hover {
   margin: 0em;
 }
 
-#About {
-  margin-top: 3em;
+
+.About_section {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: blue;
+}
+
+.About_items {
+  background-color: yellow;
 }
 
 .about_photo {
@@ -51,8 +66,17 @@ a:hover {
   height: 35em;
 }
 
+#About_text {
+  flex-grow: 2;
+  width: 30em;
+  height: 10em;
+  font-size: 1.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
 .Circle {
-  background-color: white;
+  background-color: white ;
   text-align: center;
   border-radius: 70%;
   width: 4em;
@@ -93,4 +117,11 @@ footer {
   padding: 2.5em;
   text-align: center;
   color: white;
+}
+
+@media (max-width: 1100px) {
+  .Title {
+    font-size: 5em;
+    text-align: center;
+  }
 }
