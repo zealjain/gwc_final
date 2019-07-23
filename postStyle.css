@@ -1,1 +1,10 @@
-ddjdl
+* {box-sizing: border-box}
+/* Full-width input fields */
+  input[type=text], input[type=notes] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
