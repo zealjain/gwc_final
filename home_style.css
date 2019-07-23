@@ -14,7 +14,6 @@ h1 {
 .Header_title {
   margin-top: 2em;
   font-family: SignPainter;
-  font-size: 4em;
 }
 
 /* Nav Bar */
@@ -86,6 +85,12 @@ a:hover {
   width: 30em;
   height: 35em;
   margin: 1.1em;
+}
+
+#About_Title {
+  font-size: 3.5em;
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
 }
 
 #About_text {
