@@ -4,32 +4,43 @@
     <!--key is AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI-->
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href = "map.css">
-    <script src="new_map.js"></script>
-    <title>Meet w/ Maps</title>
+    <script src="map.js"></script>
+    <title>Fruitful</title>
     <style>
       /* Set the size of the div element that contains the map */
       #map {
         height: 630px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
+
     </style>
   </head>
   <body>
-    <ul>
+
+    <header>
+    <nav id="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Pick</a></li>
+        <li><a href="profile.html">Sign In</a></li>
+      </ul>
+    </nav>
+    </header>
+
+    <center> "Enter your location in the search bar to find fruit to pick near you" </center>
+
+    <!-- <ul>
       <li><a href="home.html"><img src="favicon.png" style="width:30px;height:35px"></a></li>
-      <div id ="center">
-      <li><a href="instruction.html">Instructions</a></li>
-      <li><a href="map.html">MeetMap</a></li>
-      <li><a href="about.html">About Us</a></li>
       </div>
-    </ul>
+    </ul> -->
+
     <!--The div element for the map -->
     <div id="map"></div>
 
-  <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+  <input id="pac-input" class="controls" type="text" placeholder="Seach Bar">
 <div id="map"></div>
 <!-- Replace the value of the key parameter with your own API key. -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initAutocomplete"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initMap"
          async defer></script>
 
   </body>
