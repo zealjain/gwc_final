@@ -35,8 +35,6 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* Set a style for all buttons */
 button {
-  background-color: #C2CFB2;
-  color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -49,18 +47,16 @@ button:hover {
   opacity:1;
 }
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-  /* padding: 14px 20px; */
-  background-color: #C2CFB2;
-}
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn{
+  background-color: white;
+  color: gray;
   float: left;
   width: 50%;
 }
 .signupbtn {
+  color: white;
   float: right;
   width: 50%;
 }
