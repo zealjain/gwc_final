@@ -6,8 +6,8 @@ h1 {
   text-align: center;
 }
 
-.Section_header {
-  margin-top: 5em;
+.Header_title {
+  margin-top: 2em;
 }
 
 /* Nav Bar */
@@ -76,12 +76,8 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-content: stretch;
-  background-color: blue;
-}
-
-#About_image_section {
-  background-color: green;
+  /* align-items: center; */
+  /* background-color: blue; */
 }
 
 #About_image {
@@ -96,8 +92,8 @@ a:hover {
   font-size: 1.5em;
   padding-left: 2em;
   padding-right: 2em;
-  background-color: purple;
-  align-items: stretch;
+  /* background-color: purple; */
+
 }
 
 /* How To  */
@@ -110,6 +106,12 @@ a:hover {
   height: 4em;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  margin-top: 0.1em;
+}
+
+.step_number {
+  margin: 0 auto;
 }
 
 .box_item {
