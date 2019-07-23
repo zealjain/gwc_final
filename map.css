@@ -1,46 +1,70 @@
-body {
-  background: linear-gradient(to right, #6464ed, #6486ed, #6495ed, #64a8ed, darkturquoise, mediumturquoise, turquoise);
+
+html {
+  font-family: 'Raleway', sans-serif;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: clear;
-    text-align: center;
-    font-family: calibri;
+h1 {
+  text-align: center;
 }
 
-.left {
-  float: left;
+.Header_title {
+  margin-top: 2em;
 }
 
-#center {
+/* Nav Bar */
+
+header {
+  margin: 0em;
+  /* position: fixed; */
+  padding: 0.5em;
+  width: 100%
+}
+
+header::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+nav ul{
+  list-style: none;
   float: right;
+  margin-right: 2em;
+}
+nav li{
+  display: inline;
+  margin: 1em;
+  padding: 0.5em;
+  display: inline-block;
 }
 
-.center {
-  display: block;
-  margin-left:auto;
-  margin-right: auto;
+a {
+  color: inherit;
 }
 
-li {
-    float: left;
+a:link {
+  text-decoration: none;
 }
 
-li a {
-    font-size: 40px;
-    display: block;
-    color: indigo;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+a:hover {
+  font-weight: bold;
 }
 
-li a:hover {
-    background-color: clear;
+/* Title Page */
+
+#Title_page {
+  text-align: center;
+  background-color: #8DB580;
+  background-image: url(https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+  background-size: cover;
+  padding: 10em;
+  margin:0em;
+}
+
+.Title {
+  font-size: 10em;
+  font-family: SignPainter;
+  margin: 0em;
 }
 
 /* Always set the map height explicitly to define the size of the div
@@ -55,7 +79,7 @@ html, body {
   padding: 0;
 }
 #description {
-  font-family: Roboto;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 300;
 }
@@ -80,7 +104,7 @@ html, body {
   outline: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   background-color: #fff;
-  font-family: Roboto;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #pac-container {
@@ -94,14 +118,14 @@ html, body {
 }
 
 .pac-controls label {
-  font-family: Roboto;
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 300;
 }
 
 #pac-input {
   background-color: #fff;
-  font-family: Roboto;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 300;
   margin-left: 12px;
@@ -142,7 +166,7 @@ html, body {
   padding: 0;
 }
 #description {
-  font-family: Roboto;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 300;
 }
@@ -167,7 +191,7 @@ html, body {
   outline: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   background-color: #fff;
-  font-family: Roboto;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #pac-container {
@@ -181,14 +205,14 @@ html, body {
 }
 
 .pac-controls label {
-  font-family: Roboto;
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-weight: 300;
 }
 
 #pac-input {
   background-color: #fff;
-  font-family: Roboto;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   font-weight: 300;
   margin-left: 12px;
@@ -216,17 +240,6 @@ html, body {
   height: 500px;  /* The height is 400 pixels */
   width: 50%;  /* The width is the width of the web page */
  }
-
-  .button {
-    background-color: indigo;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
 
  #buttcenter{
  text-align:center;

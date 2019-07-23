@@ -2,13 +2,31 @@
 var map;
 var markers = [];
 
-function initAutocomplete() {
-map = new google.maps.Map(document.getElementById('map'), {
-  center: {lat: 37.386051, lng: -122.083855},
-  zoom: 9,
-  mapTypeId: 'roadmap'
-});
+function initMap(){
+  //first init map
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 37.386051, lng: -122.083855},
+    zoom: 9,
+    mapTypeId: 'roadmap'
+  });
 
+  //add marker
+  var marker = new google.maps.Marker({
+    position:{lat:37.32675000, lng: -122.062954},
+    map:map
+  });
+
+  var infoWindow = new google.maps.InfoWindow({
+    content:"apricots"
+  });
+
+  marker.addListener('click', function(){
+    infoWindow.open(map, marker);
+  });
+  initAutocomplete();
+}
+
+function initAutocomplete() {
 
 // Create the search box and link it to the UI element.
 var input = document.getElementById('pac-input');
@@ -52,7 +70,7 @@ places.forEach(function(place) {
   }
   var icon = {
     url: place.icon,
-    size: new google.maps.Size(71, 71),
+    size: new google.maps.Size(180, 180),
     origin: new google.maps.Point(0, 0),
     anchor: new google.maps.Point(17, 34),
     scaledSize: new google.maps.Size(25, 25)
@@ -76,6 +94,7 @@ places.forEach(function(place) {
 map.fitBounds(bounds);
 });
 }
+
 
 
 function middle() {
@@ -122,266 +141,267 @@ function clearPage() {
   }
 
 // ADDED THE FOLLOWING
+//
+// var infowindow;
+//
+// function initMapCafe() {
+//
+// var pyrmont = middle();
+//
+// map = new google.maps.Map(document.getElementById('map'), {
+//       center: pyrmont,
+//       zoom: 13
+//     });
+//
+// infowindow = new google.maps.InfoWindow();
+//     var service = new google.maps.places.PlacesService(map);
+//     service.nearbySearch({
+//       location: pyrmont,
+//       radius: 5000,
+//       type: ['cafe']
+//       //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
+//     }, callbackCafe);
+//   }
+//
+//   function callbackCafe(results, status) {
+//     if (status === google.maps.places.PlacesServiceStatus.OK) {
+//       for (var i = 0; i < results.length; i++) {
+//         createMarkerCafe(results[i]);
+//       }
+//     }
+//   }
+//
+//   function createMarkerCafe(place) {
+//     var placeLoc = place.geometry.location;
+//     var marker = new google.maps.Marker({
+//       map: map,
+//       position: place.geometry.location
+//     });
+//
+//     google.maps.event.addListener(marker, 'click', function() {
+//       infowindow.setContent(place.name);
+//       infowindow.open(map, this);
+//     });
+//   }
+//
+//
+//   function initMapRestaurant() {
+//
+//   var pyrmont = middle();
+//
+//   map = new google.maps.Map(document.getElementById('map'), {
+//         center: pyrmont,
+//         zoom: 13
+//       });
+//
+//   infowindow = new google.maps.InfoWindow();
+//       var service = new google.maps.places.PlacesService(map);
+//       service.nearbySearch({
+//         location: pyrmont,
+//         radius: 5000,
+//         type: ['restaurant']
+//         //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
+//       }, callbackRestaurant);
+//     }
+//
+//
+//         function callbackRestaurant(results, status) {
+//           if (status === google.maps.places.PlacesServiceStatus.OK) {
+//             for (var i = 0; i < results.length; i++) {
+//               createMarkerRestaurant(results[i]);
+//             }
+//           }
+//         }
+//
+//         function createMarkerRestaurant(place) {
+//           var placeLoc = place.geometry.location;
+//           var marker = new google.maps.Marker({
+//             map: map,
+//             position: place.geometry.location
+//           });
+//
+//         google.maps.event.addListener(marker, 'click', function() {
+//           infowindow.setContent(place.name);
+//           infowindow.open(map, this);
+//         });
+//       }
+//
+//     function initMapParks() {
+//
+//     var pyrmont = middle();
+//
+//     map = new google.maps.Map(document.getElementById('map'), {
+//           center: pyrmont,
+//           zoom: 13
+//         });
+//
+//
+//
+//     infowindow = new google.maps.InfoWindow();
+//         var service = new google.maps.places.PlacesService(map);
+//         service.nearbySearch({
+//           location: pyrmont,
+//           radius: 5000,
+//           type: ['amusement_park']
+//           //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
+//         }, callbackParks);
+//       }
+//
+//
+//         function callbackParks(results, status) {
+//           if (status === google.maps.places.PlacesServiceStatus.OK) {
+//             for (var i = 0; i < results.length; i++) {
+//               createMarkerParks(results[i]);
+//             }
+//           }
+//         }
+//
+//         function createMarkerParks(place) {
+//           var placeLoc = place.geometry.location;
+//           var marker = new google.maps.Marker({
+//             map: map,
+//             position: place.geometry.location
+//           });
+//
+//           google.maps.event.addListener(marker, 'click', function() {
+//             infowindow.setContent(place.name);
+//             infowindow.open(map, this);
+//           });
+//         }
 
-var infowindow;
-
-function initMapCafe() {
-
-var pyrmont = middle();
-
-map = new google.maps.Map(document.getElementById('map'), {
-      center: pyrmont,
-      zoom: 13
-    });
-
-infowindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-      location: pyrmont,
-      radius: 5000,
-      type: ['cafe']
-      //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
-    }, callbackCafe);
-  }
-
-  function callbackCafe(results, status) {
-    if (status === google.maps.places.PlacesServiceStatus.OK) {
-      for (var i = 0; i < results.length; i++) {
-        createMarkerCafe(results[i]);
-      }
-    }
-  }
-
-  function createMarkerCafe(place) {
-    var placeLoc = place.geometry.location;
-    var marker = new google.maps.Marker({
-      map: map,
-      position: place.geometry.location
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-      infowindow.setContent(place.name);
-      infowindow.open(map, this);
-    });
-  }
-
-
-  function initMapRestaurant() {
-
-  var pyrmont = middle();
-
-  map = new google.maps.Map(document.getElementById('map'), {
-        center: pyrmont,
-        zoom: 13
-      });
-
-  infowindow = new google.maps.InfoWindow();
-      var service = new google.maps.places.PlacesService(map);
-      service.nearbySearch({
-        location: pyrmont,
-        radius: 5000,
-        type: ['restaurant']
-        //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
-      }, callbackRestaurant);
-    }
-
-
-        function callbackRestaurant(results, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-              createMarkerRestaurant(results[i]);
-            }
-          }
-        }
-
-        function createMarkerRestaurant(place) {
-          var placeLoc = place.geometry.location;
-          var marker = new google.maps.Marker({
-            map: map,
-            position: place.geometry.location
-          });
-
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.setContent(place.name);
-          infowindow.open(map, this);
-        });
-      }
-
-    function initMapParks() {
-
-    var pyrmont = middle();
-
-    map = new google.maps.Map(document.getElementById('map'), {
-          center: pyrmont,
-          zoom: 13
-        });
-
-
-
-    infowindow = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch({
-          location: pyrmont,
-          radius: 5000,
-          type: ['amusement_park']
-          //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
-        }, callbackParks);
-      }
-
-
-        function callbackParks(results, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-              createMarkerParks(results[i]);
-            }
-          }
-        }
-
-        function createMarkerParks(place) {
-          var placeLoc = place.geometry.location;
-          var marker = new google.maps.Marker({
-            map: map,
-            position: place.geometry.location
-          });
-
-          google.maps.event.addListener(marker, 'click', function() {
-            infowindow.setContent(place.name);
-            infowindow.open(map, this);
-          });
-        }
 ///////////////////////////////////////////////////////////////////////////////
-function initMapMovies() {
-  var pyrmont = middle();
-  map = new google.maps.Map(document.getElementById('map'), {
-  center: pyrmont,
-  zoom: 13
-  });
-
-  infowindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-    location: pyrmont,
-    radius: 5000,
-    type: ['movie_theater']
-    //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
-    }, callbackMovies);}
-
-function callbackMovies(results, status) {
-  if (status === google.maps.places.PlacesServiceStatus.OK) {
-  for (var i = 0; i < results.length; i++) {
-      createMarkerMovies(results[i]);
-  }}}
-
-function createMarkerMovies(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-  map: map,
-  position: place.geometry.location
-  });
-
-  google.maps.event.addListener(marker, 'click', function() {
-  infowindow.setContent(place.name);
-  infowindow.open(map, this);
-  });}
-///////////////////////////////////////////////////////////////////////////////
-function initMapBowling() {
-  var pyrmont = middle();
-  map = new google.maps.Map(document.getElementById('map'), {
-  center: pyrmont,
-  zoom: 13
-  });
-
-  infowindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-    location: pyrmont,
-    radius: 5000,
-    type: ['bowling_alley']
-    //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
-  }, callbackBowling);}
-
-function callbackBowling(results, status) {
-  if (status === google.maps.places.PlacesServiceStatus.OK) {
-  for (var i = 0; i < results.length; i++) {
-      createMarkerBowling(results[i]);
-  }}}
-
-function createMarkerBowling(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-  map: map,
-  position: place.geometry.location
-  });
-
-  google.maps.event.addListener(marker, 'click', function() {
-  infowindow.setContent(place.name);
-  infowindow.open(map, this);
-  });}
-///////////////////////////////////////////////////////////////////////////////
-function initMapMall() {
-  var pyrmont = middle();
-  map = new google.maps.Map(document.getElementById('map'), {
-  center: pyrmont,
-  zoom: 13
-  });
-
-  infowindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-    location: pyrmont,
-    radius: 5000,
-    type: ['shopping_mall']
-    //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
-  }, callbackMall);}
-
-function callbackMall(results, status) {
-  if (status === google.maps.places.PlacesServiceStatus.OK) {
-  for (var i = 0; i < results.length; i++) {
-      createMarkerMall(results[i]);
-  }}}
-
-function createMarkerMall(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-  map: map,
-  position: place.geometry.location
-  });
-
-  google.maps.event.addListener(marker, 'click', function() {
-  infowindow.setContent(place.name);
-  infowindow.open(map, this);
-  });}
-///////////////////////////////////////////////////////////////////////////////
-function initMap() {
-  var pyrmont = middle();
-  map = new google.maps.Map(document.getElementById('map'), {
-  center: pyrmont,
-  zoom: 13
-  });
-
-  infowindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-    location: pyrmont,
-    radius: 5000,
-    type: ['shopping_mall']
-  }, callbackMall);}
-
-function callbackMall(results, status) {
-  if (status === google.maps.places.PlacesServiceStatus.OK) {
-  for (var i = 0; i < results.length; i++) {
-      createMarkerMall(results[i]);
-  }}}
-
-function createMarkerMall(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-  map: map,
-  position: place.geometry.location
-  });
-
-  google.maps.event.addListener(marker, 'click', function() {
-  infowindow.setContent(place.name);
-  infowindow.open(map, this);
-  });}
+// function initMapMovies() {
+//   var pyrmont = middle();
+//   map = new google.maps.Map(document.getElementById('map'), {
+//   center: pyrmont,
+//   zoom: 13
+//   });
+//
+//   infowindow = new google.maps.InfoWindow();
+//     var service = new google.maps.places.PlacesService(map);
+//     service.nearbySearch({
+//     location: pyrmont,
+//     radius: 5000,
+//     type: ['movie_theater']
+//     //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
+//     }, callbackMovies);}
+//
+// function callbackMovies(results, status) {
+//   if (status === google.maps.places.PlacesServiceStatus.OK) {
+//   for (var i = 0; i < results.length; i++) {
+//       createMarkerMovies(results[i]);
+//   }}}
+//
+// function createMarkerMovies(place) {
+//   var placeLoc = place.geometry.location;
+//   var marker = new google.maps.Marker({
+//   map: map,
+//   position: place.geometry.location
+//   });
+//
+//   google.maps.event.addListener(marker, 'click', function() {
+//   infowindow.setContent(place.name);
+//   infowindow.open(map, this);
+//   });}
+// ///////////////////////////////////////////////////////////////////////////////
+// function initMapBowling() {
+//   var pyrmont = middle();
+//   map = new google.maps.Map(document.getElementById('map'), {
+//   center: pyrmont,
+//   zoom: 13
+//   });
+//
+//   infowindow = new google.maps.InfoWindow();
+//     var service = new google.maps.places.PlacesService(map);
+//     service.nearbySearch({
+//     location: pyrmont,
+//     radius: 5000,
+//     type: ['bowling_alley']
+//     //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
+//   }, callbackBowling);}
+//
+// function callbackBowling(results, status) {
+//   if (status === google.maps.places.PlacesServiceStatus.OK) {
+//   for (var i = 0; i < results.length; i++) {
+//       createMarkerBowling(results[i]);
+//   }}}
+//
+// function createMarkerBowling(place) {
+//   var placeLoc = place.geometry.location;
+//   var marker = new google.maps.Marker({
+//   map: map,
+//   position: place.geometry.location
+//   });
+//
+//   google.maps.event.addListener(marker, 'click', function() {
+//   infowindow.setContent(place.name);
+//   infowindow.open(map, this);
+//   });}
+// ///////////////////////////////////////////////////////////////////////////////
+// function initMapMall() {
+//   var pyrmont = middle();
+//   map = new google.maps.Map(document.getElementById('map'), {
+//   center: pyrmont,
+//   zoom: 13
+//   });
+//
+//   infowindow = new google.maps.InfoWindow();
+//     var service = new google.maps.places.PlacesService(map);
+//     service.nearbySearch({
+//     location: pyrmont,
+//     radius: 5000,
+//     type: ['shopping_mall']
+//     //'restaurant','spa','amusement_park','bowling_alley','movie_theater','night_club','shoe_store','shopping_mall'
+//   }, callbackMall);}
+//
+// function callbackMall(results, status) {
+//   if (status === google.maps.places.PlacesServiceStatus.OK) {
+//   for (var i = 0; i < results.length; i++) {
+//       createMarkerMall(results[i]);
+//   }}}
+//
+// function createMarkerMall(place) {
+//   var placeLoc = place.geometry.location;
+//   var marker = new google.maps.Marker({
+//   map: map,
+//   position: place.geometry.location
+//   });
+//
+//   google.maps.event.addListener(marker, 'click', function() {
+//   infowindow.setContent(place.name);
+//   infowindow.open(map, this);
+//   });}
+// ///////////////////////////////////////////////////////////////////////////////
+// function initMap() {
+//   var pyrmont = middle();
+//   map = new google.maps.Map(document.getElementById('map'), {
+//   center: pyrmont,
+//   zoom: 13
+//   });
+//
+//   infowindow = new google.maps.InfoWindow();
+//     var service = new google.maps.places.PlacesService(map);
+//     service.nearbySearch({
+//     location: pyrmont,
+//     radius: 5000,
+//     type: ['shopping_mall']
+//   }, callbackMall);}
+//
+// function callbackMall(results, status) {
+//   if (status === google.maps.places.PlacesServiceStatus.OK) {
+//   for (var i = 0; i < results.length; i++) {
+//       createMarkerMall(results[i]);
+//   }}}
+//
+// function createMarkerMall(place) {
+//   var placeLoc = place.geometry.location;
+//   var marker = new google.maps.Marker({
+//   map: map,
+//   position: place.geometry.location
+//   });
+//
+//   google.maps.event.addListener(marker, 'click', function() {
+//   infowindow.setContent(place.name);
+//   infowindow.open(map, this);
+//   });}
 ///////////////////////////////////////////////////////////////////////////////

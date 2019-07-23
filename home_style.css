@@ -1,3 +1,8 @@
+@font-face {
+  font-family: SignPainter;
+  src: url(signpainterhousescriptregular.ttf);
+}
+
 html {
   font-family: 'Raleway', sans-serif;
 }
@@ -6,14 +11,18 @@ h1 {
   text-align: center;
 }
 
-.Section_header {
-  margin-top: 3.5em;
+.Header_title {
+  margin-top: 2em;
+  font-family: SignPainter;
+  font-size: 3.5em;
 }
+
+/* Nav Bar */
 
 header {
   margin: 0em;
   /* position: fixed; */
-  padding: 0.5em;
+  padding: 0.2em;
   width: 100%
 }
 
@@ -34,18 +43,7 @@ nav li{
   padding: 0.5em;
   display: inline-block;
 }
-/* nav ul{
-  list-style: none;
-  width: 100%
-  margin-right: 2em;
-  position: inherit;
-}
-nav li{
-  display: inline;
-  margin: 1em;
-  padding: 1em;
-  display: inline-block;
-} */
+
 a {
   color: inherit;
 }
@@ -58,52 +56,59 @@ a:hover {
   font-weight: bold;
 }
 
+/* Title Page */
+
 #Title_page {
   text-align: center;
   background-color: #8DB580;
+  background-image: url(https://images.unsplash.com/photo-1490708774159-fc61db97f101?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1655&q=80);
   background-size: cover;
-  padding: 20em;
+  padding: 18em;
   margin:0em;
 }
 
 .Title {
   font-size: 10em;
-  font-family: 'Pacifico', cursive;
+  font-family: SignPainter;
   margin: 0em;
 }
-
-.Header_title {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.5em;
-}
+/* About Section */
 
 .About_section {
   display: flex;
   flex-wrap: wrap;
-  align-content: space-around;
   justify-content: space-evenly;
-  flex-direction: row;
-  align-items: stretch;
-  background-color: blue;
+  /* align-items: center; */
+  /* background-color: blue; */
 }
 
-.About_items {
-  background-color: yellow;
+#About {
+  margin-top: 2em;
 }
 
-.about_photo {
+#About_image {
   width: 30em;
   height: 35em;
+  margin: 1.1em;
+}
+
+#About_Title {
+  font-size: 3.5em;
+  margin-top: 0.6em;
+  margin-bottom: 0.2em;
+  font-family: SignPainter;
 }
 
 #About_text {
-  flex-grow: 2;
   width: 30em;
   height: 10em;
   font-size: 1.5em;
   padding-left: 2em;
   padding-right: 2em;
+  /* background-color: purple; */
 }
+
+/* How To  */
 
 .Circle {
   background-color: white ;
@@ -111,8 +116,10 @@ a:hover {
   border-radius: 70%;
   width: 4em;
   height: 4em;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  margin: 0 auto;
+  margin-top: 2em;
 }
 
 .box_item {
@@ -120,6 +127,10 @@ a:hover {
   width: 22em;
   height: 25em;
   margin: 0.5em;
+}
+
+.How_to_text {
+  padding: 1.5em;
 }
 
 .How_to_boxes {
@@ -147,6 +158,7 @@ footer {
   padding: 2.5em;
   text-align: center;
   color: white;
+  width: 100%;
 }
 
 @media (max-width: 1100px) {
