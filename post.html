@@ -7,22 +7,31 @@
   </head>
 
   <body>
-    <h1> Do you have some Fruit you have to make other fruitFULL? Post here!</h1>
+    <h1> Do you have some Fruit you have to make others fruitFULL? Post here!</h1>
+    <button onclick="document.getElementbyId('id01').stype.display='block'">Make a Post!</button>
+    <!-- //The Modal (contains the Sign Up form)
+    //<div id="id01" class="modal"> -->
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+    <form class="modal-content" action="/action_page.php">
+      <div class="container">
+        <h1>POST!</h1>
+        <p>Ready to make a post? Fill out the boxes below!</p>
+        <hr>
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
 
- <!-- <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="profile_style.css">
-  </head>
-  <body>
-    <div>
-      <div class="returning">
-        <h1>Registered Neighbor</h1>
-        <h2>If you have an account with us, log in using your email address.</h2>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+
       </div>
-      <div class="new">
-        <h1>New to Fruitful?</h1>
-        <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+
 
         <!-- The Modal (contains the Sign Up form) -->
         <!-- <div id="id01" class="modal">
