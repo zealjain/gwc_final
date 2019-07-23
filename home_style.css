@@ -1,6 +1,9 @@
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
 
+h1 {
+  text-align: center;
 }
 nav ul{
   list-style: none;
@@ -28,11 +31,66 @@ a:hover {
 
 #Title_page {
   text-align: center;
-  background-color: #D9FFF8;
+  background-color: #8DB580;
   background-size: cover;
+  padding: 20em;
 }
+
 .Title {
   font-size: 10em;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Pacifico', cursive;
   margin: 0em;
+}
+
+#About {
+  margin-top: 3em;
+}
+
+.about_photo {
+  width: 30em;
+  height: 35em;
+}
+
+.Circle {
+  background-color: white;
+  text-align: center;
+  border-radius: 70%;
+  width: 4em;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+}
+
+.box_item {
+  text-align: center;
+  width: 22em;
+  height: 25em;
+  margin: 0.5em;
+}
+
+.How_to_boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
+.green_box {
+  background-color: #8DB580;
+}
+
+.light_green_box {
+  background-color: #C2CFB2;
+}
+
+.gray_box {
+  background-color: #7E8987;
+}
+
+footer {
+  margin-top: 3em;
+  background-color: #B59DA4;
+  padding: 2.5em;
+  text-align: center;
+  color: white;
 }
