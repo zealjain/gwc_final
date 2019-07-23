@@ -1,4 +1,4 @@
-function startingColor() {
+function postBackgroundColor() {
   document.body.style.backgroundColor = "lavender";
 
 }
