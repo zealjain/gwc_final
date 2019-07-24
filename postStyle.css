@@ -29,7 +29,11 @@ label input {
  float: left;
  padding: 0em;
  }
+<<<<<<< Updated upstream
 
+=======
+ 
+>>>>>>> Stashed changes
 header {
   margin: 0em;
   /* position: fixed; */
@@ -160,7 +164,11 @@ textarea {
   display: inline-block;
   border: none;
   background: #f1f1f1;
+<<<<<<< Updated upstream
 >>>>>>> 8b0d40189586e0d4865883349bb46c06bc552748
+=======
+>>>>>>> 076d244c530d73db3d8138ccd6140e0d9f05e872
+>>>>>>> Stashed changes
 }
 
 /* Add padding to container elements */
