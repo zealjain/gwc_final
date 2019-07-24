@@ -103,6 +103,13 @@ footer {
   height: 100%;
 }
 
+#map-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
