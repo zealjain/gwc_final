@@ -1,3 +1,8 @@
+@font-face {
+  font-family: SignPainter;
+  src: url(signpainterhousescriptregular.ttf);
+}
+
 html {
   font-family: 'Raleway', sans-serif;
 }
@@ -16,13 +21,22 @@ p2 {
 
 .Header_title {
   margin-top: 2em;
+  font-family: SignPainter;
+  font-size: 3.5em;
 }
 
 /* Nav Bar */
+#header-img {
+width: 18em;
+height: 7em;
+float: left;
+padding: 0em;
+}
+
 header {
   margin: 0em;
   /* position: fixed; */
-  padding: 0.5em;
+  padding: 0.2em;
   width: 100%
 }
 
