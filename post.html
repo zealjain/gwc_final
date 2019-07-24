@@ -31,7 +31,7 @@
   <body>
 
 
-
+<!-- --------------------------dhriti trying to figure out user input --------------------------------- -->
     <script type= "text/javascript" >
   function writeName(){
   var welcomeMsg = document.getElementById('welcome');
@@ -51,7 +51,7 @@
  What is your name:<input type="text" id="name"/><br/>
  <input type="button" value="Submit" onclick="writeName();"/>
 </form>
-
+<!-- ------------------------------------------------------------------------------------------------------- -->
     <!-- <script type= "text/javascript" >
       postBackgroundColor()
     </script> -->
@@ -76,7 +76,7 @@
 
         <h1 class="section_title">POST!</h1>
         <hr>
-
+    <form id="postfruit">
       <div id="form">
         <label for="fruitType" class="labels labelstyle">Fruit Type</label> <p>
         <div class="right">
@@ -107,10 +107,10 @@
           <textarea id="commentsbox" class="input" type="text" placeholder="Notes" name="Notes" not required></textarea>
         </div>
         <p>
-
+    </form>
           <div class="postcancel">
             <button type="button" onclick="window.location.href='index.html'" class="backbtn">« Back</button>
-            <button type="button" class="postbtn">Post!</button>
+            <button type="button" onclick="juliannesFunction()" class="postbtn">Post!</button>
           </div class = "newContainer">
           <h4> Stay Fruity! </h4>
         </div>
