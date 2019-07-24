@@ -91,7 +91,6 @@ a:hover {
 footer {
   margin-top: 3em;
   background-color: #D6CDE2;
-  padding: 2.5em;
   text-align: center;
   color: white;
   width: 100%;
@@ -100,12 +99,9 @@ footer {
 /* Map
  * Always set the map height explicitly to define the size of the div
  * element that contains the map. */
-
-/* LOOOOOOOOK HEREEE */
- /*
 #map {
   height: 100%;
-} */
+}
 
 /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -185,31 +181,20 @@ html, body {
   width: 345px;
 }
 /* Set the size of the div element that contains the map */
-
-
-
-/*
-RECOMMENT! UNCOMMENT? PUT THIS BACK LATER!
 #map {
   height: 500px;
   /* The height is 400 pixels */
-  /* width: 50%; */
+  width: 50%;
   /* The width is the width of the web page */
 }
 
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
-
- /* COMMENTED THIS OUT PUT BACK IF NO WORK */
- /*
 #map {
   height: 100%;
-} */
+}
 
 /* Optional: Makes the sample page fill the window. */
-
-
-
 html, body {
   height: 100%;
   margin: 0;
@@ -290,7 +275,7 @@ html, body {
 
 /* Set the size of the div element that contains the map */
 #map {
-  height: 10;
+  height: 500px;
   /* The height is 400 pixels */
   width: 50%;
   /* The width is the width of the web page */
@@ -299,3 +284,5 @@ html, body {
 #buttcenter {
   text-align: center;
 }
+
+*/
