@@ -6,6 +6,11 @@
 html {
   font-family: 'Raleway', sans-serif;
 }
+#after_submit {
+	visibility: hidden;
+	font-size: 10px;
+  color: red;
+}
 
 /* Nav Bar */
 header {
