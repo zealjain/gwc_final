@@ -13,10 +13,13 @@ function initMap() {
     mapTypeId: 'roadmap'
   });
 
-  createMarker(37.381388, -122.069821, "Walnut", "Unkown", "n/a", "n/a", "Tree is large and unmanaged, right next to gas station.", "www.fallingfruit.com")
-  createMarker(37.363528, -122.042417, "Orange", "Private", "n/a", "n/a", "Tree located on private property but overhangs to sidewalk. Ask owner for permission to pick but lots of fruit on ground.", "www.fallingfruit.com")
-  createMarker(37.32675000, -122.062954, "Apricot", "Public", "n/a", "n/a", "Multiple trees located in Varian Park, open to public. Good yeild.", "user")
-  createMarker(37.378335, -122.028976, "Avocado", "Public", "n/a", "n/a", "Tree overhangs Caltrain fence to public area", "www.fallingfruit.com")
+  createMarker(37.407540, -122.125873, "Almond", "Public", "n/a", "n/a", "Many small almond trees along the road.", "www.fallingfruit.com");
+  createMarker(37.406725, -122.126072, "Plum", "Public", "n/a", "n/a", "About 10 plum trees at the front of Juana Briones Park.", "www.fallingfruit.com");
+  createMarker(37.3979963,-122.1213036, "Plum", "Public", "n/a", "n/a", "Three medium sized plum trees on the side of the road.", "www.fallingfruit.com");
+  createMarker(37.381388, -122.069821, "Walnut", "Unknown", "n/a", "n/a", "Tree is large and unmanaged, right next to gas station.", "www.fallingfruit.com");
+  createMarker(37.363528, -122.042417, "Orange", "Private", "n/a", "n/a", "Tree located on private property but overhangs to sidewalk. Ask owner for permission to pick but lots of fruit on ground.", "www.fallingfruit.com");
+  createMarker(37.32675000, -122.062954, "Apricot", "Public", "n/a", "n/a", "Multiple trees located in Varian Park, open to public. Good yeild.", "user");
+  createMarker(37.378335, -122.028976, "Avocado", "Public", "n/a", "n/a", "Tree overhangs Caltrain fence to public area", "www.fallingfruit.com");
 
   initAutocomplete();
 }
