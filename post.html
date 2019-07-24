@@ -9,7 +9,10 @@
 
   </head>
 
+<!-- Nav Bar  -->
+
   <header>
+  <img src="https://afroleft.com/content/images/2015/08/fruitful-logo-iteration3-2.jpg" alt="Fruitful logo" id="header-img">
   <nav id="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -22,71 +25,69 @@
 
 
   <body>
-    <script type= "text/javascript" >
+    <!-- <script type= "text/javascript" >
       postBackgroundColor()
-    </script>
+    </script> -->
     <div class="container">
 
         <!-- The Modal (contains the Sign Up form) -->
-        </center>
+        </>
             <div class="container">
 
 
   </body>
 
 
-   <h1> <center> Do you have some Fruit you have to make others fruitFULL? <center> </h1>
+   <h1>   Do you have some Fruit you have to make others fruitFULL?   </h1>
 
     <!-- //The Modal (contains the Sign Up form)
     //<div id="id01" class="modal"> -->
     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
     <form class="modal-content" action="/action_page.php">
 
-          <div class="container">
+      <div class="container">
 
-            <h1 class="section_title"> <center> POST! </center> </h1>
-            <hr>
-            <center>
-            <label for="fruitType"><b>Fruit Type</b></label> <p>
-            <input type="text" placeholder="Enter Your Fruit Type (eg. apple, banana)" name="fruitType" required>
+        <h1 class="section_title">POST!</h1>
+        <hr>
 
-            <p>
+        <label for="fruitType" class="labels labelstyle">Fruit Type</label> <p>
+        <div class="right">
+          <input class="input" type="text" placeholder="Enter Your Fruit Type (eg. apple, banana)" name="fruitType" required>
+        </div>
+        <p>
 
-            <label for="address"><b>Address</b></label> <p>
-            <input type="text" placeholder="Enter fruit pick up address" name="addressEnter" required>
+        <label for="address" class="labels labelstyle">Address</label> <p>
+        <div class="right">
+          <input class="input" type="text" placeholder="Enter fruit pick up address" name="addressEnter" required>
+        </div>
+        <p>
 
-            <p>
+        <label for="phoneNumber" class="labels labelstyle">Enter Phone Number</label> <p>
+        <div class="right">
+          <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" required>
+        </div>
+        <p>
 
-            <label for="phoneNumber"><b>Enter Phone Number</b></label> <p>
-            <input type="text" placeholder="(---) --- - ----" name="phoneNumber" required>
+        <label for="email" class="labels labelstyle">Email</label> <p>
+        <div class="right">
+          <input class="input" type="text" placeholder="Enter Email" name="email" required>
+        </div>
+        <p>
 
-            <p>
+        <label for="notes" class="labels labelstyle"> Any addition Notes or Special Instructions?  </label> <p>
+        <div class="right">
+          <textarea id="commentsbox" class="input" type="text" placeholder="Notes" name="Notes" not required></textarea>
+        </div>
+        <p>
 
-            <label for="email"><b>Email</b></label> <p>
-            <input type="text" placeholder="Enter Email" name="email" required>
+          <div class="postcancel">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="backbtn">« Back</button>
+            <button type="button" class="postbtn">Post!</button>
+          </div class = "newContainer">
+          <h4> Stay Fruity! </h4>
 
-            <p>
-
-            <label for="notes"><b>Any addition Notes or Special Instructions?</b></label> <p>
-            <input type="text" placeholder="notes" name="notes" not required>
-
-            <p>
-
-              <div class="postcancel">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="backbtn">« Back</button>
-                <button type="button" class="postbtn">Post!</button>
-              </div class = "newContainer">
-              <h4> Stay Fruity! </h4>
-          </div>
-    </div>
+      </div>
   </form>
-</div>
-</div>
-</div>
-</div>
-
-
-</body>
 </html>
 
 
@@ -101,13 +102,13 @@
               <h1>POST!</h1>
               <p>Ready to make a post? Fill out the boxes below!</p>
               <hr>
-              <label for="email"><b>Email</b></label>
+              <label for="email"> Email  </label>
               <input type="text" placeholder="Enter Email" name="email" required>
 
-              <label for="psw"><b>Password</b></label>
+              <label for="psw"> Password  </label>
               <input type="password" placeholder="Enter Password" name="psw" required>
 
-              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <label for="psw-repeat"> Repeat Password  </label>
               <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
               <label>

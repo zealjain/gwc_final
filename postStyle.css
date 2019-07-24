@@ -13,7 +13,18 @@ html {
   font-family: SignPainter;
 }
 
+label input {
+  text-align: center;
+}
 
+ /* Nav Bar */
+ #header-img {
+ width: 18em;
+ height: 7em;
+ float: left;
+ padding: 0em;
+ }
+ 
 header {
   margin: 0em;
   /* position: fixed; */
@@ -55,10 +66,10 @@ div {
   display: block;
 }
 
-  input[type=text], input[type=notes] {
+input[type=text], input[type=notes] {
   width: 80%;
   padding: 12px;
-  margin: 5px 0 22px 0;
+  margin: 5px 0px 22px 0;
   display: inline-block;
   border: none;
   background: #f1f1f1;
@@ -76,6 +87,7 @@ button {
 
 h1 {
   font-size: 200%;
+  text-align: center;
 }
 
 h2 {
@@ -96,7 +108,7 @@ div {
   width: 50%
 }
 
-input[type=text]:focus, input[type=text]:focus {
+input[type=text]:focus, textarea[type=text]:focus{
   background-color: #ddd;
   outline: none;
 }
@@ -105,6 +117,33 @@ button:hover {
   opacity:1;
 }
 
+.right {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+.labels {
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  width: 40%;
+  padding: 0.8em;
+  float: left;
+}
+
+.labelstyle {
+  font-weight: bold;
+}
+
+textarea {
+  width: 80%;
+  padding: 12px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
 
 /* Add padding to container elements */
 .container {
@@ -129,7 +168,7 @@ button:hover {
 .postbtn {
   background-color: #868C4C;
   float: right;
-  width: 40%;
+  width: 30%;
   background:
 }
 
