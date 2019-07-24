@@ -9,6 +9,11 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
+#header {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
 .section_title {
   font-family: SignPainter;
 }
@@ -24,7 +29,7 @@ label input {
  float: left;
  padding: 0em;
  }
- 
+
 header {
   margin: 0em;
   /* position: fixed; */
