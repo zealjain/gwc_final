@@ -19,6 +19,13 @@ h1 {
 
 /* Nav Bar */
 
+#header-img {
+width: 18em;
+height: 7em;
+float: left;
+padding: 0em;
+}
+
 header {
   margin: 0em;
   /* position: fixed; */
@@ -60,7 +67,7 @@ a:hover {
 
 #Title_page {
   text-align: center;
-  background-color: #8DB580;
+  background-color: #ffffff;
   background-image: url(https://images.unsplash.com/photo-1524222717473-730000096953?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
   background-size: cover;
   padding: 18em;
@@ -168,6 +175,17 @@ footer {
   width: 100%;
 }
 
+@media (max-width: 1400px) {
+  #About_text {
+    font-size: 1.4em;
+    width: 50em;
+    height: 18em;
+  }
+  #About_image {
+    display: none;
+  }
+}
+
 @media (max-width: 1100px) {
   .Title {
     font-size: 5em;
@@ -176,5 +194,15 @@ footer {
   #About_image {
     display: none;
   }
+  #About_text {
+    font-size: 1.25em;
+    width: 50em;
+    height: 18em;
+  }
+}
 
+@media (max-width: 800px) {
+  #About_text {
+    font-size: 0.9em;
+  }
 }

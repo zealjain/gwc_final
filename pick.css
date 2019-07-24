@@ -1,3 +1,7 @@
+@font-face {
+  font-family: SignPainter;
+  src: url(signpainterhousescriptregular.ttf);
+}
 
 html {
   font-family: 'Raleway', sans-serif;
@@ -7,24 +11,32 @@ h1 {
   text-align: center;
 }
 
-p{
+p {
   padding: 5em;
 }
 
-p2{
+p2 {
   padding: 1em;
 }
 
 .Header_title {
   margin-top: 2em;
+  font-family: SignPainter;
+  font-size: 3.5em;
 }
 
 /* Nav Bar */
+#header-img {
+width: 18em;
+height: 7em;
+float: left;
+padding: 0em;
+}
 
 header {
   margin: 0em;
   /* position: fixed; */
-  padding: 0.5em;
+  padding: 0.2em;
   width: 100%
 }
 
@@ -34,12 +46,13 @@ header::after {
   display: table;
 }
 
-nav ul{
+nav ul {
   list-style: none;
   float: right;
   margin-right: 2em;
 }
-nav li{
+
+nav li {
   display: inline;
   margin: 1em;
   padding: 0.5em;
@@ -57,15 +70,15 @@ a:link {
 a:hover {
   font-weight: bold;
 }
-/* Title Page */
 
+/* Title Page */
 #Title_page {
   text-align: center;
-  background-color: #8DB580;
+  background-color: #ffffff;
   background-image: url(https://images.unsplash.com/photo-1516813147935-a2b3e7160e49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
   background-size: cover;
   padding: 8em;
-  margin:0em;
+  margin: 0em;
 }
 
 .Title {
@@ -74,18 +87,30 @@ a:hover {
   margin: 0em;
 }
 
-/* Title Page */
-/* Always set the map height explicitly to define the size of the div
+/* Footer */
+footer {
+  margin-top: 3em;
+  background-color: #D6CDE2;
+  padding: 2.5em;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+/* Map
+ * Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
   height: 100%;
 }
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
 /* #description {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
@@ -158,21 +183,25 @@ html, body {
 }
 /* Set the size of the div element that contains the map */
 #map {
-  height: 500px;  /* The height is 400 pixels */
-  width: 50%;  /* The width is the width of the web page */
- }
+  height: 500px;
+  /* The height is 400 pixels */
+  width: 50%;
+  /* The width is the width of the web page */
+}
 
 /* Always set the map height explicitly to define the size of the div
  * element that contains the map. */
 #map {
   height: 100%;
 }
+
 /* Optional: Makes the sample page fill the window. */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
+
 #description {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
@@ -240,15 +269,21 @@ html, body {
   font-weight: 500;
   padding: 6px 12px;
 }
+
 #target {
   width: 345px;
 }
+
 /* Set the size of the div element that contains the map */
 #map {
-  height: 500px;  /* The height is 400 pixels */
-  width: 50%;  /* The width is the width of the web page */
- }
+  height: 500px;
+  /* The height is 400 pixels */
+  width: 50%;
+  /* The width is the width of the web page */
+}
 
- #buttcenter{
- text-align:center;
-} */
+#buttcenter {
+  text-align: center;
+}
+
+*/
