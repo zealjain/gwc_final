@@ -57,11 +57,8 @@ a:hover {
 }
 h1 {
   font-size: 200%;
-<<<<<<< HEAD
-  color: #A1544B;
-=======
   font-family: SignPainter;
->>>>>>> 2e555c2ba44585e90d68998331c452cfce2da0cb
+  color: #A1544B;
 }
 
 h2 {
