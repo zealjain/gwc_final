@@ -124,6 +124,12 @@ button:hover {
   margin-right: auto;
   width: 90%;
 }
+
+.newContainer {
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .backbtn {
   color: "#A1544B"
   float: left;
