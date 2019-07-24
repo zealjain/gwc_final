@@ -91,6 +91,7 @@ a:hover {
 footer {
   margin-top: 3em;
   background-color: #D6CDE2;
+  padding: 2.5em;
   text-align: center;
   color: white;
   width: 100%;
@@ -206,6 +207,9 @@ RECOMMENT! UNCOMMENT? PUT THIS BACK LATER!
 } */
 
 /* Optional: Makes the sample page fill the window. */
+
+
+
 html, body {
   height: 100%;
   margin: 0;
@@ -286,9 +290,9 @@ html, body {
 
 /* Set the size of the div element that contains the map */
 #map {
-  height: 50%;
+  height: 10;
   /* The height is 400 pixels */
-  width: 100%;
+  width: 50%;
   /* The width is the width of the web page */
 }
 
