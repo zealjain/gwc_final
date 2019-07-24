@@ -7,6 +7,14 @@ h1 {
   text-align: center;
 }
 
+p{
+  padding: 5em;
+}
+
+p2{
+  padding: 1em;
+}
+
 .Header_title {
   margin-top: 2em;
 }
@@ -49,11 +57,6 @@ a:link {
 a:hover {
   font-weight: bold;
 }
-
-p{
-  padding: 5em;
-}
-
 /* Title Page */
 
 #Title_page {

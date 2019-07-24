@@ -16,8 +16,10 @@ function initMap(){
     map:map
   });
 
+  markers.push(marker);
+
   var infoWindow = new google.maps.InfoWindow({
-    content:"apricots"
+    content:'<h2> Apricots </h2>'+ '<body>Location: Varian Park <br> Contact: example@gmail.com <br> Instructions: wordswords</bodyx>'
   });
 
   marker.addListener('click', function(){
