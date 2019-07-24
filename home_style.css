@@ -116,21 +116,28 @@ a:hover {
   border-radius: 70%;
   width: 4em;
   height: 4em;
-  /* display: flex;
-  justify-content: center; */
   margin: 0 auto;
   margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.step_number {
+  font-size: 1.8em;
+  font-weight: bold;
 }
 
 .box_item {
   text-align: center;
   width: 22em;
-  height: 25em;
+  height: 23em;
   margin: 0.5em;
 }
 
 .How_to_text {
-  padding: 1.5em;
+  padding: 2em;
 }
 
 .How_to_boxes {
@@ -166,4 +173,8 @@ footer {
     font-size: 5em;
     text-align: center;
   }
+  #About_image {
+    display: none;
+  }
+
 }
