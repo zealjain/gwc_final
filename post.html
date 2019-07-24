@@ -30,6 +30,28 @@
 
   <body>
 
+
+
+    <script type= "text/javascript" >
+  function writeName(){
+  var welcomeMsg = document.getElementById('welcome');
+  var name = document.getElementById('name');
+  var formContent = document.getElementById('entername');
+
+  welcomeMsg.innerHTML = "Welcome "+name.value+".<br/>";
+  // We append .value to the end of name so that it sets the variable name
+  // to be equal to a property which is the value, not the object.
+
+  formContent.innerHTML = ""; // this removes the form text input box after name has been entered.
+
+  }
+</script>
+<p id="welcome"></p>
+<form id="entername">
+ What is your name:<input type="text" id="name"/><br/>
+ <input type="button" value="Submit" onclick="writeName();"/>
+</form>
+
     <!-- <script type= "text/javascript" >
       postBackgroundColor()
     </script> -->
