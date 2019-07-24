@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr">
   <head>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <meta charset="utf-8">
+    <title></title>
     <link rel="stylesheet" href="profile_style.css">
-    <script src="account.info.js" charset="utf-8"></script>
+    <script src="account_info.js" ></script>
   </head>
 
   <header>
@@ -29,11 +29,16 @@
         <h2>If you have an account with us, log in using your email address.</h2>
         <div>
           <hr>
-          <label for="email"><b>Email</b></label>
-          <input type="email" placeholder="Enter Email" name="email" required>
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-          <button class="signupbtn">Log In</button>
+          <form id="form" name="form">
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" id="email" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="psw" required>
+          </form>
+        <button class="signupbtn" id="submit" onclick="check();">Log In</button>
+        </div>
+        <div id = "after_submit">
+          Your password or email is invalid.
         </div>
       </div>
     </div>
@@ -42,7 +47,6 @@
         <h1>New to Fruitful?</h1>
         <h2>By creating an account with Fruitful, you will be able to post what fruit trees you have available for the community to use and request fruit from other households.</h2>
         <button class="signupbtn" onclick="window.location.href='account_create.html'">Create an Account</button>
-        <pre> <code></code> </pre>
       </div>
     </div>
   </div>
