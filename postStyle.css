@@ -111,8 +111,11 @@ h1 {
   text-align: center;
 }
 
-h2 {
+h4 {
   font-size: 100%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 
@@ -180,17 +183,14 @@ textarea {
   margin-right: auto;
 }
 .backbtn {
-  background-color: "#A1544B";
+  background-color: #A1544B;
   float: left;
-  width: 40%;
-  background: white;
-  color: gray;
+  width: 30%;
 }
 .postbtn {
-  background-color: "#868C4C";
+  background-color: #868C4C;
   float: right;
   width: 30%;
-  background:
 }
 
 .modal {
