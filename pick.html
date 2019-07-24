@@ -51,12 +51,30 @@
     </ul> -->
 
   <!--The div element for the map -->
-  <div id="map"></div>
 
-  <input id="pac-input" class="controls" type="text" placeholder="Seach Bar">
-  <div id="map"></div>
-  <!-- Replace the value of the key parameter with your own API key. -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initMap" async defer></script>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+  <div id="map"> </div>
+  <script>
+    function initMap() {
+      var options = {
+        zoom: 8;
+        center: {lat:42.3601, ling:-71.0589}
+      }
+
+    var map =new
+    google.map.Map(document.getElementById('map'), options);
+
+  }
+
+    </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnjFgZF4ugEvcPQO-UeHOcq9p-YUOnbk0&callback=initMap"
+    async defer></script>
+
 
   <footer>
     <p>Created By Dhriti, Julianne, Zeal, Surabhi, and Michelle </p>
