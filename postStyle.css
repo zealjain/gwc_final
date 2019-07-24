@@ -51,9 +51,12 @@ a:hover {
   font-weight: bold;
 }
 
+div {
+  display: block;
+}
 
   input[type=text], input[type=notes] {
-  width: 50%;
+  width: 80%;
   padding: 12px;
   margin: 5px 0 22px 0;
   display: inline-block;
@@ -63,13 +66,10 @@ a:hover {
 
 
 button {
-  background-color: #7E8987;
-  color: white;
   padding: 10px 16px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
   opacity: 0.9;
 }
 
@@ -105,27 +105,33 @@ button:hover {
   opacity:1;
 }
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-  /* padding: 14px 20px; */
-  background-color: #C2CFB2;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
 
 /* Add padding to container elements */
 .container {
   padding: 16px;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+  width: 90%;
 }
 
-
+.newContainer {
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.backbtn {
+  background-color: #A1544B;
+  float: left;
+  width: 40%;
+  background: white;
+  color: gray;
+}
+.postbtn {
+  background-color: #868C4C;
+  float: right;
+  width: 40%;
+  background:
+}
 
 .modal {
   display: none; /* Hidden by default */
