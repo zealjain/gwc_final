@@ -1,5 +1,19 @@
 /* * {box-sizing: border-box} */
 
+@font-face {
+  font-family: SignPainter;
+  src: url(signpainterhousescriptregular.ttf);
+}
+
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+.Header_Title {
+  font-family: SignPainter;
+}
+
+
 header {
   margin: 0em;
   /* position: fixed; */
