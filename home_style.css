@@ -19,6 +19,13 @@ h1 {
 
 /* Nav Bar */
 
+#header-img {
+width: 18em;
+height: 7em;
+float: left;
+padding: 0em;
+}
+
 header {
   margin: 0em;
   /* position: fixed; */
