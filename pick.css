@@ -1,11 +1,8 @@
-<<<<<<< Updated upstream
 @font-face {
   font-family: SignPainter;
   src: url(signpainterhousescriptregular.ttf);
 }
 
-=======
->>>>>>> Stashed changes
 html {
   font-family: 'Raleway', sans-serif;
 }
@@ -29,7 +26,6 @@ p2 {
 }
 
 /* Nav Bar */
-<<<<<<< Updated upstream
 #header-img {
 width: 18em;
 height: 7em;
@@ -37,8 +33,6 @@ float: left;
 padding: 0em;
 }
 
-=======
->>>>>>> Stashed changes
 header {
   margin: 0em;
   /* position: fixed; */
