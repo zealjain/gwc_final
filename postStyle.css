@@ -1,5 +1,56 @@
 /* * {box-sizing: border-box} */
 
+@font-face {
+  font-family: SignPainter;
+  src: url(signpainterhousescriptregular.ttf);
+}
+
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+.section_title {
+  font-family: SignPainter;
+}
+
+
+header {
+  margin: 0em;
+  /* position: fixed; */
+  padding: 0.2em;
+  width: 100%
+}
+
+header::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+nav ul{
+  list-style: none;
+  float: right;
+  margin-right: 2em;
+}
+nav li{
+  display: inline;
+  margin: 1em;
+  padding: 0.5em;
+  display: inline-block;
+}
+
+a {
+  color: inherit;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
 
   input[type=text], input[type=notes] {
   width: 50%;
