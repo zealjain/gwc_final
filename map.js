@@ -12,13 +12,14 @@ function initMap() {
     zoom: 9,
     mapTypeId: 'roadmap'
   });
-
-  createMarker(37.32675000, -122.062954, "Apricots", "1349235", "example@gmail.com", "words words")
+  createMarker(37.363528, -122.042417, "Orange", "Private", "n/a", "n/a", "Tree located on private property but overhangs to sidewalk. Ask owner for permission to pick but lots of fruit on ground.", "www.fallingfruit.com")
+  createMarker(37.32675000, -122.062954, "Apricot", "Public", "n/a", "n/a", "Multiple trees located in Varian Park, open to public. Good yeild.", "user")
+  createMarker(37.378335, -122.028976, "Avocado", "Unknown", "n/a", "n/a", "Tree overhangs fence on Caltrain", "www.fallingfruit.com")
 
   initAutocomplete();
 }
 
-function createMarker(latitude, longitude, fruitType, phoneNum, email, instructions) {
+function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, email, instructions, source) {
   //add marker
   var marker = new google.maps.Marker({
     position: {
@@ -32,16 +33,19 @@ function createMarker(latitude, longitude, fruitType, phoneNum, email, instructi
 
   //create info window
   //TODO: add tabs for contact info
+  var tab = "  -  ";
   var infoWindow = new google.maps.InfoWindow({
-    content: '<h2>' + fruitType + ' </h2>' + '<body>' + 'Instructions: ' + instructions + '<br> Contact:<br> Phone number: ' + phoneNum + '<br> Email: ' + email + '</body>'
+    content: '<h2>' + fruitType + ' </h2>' + '<body>' + 'Instructions: ' + instructions + '<br> Contact:<br>'+ tab + 'Phone number: ' + phoneNum + '<br>'+ tab +  'Email: ' + email +
+      '<br><br><i>Attribution: ' + source + '</i></body>'
   });
-  map.addListener('center_changed', function() {
-    // 3 seconds after the center of the map has changed, pan back to the
-    // marker.
-    window.setTimeout(function() {
-      map.panTo(marker.getPosition());
-    }, 3000);
-  });
+
+  // map.addListener('center_changed', function() {
+  //   // 3 seconds after the center of the map has changed, pan back to the
+  //   // marker.
+  //   window.setTimeout(function() {
+  //     map.panTo(marker.getPosition());
+  //   }, 3000);
+  // });
 
   marker.addListener('click', function() {
     map.setZoom(15);
