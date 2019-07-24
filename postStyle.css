@@ -30,6 +30,22 @@ label input {
  padding: 0em;
  }
 
+ /* Title Page */
+ #Title_page {
+   text-align: center;
+   background-color: #ffffff;
+   background-image: url(https://images.unsplash.com/photo-1528873981-36c6afde7b9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80);
+   background-size: cover;
+   padding: 8em;
+   margin: 0em;
+ }
+
+ .Title {
+   font-size: 10em;
+   font-family: SignPainter;
+   margin: 0em;
+ }
+
 header {
   margin: 0em;
   /* position: fixed; */
@@ -72,7 +88,7 @@ div {
 }
 
 input[type=text], input[type=notes] {
-  width: 80%;
+  width: 100%;
   padding: 12px;
   margin: 5px 0px 22px 0;
   display: inline-block;
@@ -95,8 +111,11 @@ h1 {
   text-align: center;
 }
 
-h2 {
+h4 {
   font-size: 100%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 
@@ -121,7 +140,7 @@ input[type=text]:focus, textarea[type=text]:focus{
 button:hover {
   opacity:1;
 }
-
+/*
 .right {
   display: inline-block;
   text-align: left;
@@ -135,14 +154,14 @@ button:hover {
   width: 40%;
   padding: 0.8em;
   float: left;
-}
+} */
 
 .labelstyle {
   font-weight: bold;
 }
 
 textarea {
-  width: 80%;
+  width: 100%;
   padding: 12px;
   margin: 5px 0 22px 0;
   display: inline-block;
@@ -155,7 +174,7 @@ textarea {
   padding: 16px;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 80%;
 }
 
 .newContainer {
@@ -164,17 +183,14 @@ textarea {
   margin-right: auto;
 }
 .backbtn {
-  background-color: "#A1544B";
+  background-color: #A1544B;
   float: left;
-  width: 40%;
-  background: white;
-  color: gray;
+  width: 30%;
 }
 .postbtn {
-  background-color: "#868C4C";
+  background-color: #868C4C;
   float: right;
   width: 30%;
-  background:
 }
 
 .modal {

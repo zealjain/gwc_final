@@ -23,8 +23,13 @@
   </nav>
   </header>
 
+  <div id="Title_page" class="Section_header">
+    <h1 class="Title">Post</h1>
+  </div>
+
 
   <body>
+
     <!-- <script type= "text/javascript" >
       postBackgroundColor()
     </script> -->
@@ -50,6 +55,7 @@
         <h1 class="section_title">POST!</h1>
         <hr>
 
+      <div id="form">
         <label for="fruitType" class="labels labelstyle">Fruit Type</label> <p>
         <div class="right">
           <input class="input" type="text" placeholder="Enter Your Fruit Type (eg. apple, banana)" name="fruitType" required>
@@ -81,11 +87,11 @@
         <p>
 
           <div class="postcancel">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="backbtn">« Back</button>
+            <button type="button" onclick="window.location.href='index.html'" class="backbtn">« Back</button>
             <button type="button" class="postbtn">Post!</button>
           </div class = "newContainer">
           <h4> Stay Fruity! </h4>
-
+        </div>
       </div>
   </form>
 </html>

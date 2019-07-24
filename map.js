@@ -13,12 +13,11 @@ function initMap() {
     mapTypeId: 'roadmap'
   });
 
-  createMarker(37.32675000, -122.062954, "Apricots", "1349235", "example@gmail.com", "words words")
-
+  initMarkers();
   initAutocomplete();
 }
 
-function createMarker(latitude, longitude, fruitType, phoneNum, email, instructions) {
+function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, email, instructions, source) {
   //add marker
   var marker = new google.maps.Marker({
     position: {
@@ -32,16 +31,19 @@ function createMarker(latitude, longitude, fruitType, phoneNum, email, instructi
 
   //create info window
   //TODO: add tabs for contact info
+  var tab = "  -  ";
   var infoWindow = new google.maps.InfoWindow({
-    content: '<h2>' + fruitType + ' </h2>' + '<body>' + 'Instructions: ' + instructions + '<br> Contact:<br> Phone number: ' + phoneNum + '<br> Email: ' + email + '</body>'
+    content: '<h2>' + fruitType + ' </h2>' + '<body>' + 'Instructions: ' + instructions + '<br> Contact:<br>'+ tab + 'Phone number: ' + phoneNum + '<br>'+ tab +  'Email: ' + email +
+      '<br><br><i>Attribution: ' + source + '</i></body>'
   });
-  map.addListener('center_changed', function() {
-    // 3 seconds after the center of the map has changed, pan back to the
-    // marker.
-    window.setTimeout(function() {
-      map.panTo(marker.getPosition());
-    }, 3000);
-  });
+
+  // map.addListener('center_changed', function() {
+  //   // 3 seconds after the center of the map has changed, pan back to the
+  //   // marker.
+  //   window.setTimeout(function() {
+  //     map.panTo(marker.getPosition());
+  //   }, 3000);
+  // });
 
   marker.addListener('click', function() {
     map.setZoom(15);
@@ -53,6 +55,17 @@ function createMarker(latitude, longitude, fruitType, phoneNum, email, instructi
 
   });
 
+}
+
+function initMarkers(){
+  createMarker(37.403566, -122.059454, "Walnut", "Public", "n/a", "n/a", "Large walnut tree with lots a good quality walnuts. Located in Devonshire Park.", "www.fallingfruit.com");
+  createMarker(37.407540, -122.125873, "Almond", "Public", "n/a", "n/a", "Many small almond trees along the road.", "www.fallingfruit.com");
+  createMarker(37.406725, -122.126072, "Plum", "Public", "n/a", "n/a", "About 10 plum trees at the front of Juana Briones Park.", "www.fallingfruit.com");
+  createMarker(37.3979963,-122.1213036, "Plum", "Public", "n/a", "n/a", "Three medium sized plum trees on the side of the road.", "www.fallingfruit.com");
+  createMarker(37.381388, -122.069821, "Walnut", "Unknown", "n/a", "n/a", "Tree is large and unmanaged, right next to gas station.", "www.fallingfruit.com");
+  createMarker(37.363528, -122.042417, "Orange", "Private", "n/a", "n/a", "Tree located on private property but overhangs to sidewalk. Ask owner for permission to pick but lots of fruit on ground.", "www.fallingfruit.com");
+  createMarker(37.32675000, -122.062954, "Apricot", "Public", "n/a", "n/a", "Multiple trees located in Varian Park, open to public. Good yeild.", "user");
+  createMarker(37.378335, -122.028976, "Avocado", "Public", "n/a", "n/a", "Tree overhangs Caltrain fence to public area", "www.fallingfruit.com");
 }
 
 //Convert user input address into lat, long

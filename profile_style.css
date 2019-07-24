@@ -50,6 +50,23 @@ a:hover {
   font-weight: bold;
 }
 
+/* Title Page */
+#Title_page {
+  text-align: center;
+  background-color: #ffffff;
+  background-image: url(https://images.unsplash.com/photo-1454944338482-a69bb95894af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2552&q=80);
+  background-size: cover;
+  padding: 8em;
+  margin: 0em;
+}
+
+.Title {
+  font-size: 10em;
+  font-family: SignPainter;
+  margin: 0em;
+}
+
+
 * {box-sizing: border-box}
 /* Full-width input fields */
   input[type=email], input[type=password], input[type=text]  {
