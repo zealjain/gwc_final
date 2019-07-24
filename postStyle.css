@@ -164,17 +164,14 @@ textarea {
   margin-right: auto;
 }
 .backbtn {
-  background-color: "#A1544B";
+  background-color: #A1544B;
   float: left;
   width: 40%;
-  background: white;
-  color: gray;
 }
 .postbtn {
-  background-color: "#868C4C";
+  background-color: #868C4C;
   float: right;
   width: 30%;
-  background:
 }
 
 .modal {
