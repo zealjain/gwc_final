@@ -72,7 +72,7 @@ div {
 }
 
 input[type=text], input[type=notes] {
-  width: 80%;
+  width: 100%;
   padding: 12px;
   margin: 5px 0px 22px 0;
   display: inline-block;
@@ -121,7 +121,7 @@ input[type=text]:focus, textarea[type=text]:focus{
 button:hover {
   opacity:1;
 }
-
+/*
 .right {
   display: inline-block;
   text-align: left;
@@ -135,14 +135,14 @@ button:hover {
   width: 40%;
   padding: 0.8em;
   float: left;
-}
+} */
 
 .labelstyle {
   font-weight: bold;
 }
 
 textarea {
-  width: 80%;
+  width: 100%;
   padding: 12px;
   margin: 5px 0 22px 0;
   display: inline-block;
@@ -155,7 +155,7 @@ textarea {
   padding: 16px;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 80%;
 }
 
 .newContainer {
