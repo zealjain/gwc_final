@@ -1,6 +1,7 @@
 
 var map;
 var markers = [];
+var fruitMarkers = [];
 
 function initMap(){
   //first init map
@@ -10,22 +11,48 @@ function initMap(){
     mapTypeId: 'roadmap'
   });
 
+  createMarker(37.32675000, -122.062954, "Apricots", "1349235", "example@gmail.com", "words words" )
+
+  initAutocomplete();
+}
+
+function createMarker(latitude, longitude, fruitType, phoneNum, email, instructions){
   //add marker
   var marker = new google.maps.Marker({
-    position:{lat:37.32675000, lng: -122.062954},
+    position:{lat:latitude, lng: longitude},
     map:map
   });
 
-  markers.push(marker);
+  fruitMarkers.push(marker);
 
+  //create info window
+  //TODO: add tabs for contact info
   var infoWindow = new google.maps.InfoWindow({
-    content:'<h2> Apricots </h2>'+ '<body>Location: Varian Park <br> Contact: example@gmail.com <br> Instructions: wordswords</bodyx>'
+    content:'<h2>'+ fruitType + ' </h2>'+ '<body>'+ 'Instructions: ' + instructions + '<br> Contact:<br> Phone number: ' + phoneNum + '<br> Email: ' + email + '</body>'
+  });
+  map.addListener('center_changed', function() {
+    // 3 seconds after the center of the map has changed, pan back to the
+    // marker.
+    window.setTimeout(function() {
+      map.panTo(marker.getPosition());
+    }, 3000);
+  });
+
+  marker.addListener('click', function() {
+    map.setZoom(15);
+    map.setCenter(marker.getPosition());
   });
 
   marker.addListener('click', function(){
     infoWindow.open(map, marker);
+
   });
-  initAutocomplete();
+
+}
+
+//Convert user input address into lat, long
+function geocode(address){
+  return;
 }
 
 function initAutocomplete() {
@@ -57,11 +84,6 @@ var places = searchBox.getPlaces();
 if (places.length == 0) {
   return;
 }
-
-// Clear out the old markers.
-//markers.forEach(function(marker) {
-//   marker.setMap(null);
-//  });
 
 // For each place, get the icon, name and location.
 var bounds = new google.maps.LatLngBounds();
