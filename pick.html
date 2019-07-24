@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--key is AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href = "pick.css">
-    <script src="map.js"></script>
-    <title>Fruitful</title>
-    <style>
-      /* Set the size of the div element that contains the map */
-      #map {
-        height: 630px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
-       }
 
-    </style>
-  </head>
-  <body>
+<head>
+  <!--key is AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="pick.css">
+  <script src="map.js"></script>
+  <title>Fruitful</title>
+  <style>
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 630px;
+      /* The height is 400 pixels */
+      width: 100%;
+      /* The width is the width of the web page */
+    }
+  </style>
+</head>
 
-    <header>
+<body>
+
+  <header>
     <nav id="navbar">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -29,29 +32,35 @@
         <li><a href="profile.html">Sign In</a></li>
       </ul>
     </nav>
-    </header>
+  </header>
 
-    <div id="Title_page" class="Section_header">
-     <h1 class="Title">Pick</h1>
-   </div>
+  <div id="Title_page" class="Section_header">
+    <h1 class="Title">Pick</h1>
+  </div>
 
-    <center> <p>
+  <center>
+    <p>
       Enter your location in the search bar below to find fruit to pick near you
-    </p></center>
+    </p>
+  </center>
 
-    <!-- <ul>
+  <!-- <ul>
       <li><a href="home.html"><img src="favicon.png" style="width:30px;height:35px"></a></li>
       </div>
     </ul> -->
 
-    <!--The div element for the map -->
-    <div id="map"></div>
+  <!--The div element for the map -->
+  <div id="map"></div>
 
   <input id="pac-input" class="controls" type="text" placeholder="Seach Bar">
-<div id="map"></div>
-<!-- Replace the value of the key parameter with your own API key. -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initMap"
-         async defer></script>
+  <div id="map"></div>
+  <!-- Replace the value of the key parameter with your own API key. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initMap" async defer></script>
 
-  </body>
+  <footer>
+    <p>Created By Dhriti, Julianne, Zeal, Surabhi, and Michelle </p>
+  </footer>
+
+</body>
+
 </html>
