@@ -6,6 +6,8 @@
     <title>Fruitful</title>
     <link rel="stylesheet" href="postStyle.css">
     <script src = "post.js"> </script>
+    <script src = "map.js"> </script>
+
 
   </head>
 
@@ -31,31 +33,7 @@
   <body>
 
 
-<!-- --------------------------dhriti trying to figure out user input --------------------------------- -->
-  <script type= "text/javascript" >
-  function writeName(){
-  var welcomeMsg = document.getElementById('welcome');
-  var name = document.getElementById('name');
-  var formContent = document.getElementById('entername');
-
-  welcomeMsg.innerHTML = "Welcome "+name.value+".<br/>";
-  // We append .value to the end of name so that it sets the variable name
-  // to be equal to a property which is the value, not the object.
-
-  formContent.innerHTML = ""; // this removes the form text input box after name has been entered.
-
-  }
-</script>
-
-<p id="welcome"></p>
-<form id="entername">
-//this is the question and then the person sets the name to the id right
- What is your name:<input type="text" id="name"/><br/>
- // this is the button
- <input type="button" value="Submit" onclick="writeName();"/>
-</form>
-<!-- ------------------------------------------------------------------------------------------------------- -->
-    <!-- <script type= "text/javascript" >
+<!-- <script type= "text/javascript" >
       postBackgroundColor()
     </script> -->
     <div class="container">
@@ -80,12 +58,13 @@
 
         <h2 class="section_title">POST!</h2>
         <hr>
-    <p id = "finnapost" ></p>
+    <p id = "posting" ></p>
     <form id="postfruit">
 
         <label for="fruitType" class="labels labelstyle">Fruit Type</label> <p>
         <div class="right">
-          <input class="input" type="text" placeholder="Enter Your Fruit Type (eg. apple, banana)" name="fruitType" id= "fruitType" required><br/>
+          what is the type of fruit:<input type="text" placeholder="Enter Your Fruit Type (eg. apple, banana)" id= "fruitType" required /><br/>
+          <input type="button" value="Submit" onclick="mapData();"/>
         </div>
 
         <p>
@@ -99,14 +78,14 @@
 
         <label for="phoneNumber" class="labels labelstyle">Enter Phone Number</label> <p>
         <div class="right">
-          <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" required><br/>
+          <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id = "phoneNumber" required><br/>
         </div>
 
         <p>
 
         <label for="email" class="labels labelstyle">Email</label> <p>
         <div class="right">
-          <input class="input" type="text" placeholder="Enter Email" name="email" required><br/>
+          <input class="input" type="text" placeholder="Enter Email" name="email" id="email" required><br/>
         </div>
 
         <p>
