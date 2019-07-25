@@ -63,7 +63,7 @@
 
         <label for="fruitType" class="labels labelstyle">Fruit Type</label> <p>
         <div class="right">
-          what is the type of fruit:<input type="text" placeholder="Enter Your Fruit Type (eg. apple, banana)" id= "fruitType" required /><br/>
+          <input type="text" placeholder="Enter Your Fruit Type (eg. apple, banana)" id= "fruitType" required /><br/>
           <input type="button" value="Submit" onclick="mapData();"/>
         </div>
 
@@ -78,7 +78,7 @@
 
         <label for="phoneNumber" class="labels labelstyle">Enter Phone Number</label> <p>
         <div class="right">
-          <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id = "phoneNumber" required><br/>
+          <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id = "phoneNum" required><br/>
         </div>
 
         <p>
@@ -92,7 +92,7 @@
 
         <label for="notes" class="labels labelstyle"> Any addition Notes or Special Instructions?  </label> <p>
         <div class="right">
-          <textarea id="commentsbox" class="input" type="text" placeholder="Notes" name="Notes" not required></textarea>
+          <textarea id="commentsbox" class="input" type="text" placeholder="Notes" name="Notes" id = notes not required></textarea>
         </div>
 
         <p>
@@ -100,7 +100,7 @@
     </form>
           <div class="postcancel">
             <button type="button" onclick="window.location.href='index.html'" class="backbtn">« Back</button>
-            <button type="button" onclick="createMarker()" class="postbtn">Post!</button>
+            <button type="button" onclick="mapData()" class="postbtn">Post!</button>
           </div class = "newContainer">
           <h4> Stay Fruity! </h4>
         </div>
