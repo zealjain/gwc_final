@@ -22,7 +22,6 @@
 </head>
 
 <body>
-
   <header>
     <nav id="navbar">
           <img src="https://afroleft.com/content/images/2015/08/fruitful-logo-iteration3-2.jpg" alt="Fruitful logo" id="header-img">
@@ -60,6 +59,8 @@
   </style>
   <div id="map"> </div>
   <input id= "pac-input" class="controls" type ="text" placeholder="Search Bar">
+
+
   <script>
     function initMap() {
       var options = {
@@ -67,7 +68,7 @@
         center: {lat:42.3601, ling:-71.0589}
       }
 
-    var map =new
+    var map = new
     google.map.Map(document.getElementById('map'), options);
 
   }
