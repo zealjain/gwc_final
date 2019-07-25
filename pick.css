@@ -90,7 +90,7 @@ a:hover {
 /* Footer */
 footer {
   margin-top: 3em;
-  background-color: #D6CDE2;
+  background-color: #E0C798;
   text-align: center;
   color: white;
   width: 100%;
@@ -259,6 +259,7 @@ html, body {
   font-size: 15px;
   font-weight: 300;
   margin-left: 12px;
+  margin-top: 10px;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
   width: 400px;

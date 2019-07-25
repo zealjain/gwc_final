@@ -13,6 +13,13 @@ html {
 }
 
 /* Nav Bar */
+#header-img {
+width: 18em;
+height: 7em;
+float: left;
+padding: 0em;
+}
+
 header {
   margin: 0em;
   /* position: fixed; */
@@ -135,7 +142,7 @@ button:hover {
   width: 50%;
 }
 .signupbtn {
-  background-color: #D6CDE2;
+  background-color: #A1544B;
   color: white;
   float: right;
   width: 50%;
