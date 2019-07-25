@@ -6,11 +6,12 @@ function postBackgroundColor() {
 
 
 function mapData() {
-  var address = document.getElementById('addressFruit');
+  var address = document.getElementById('finnaPost');
   var fruitType = document.getElementById('fruitType');
-  alert(address);
+  alert(address.innerHTML);
   alert(fruitType);
   address.innerHTML = "Welcome " +fruitType.value + ".<br/>";
   form.Content.innerHTML = "";
+
 
 }
