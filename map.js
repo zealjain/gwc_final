@@ -58,6 +58,7 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
 }
 
 function initMarkers(){
+  createMarker(37.472015, -122.236929, "Apple, Pear, Fig, Mandarin, Cherry, Apricot", "Public", "n/a", "n/a", "Behing McGarvey Baseball field wall, trees are small", "www.fallingfruit.com");
   createMarker(37.431356, -122.175982, "Rosemary", "Unkown", "n/a", "n/a", "Dozen of large rosemary bushes, part of LKSC Herb Garden. Best around Jan-Dec.", "www.fallingfruit.com");
   createMarker(37.421207, -122.170120, "Orange", "Public", "n/a", "n/a", "Tree at the front of basketball court", "www.fallingfruit.com");
   createMarker(37.425297, -122.165412, "Strawberry", "Public", "n/a", "n/a", "Many small bushes ripe from Sept-Jan. Located in Stanford University.", "www.fallingfruit.com");
