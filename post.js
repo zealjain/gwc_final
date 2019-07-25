@@ -7,6 +7,13 @@ function juliannesFunction() {
 }
 
 function mapData() {
+  var address = document.getElementById('address')
 
-  
+}
+
+
+function init() {
+  fetchJSON('data.json',function(data) {
+    console.log(data)
+  });
 }
