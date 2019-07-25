@@ -70,14 +70,25 @@ a:hover {
   background-color: #ffffff;
   background-image: url(https://images.unsplash.com/photo-1524222717473-730000096953?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
   background-size: cover;
-  padding: 18em;
+  /* padding: 8em; */
   margin:0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
 }
 
 .Title {
   font-size: 10em;
   font-family: SignPainter;
   margin: 0em;
+}
+
+#Title_back {
+  background-color: white;
+  padding: 3em;
+  border-radius: 5px;
 }
 /* About Section */
 
