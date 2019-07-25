@@ -4,13 +4,37 @@ accounts : {
     "lname" : "Jain",
     "email" : "zealjain@gmail.com",
     "password" : "hello",
-    "status" : "out"
+    "status" : "out" ,
+    "posts" : {
+      "firstpost" : {
+      "fruitType" : "Apples",
+      "address":"161 Brian Lane",
+      "phoneNumber":"(669) - 444 - 2145",
+      "email" : "zealjain@gmail.com",
+      "notes" : "I only have granny apples!"
+    } ,
+      "secondpost": {
+
+      }
+    }
   },
   "dhritigoomer" : {
     "fname" : "Dhriti",
     "lname" : "Goomer",
-    "email" : "dhritigoomer@gmail.com",
+    "email" : "goomer.dhriti@gmail.com",
     "password" : "hello",
-    "status" : "out"
+    "status" : "out",
+    "posts" : {
+      "firstpost" : {
+      "fruitType" : "Strawberries",
+      "address":"10335 Judy Avenue",
+      "phoneNumber":"(669) - 333 - 4380",
+      "email" : "goomer.dhriti@gmail.com",
+      "notes" : "I have huge strawberries and they're organic too!"
+    } ,
+      "secondpost": {
+
+      }
+    }
   }
 }
