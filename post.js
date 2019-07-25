@@ -7,6 +7,6 @@ function postBackgroundColor() {
 
 function mapData() {
   var address = document.getElementById('addressFruit')
-  alert("address");
+  alert(address);
 
 }
