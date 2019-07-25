@@ -102,6 +102,10 @@ b {
   float: right;
   width: 50%
 }
+
+.tc_heading {
+  font-weight:bolder;
+}
 /* Add a background color when the inputs get focus */
 input[type=email]:focus, input[type=password]:focus, input[type=text]:focus {
   background-color: #ddd;
@@ -143,6 +147,15 @@ button:hover {
   width: 70%;
 }
 
+footer {
+  margin-top: 3em;
+  background-color: #E0C798;
+  padding: 2.5em;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -163,6 +176,7 @@ button:hover {
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   width: 80%; /* Could be more or less, depending on screen size */
 }
+
 
 /* Style the horizontal ruler */
 hr {
