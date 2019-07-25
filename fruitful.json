@@ -1,0 +1,16 @@
+accounts : {
+  "zealjain" : {
+    "fname" : "Zeal",
+    "lname" : "Jain",
+    "email" : "zealjain@gmail.com",
+    "password" : "hello",
+    "status" : "out"
+  },
+  "dhritigoomer" : {
+    "fname" : "Dhriti",
+    "lname" : "Goomer",
+    "email" : "dhritigoomer@gmail.com",
+    "password" : "hello",
+    "status" : "out"
+  }
+}
