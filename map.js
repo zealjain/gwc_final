@@ -62,9 +62,7 @@ function initMarkers(){
   createMarker(37.463744, -122.119619, "Wild Radish", "Public", "n/a", "n/a", "Radish along San Francisquito Trail by the creek", "www.inaturalist.org");
   createMarker(37.437770, -122.119931, "Lemon", "Private", "n/a", "n/a", "Small tree in front yard, ripe in April. Ask owner before picking", "www.fallingfruit.com");
   createMarker(37.432489, -122.127782, "Strawberry", "Public", "n/a", "n/a", "Easy to access, grows on land between sidewalk near Safeway parking lot.", "www.fallingfruit.com");
-  createMarker(37.424561, -122.121957 , "Japanese Permission and Loquat", "Private, "n/a", "n/a", "Permission overhangs fence to public area but loquat is on front yard. Both contain good quality fruit but on private property so ask permission before picking.", "www.fallingfruit.com");
-
-
+  createMarker(37.424561, -122.121957 , "Japanese Permission and Loquat", "Private", "n/a", "n/a", "Permission overhangs fence to public area but loquat is on front yard. Both contain good quality fruit but on private property so ask permission before picking.", "www.fallingfruit.com");
   createMarker(37.472015, -122.236929, "Apple, Pear, Fig, Mandarin, Cherry, Apricot", "Public", "n/a", "n/a", "Behing McGarvey Baseball field wall, trees are small", "www.fallingfruit.com");
   createMarker(37.431356, -122.175982, "Rosemary", "Unkown", "n/a", "n/a", "Dozen of large rosemary bushes, part of LKSC Herb Garden. Best around Jan-Dec.", "www.fallingfruit.com");
   createMarker(37.421207, -122.170120, "Orange", "Public", "n/a", "n/a", "Tree at the front of basketball court", "www.fallingfruit.com");
