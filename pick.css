@@ -11,10 +11,6 @@ h1 {
   text-align: center;
 }
 
-p {
-  padding: 5em;
-}
-
 p2 {
   padding: 1em;
 }
@@ -75,25 +71,31 @@ a:hover {
 #Title_page {
   text-align: center;
   background-color: #ffffff;
-  background-image: url(https://images.unsplash.com/photo-1516813147935-a2b3e7160e49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+  /* background-image: url(https://images.unsplash.com/photo-1516813147935-a2b3e7160e49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80); */
   background-size: cover;
-  padding: 8em;
-  margin: 0em;
+  /* padding: 8em;
+  margin: 0em; */
 }
 
 .Title {
-  font-size: 10em;
+  font-size: 7em;
   font-family: SignPainter;
   margin: 0em;
+}
+
+.map_text {
+  text-align: center;
+  padding-bottom: 1.5em;
 }
 
 /* Footer */
 footer {
   margin-top: 3em;
-  background-color: #D6CDE2;
+  background-color: #A1544B;
   text-align: center;
   color: white;
   width: 100%;
+  padding: 3em;
 }
 
 /* Map
