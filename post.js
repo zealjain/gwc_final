@@ -10,7 +10,6 @@ function mapData() {
   var fruitType = document.getElementById('fruitType');
   alert(address);
   alert(fruitType);
-
   address.innerHTML = "Welcome " +fruitType.value + ".<br/>";
   form.Content.innerHTML = "";
 
