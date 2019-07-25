@@ -13,11 +13,6 @@ function initMap() {
     mapTypeId: 'roadmap'
   });
 
-  createMarker(37.363528, -122.042417, "Orange", "Private", "n/a", "n/a", "Tree located on private property but overhangs to sidewalk. Ask owner for permission to pick but lots of fruit on ground.", "www.fallingfruit.com")
-  createMarker(37.32675000, -122.062954, "Apricot", "Public", "n/a", "n/a", "Multiple trees located in Varian Park, open to public. Good yeild.", "user")
-  createMarker(37.378335, -122.028976, "Avocado", "Unknown", "n/a", "n/a", "Tree overhangs fence on Caltrain", "www.fallingfruit.com")
-
-
   initMarkers();
   initAutocomplete();
 }
