@@ -23,8 +23,6 @@ accounts : {
       "1" : {
       "fruitType" : "Strawberries",
       "address":"10335 Judy Avenue",
-      "phoneNumber":"(669) - 333 - 4380",
-      "email" : "goomer.dhriti@gmail.com",
       "notes" : "I have huge strawberries and they're organic too!"
   }
 }
