@@ -5,3 +5,8 @@ function postBackgroundColor() {
 function juliannesFunction() {
   alert("Congrats you posted!")
 }
+
+function mapData() {
+
+  
+}
