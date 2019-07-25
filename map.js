@@ -13,11 +13,6 @@ function initMap() {
     mapTypeId: 'roadmap'
   });
 
-  createMarker(37.363528, -122.042417, "Orange", "Private", "n/a", "n/a", "Tree located on private property but overhangs to sidewalk. Ask owner for permission to pick but lots of fruit on ground.", "www.fallingfruit.com")
-  createMarker(37.32675000, -122.062954, "Apricot", "Public", "n/a", "n/a", "Multiple trees located in Varian Park, open to public. Good yeild.", "user")
-  createMarker(37.378335, -122.028976, "Avocado", "Unknown", "n/a", "n/a", "Tree overhangs fence on Caltrain", "www.fallingfruit.com")
-
-
   initMarkers();
   initAutocomplete();
 }
@@ -63,10 +58,14 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
 }
 
 function initMarkers(){
-  createMarker(37.384501, -122.120774, "Mulberry", "Public", "n/a", "n/a", "Tree on corner, lots of fruit.", "www.fallingfruit.com");
+  createMarker(37.431356, -122.175982, "Rosemary", "Unkown", "n/a", "n/a", "Dozen of large rosemary bushes, part of LKSC Herb Garden. Best around Jan-Dec.", "www.fallingfruit.com");
+  createMarker(37.421207, -122.170120, "Orange", "Public", "n/a", "n/a", "Tree at the front of basketball court", "www.fallingfruit.com");
+  createMarker(37.425297, -122.165412, "Strawberry", "Public", "n/a", "n/a", "Many small bushes ripe from Sept-Jan. Located in Stanford University.", "www.fallingfruit.com");
+  createMarker(37.402117,-122.1568901, "Fennel", "Public", "n/a", "n/a", "Lots of large, green bulbs along the pedestrian/bike path", "www.fallingfruit.com");
+  createMarker(37.384501, -122.120774, "Mulberry", "Public", "n/a", "n/a", "Tree on corner of the street, lots of fruit.", "www.fallingfruit.com");
   createMarker(37.415349, -122.121246, "Orange", "Private", "n/a", "n/a", "Orange tree in front yard, ask owner before picking.", "www.fallingfruit.com");
   createMarker(37.415349, -122.121246, "Olive", "Public", "n/a", "n/a", "Tree at the front of Robles Park in fair condition. Many more trees further in the park.", "www.fallingfruit.com");
-  createMarker(37.408045,-122.0896273, "Loquat", "Public", "n/a", "n/a", "Tree is tall with plenty of good quality fruit but tree is very tall and fruit can be hard to reach.", "www.fallingfruit.com"); //ripe: may
+  createMarker(37.408045,-122.0896273, "Loquat", "Public", "n/a", "n/a", "Tree is tall with plenty of good quality fruit but tree is very tall and fruit can be hard to reach. Most ripe during May.", "www.fallingfruit.com");
   createMarker(37.403566, -122.059454, "Walnut", "Public", "n/a", "n/a", "Large walnut tree with lots a good quality walnuts. Located in Devonshire Park.", "www.fallingfruit.com");
   createMarker(37.407540, -122.125873, "Almond", "Public", "n/a", "n/a", "Many small almond trees along the road.", "www.fallingfruit.com");
   createMarker(37.406725, -122.126072, "Plum", "Public", "n/a", "n/a", "About 10 plum trees at the front of Juana Briones Park.", "www.fallingfruit.com");
