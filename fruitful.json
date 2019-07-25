@@ -9,6 +9,7 @@ accounts : {
       "1" : {
         "fruitType" : "Apples",
         "address":"161 Brian Lane",
+        "phoneNumber" : "(669)261-2103",
         "notes" : "I only have granny apples!"
       }
     }
@@ -23,6 +24,7 @@ accounts : {
       "1" : {
       "fruitType" : "Strawberries",
       "address":"10335 Judy Avenue",
+      "phoneNumber": "(669)333-4380",
       "notes" : "I have huge strawberries and they're organic too!"
   }
 }
