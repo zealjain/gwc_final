@@ -7,13 +7,6 @@ function juliannesFunction() {
 }
 
 function mapData() {
-  var address = document.getElementById('address')
+  var address = document.getElementById('addressFruit')
 
-}
-
-
-function init() {
-  fetchJSON('data.json',function(data) {
-    console.log(data)
-  });
 }
