@@ -21,9 +21,10 @@ h1 {
 
 #header-img {
 width: 12em;
-height: 8em;
+height: 6.5em;
 float: left;
 padding: 0em;
+margin: 0px;
 }
 
 header {
@@ -70,7 +71,7 @@ a:hover {
   background-color: #ffffff;
   background-image: url(https://images.unsplash.com/photo-1524222717473-730000096953?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
   background-size: cover;
-  padding: 8em;
+  padding: 2em;
   margin:0em;
   display: flex;
   flex-direction: column;
@@ -212,8 +213,35 @@ footer {
   }
 }
 
+
 @media (max-width: 800px) {
   #About_text {
+    font-size: 1em;
+  }
+  #Title_page {
+    padding: 0.5em;
+  }
+  #header-img {
+  width: 12em;
+  height: 6.5em;
+  float: left;
+  padding: 0em;
+  margin: 0px;
+  }
+  nav ul {
+  list-style: none;
+  float: none;
+  text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  #About_image {
+    display: none;
+  }
+  #About_text {
     font-size: 0.9em;
+    width: 50em;
+    height: 18em;
   }
 }
