@@ -48,22 +48,22 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
   });
 }
 
-function removeMarker(marker){
-  var indecOf = this.fruitMarkers.indexOf(marker);
-  if (indexOf !== -1){
-    this.fruitMarkers.splice(indexOf, 1);
-    marker.setMap(null);
-  }
-}
-
-function findMarkerByLat(lat){
-  for(var i = 0; i < this.fruitMarkers.length; i++){
-    var currMarker = this.fruitMarkers[i];
-    if(currMarker.position.lat()== lat) {
-      return marker;
-    }
-  }
-}
+// function removeMarker(marker){
+//   var indecOf = this.fruitMarkers.indexOf(marker);
+//   if (indexOf !== -1){
+//     this.fruitMarkers.splice(indexOf, 1);
+//     marker.setMap(null);
+//   }
+// }
+//
+// function findMarkerByLat(lat){
+//   for(var i = 0; i < this.fruitMarkers.length; i++){
+//     var currMarker = this.fruitMarkers[i];
+//     if(currMarker.position.lat()== lat) {
+//       return marker;
+//     }
+//   }
+// }
 
 function initMarkers(){
   createMarker(37.464239, -122.146301, "Orange", "Private", "n/a", "n/a", "Two orange trees with very juicy oranges. Owner doesn't mind if you pick the oranges on the street.", "www.fallingfruit.com");
