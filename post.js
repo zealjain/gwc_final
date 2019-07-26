@@ -5,7 +5,7 @@ function postBackgroundColor() {
 
 
 
-function mapData() {
+function createMarker() {
   var address = document.getElementbyId('addressFruit');
   var fruitType = document.getElementbyId('fruitType');
   var latitude = document.getElementbyId('addressFruit');
