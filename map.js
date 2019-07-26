@@ -3,6 +3,10 @@ var markers = [];
 var fruitMarkers = [];
 
 
+function saybye(){
+  alert("chicken");
+}
+
 function initMap() {
   //first init map
   map = new google.maps.Map(document.getElementById('map'), {

@@ -18,3 +18,6 @@ function mapData() {
   // form.Content.innerHTML = "";
 
 }
+function sayhi() {
+  alert("pickles");
+}
