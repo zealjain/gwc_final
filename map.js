@@ -88,6 +88,9 @@ function initMarkers(){
   createMarker(37.363528, -122.042417, "Orange", "Private", "n/a", "n/a", "Tree located on private property but overhangs to sidewalk. Ask owner for permission to pick but lots of fruit on ground.", "www.fallingfruit.com");
   createMarker(37.32675000, -122.062954, "Apricot", "Public", "n/a", "n/a", "Multiple trees located in Varian Park, open to public. Good yeild.", "user");
   createMarker(37.378335, -122.028976, "Avocado", "Public", "n/a", "n/a", "Tree overhangs Caltrain fence to public area", "www.fallingfruit.com");
+  createMarker(37.430880, -122.112355, "Lemon", "Private", "n/a", "n/a", "A few trees along sidewalk, some hang to public area. Ripe in April.", "www.fallingfruit.com");
+  createMarker(37.414833, -122.121723, "Fig", "Private", "n/a", "n/a", "Many ripe figs around Sept-Oct. In private backyard but tree overhangs to Robles Park.", "www.fallingfruit.com");
+
 }
 
 //Convert user input address into lat, long
