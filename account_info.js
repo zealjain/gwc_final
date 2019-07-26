@@ -15,7 +15,6 @@ function fetchJSON(path, callback) {
 function incorrect() {
   document.getElementById("after_submit").style.visibility = "visible";
 }
-var signin = "none";
 function check() {
   fetchJSON('fruitful.json', function(data) {
     var email = document.form.email.value;
@@ -27,9 +26,10 @@ function check() {
       }
     }
     if (correct == 1) {
-      window["signin"] = "1";
       data[account_index].status = "in";
       window.location.href = "account.html";
+      var signin = "1";
+      alert(signin);
     } else {
       document.getElementById("after_submit").style.visibility = "visible";
     }
@@ -42,7 +42,7 @@ function signout() {
     var account_index = data[0];
     account_index = parseInt(account_index);
     data.accounts[account_index].status = 'out';
-    window["signin"] = "none";
+    signin = "none";
     window.location.href = "profile.html";
   });
 }
