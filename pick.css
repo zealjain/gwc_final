@@ -11,6 +11,10 @@ h1 {
   text-align: center;
 }
 
+p {
+  padding: 5em;
+}
+
 p2 {
   padding: 1em;
 }
@@ -71,31 +75,25 @@ a:hover {
 #Title_page {
   text-align: center;
   background-color: #ffffff;
-  /* background-image: url(https://images.unsplash.com/photo-1516813147935-a2b3e7160e49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80); */
+  background-image: url(https://images.unsplash.com/photo-1516813147935-a2b3e7160e49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
   background-size: cover;
-  /* padding: 8em;
-  margin: 0em; */
-}
-
-.Title {
-  font-size: 7em;
-  font-family: SignPainter;
+  padding: 8em;
   margin: 0em;
 }
 
-.map_text {
-  text-align: center;
-  padding-bottom: 1.5em;
+.Title {
+  font-size: 10em;
+  font-family: SignPainter;
+  margin: 0em;
 }
 
 /* Footer */
 footer {
   margin-top: 3em;
-  background-color: #A1544B;
+  background-color: #D6CDE2;
   text-align: center;
   color: white;
   width: 100%;
-  padding: 3em;
 }
 
 /* Map
@@ -118,6 +116,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 
 /* Set the size of the div element that contains the map */
 #map {
