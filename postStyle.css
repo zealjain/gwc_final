@@ -5,6 +5,14 @@
   src: url(signpainterhousescriptregular.ttf);
 }
 
+footer {
+  margin-top: 3em;
+  background-color: #E0C798;
+  padding: 2.5em;
+  text-align: center;
+  color: white;
+}
+
 html {
   font-family: 'Raleway', sans-serif;
 }
