@@ -15,44 +15,44 @@ function fetchJSON(path, callback) {
 function incorrect() {
   document.getElementById("after_submit").style.visibility = "visible";
 }
-var signin = 0;
+var signin = "none";
 function check() {
   fetchJSON('fruitful.json', function(data) {
+    var email = document.form.email.value;
+    var password = document.form.psw.value;
     for (var i = 0; i <data.length; i++) {
-      var email = document.form.email.value;
-      var password = document.form.psw.value;
       if (email == data[i].email && password == data[i].password) {
         var correct = 1;
         var account_index = i;
       }
     }
     if (correct == 1) {
+      window["signin"] = "1";
       data[account_index].status = "in";
       window.location.href = "account.html";
     } else {
       document.getElementById("after_submit").style.visibility = "visible";
     }
-    data.person[0] = account_index;
   });
 }
 
 
 function signout() {
   fetchJSON('fruitful.json', function(data) {
-    var account_index = data.person[0];
-    data[account_index].status = 'out';
+    var account_index = data[0];
+    account_index = parseInt(account_index);
+    data.accounts[account_index].status = 'out';
+    window["signin"] = "none";
     window.location.href = "profile.html";
   });
 }
 
 window.onload = function init() {
   fetchJSON("fruitful.json", function(data) {
-    var account_index = data.person[0];
-    if (data[account_index].status == "out") {
-      alert("lol");
+    alert(signin);
+    if (signin === "none") {
       document.getElementById("lol").innerHTML = "<a href='profile.html'>Sign in</a>";
     } else {
-      alert("ok");
       document.getElementById('lol').innerHTML = "<a href='profile.html'><img src='profile.png' alt='Profile Logo' width=40px height=40px ></a>";
     }
   });
