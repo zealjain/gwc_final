@@ -2,6 +2,7 @@ var map;
 var markers = [];
 var fruitMarkers = [];
 
+
 function initMap() {
   //first init map
   map = new google.maps.Map(document.getElementById('map'), {
@@ -22,8 +23,9 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
   var marker = new google.maps.Marker({
     position: {
       lat: latitude,
-      lng: longitude
+      lng: longitude,
     },
+    title: fruitType,
     map: map
   });
 
@@ -113,6 +115,7 @@ function initAutocomplete() {
   //var searchBox = new google.maps.places.SearchBox(input3);
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input3);
 
+
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
     searchBox.setBounds(map.getBounds());
@@ -123,7 +126,6 @@ function initAutocomplete() {
   // more details for that place.
   searchBox.addListener('places_changed', function() {
     var places = searchBox.getPlaces();
-
     if (places.length == 0) {
       return;
     }
@@ -135,6 +137,9 @@ function initAutocomplete() {
         console.log("Returned place contains no geometry");
         return;
       }
+
+      displayClosest(place.geometry.location);
+
       var icon = {
         url: place.icon,
         size: new google.maps.Size(180, 180),
@@ -162,7 +167,37 @@ function initAutocomplete() {
   });
 }
 
+function displayClosest(position){
+  findClosestMarker(position);
+  // google.maps.event.addListener(map, 'click', find_closest_marker);
+}
 
+function rad(x) {return x*Math.PI/180;}
+
+function findClosestMarker(position) {
+    var lat = position.lat();
+    var lng = position.lng();
+    var R = 6371; // radius of earth in km
+    var distances = [];
+    var closest = -1;
+    for( i=0;i< fruitMarkers.length; i++ ) {
+        var mlat = fruitMarkers[i].position.lat();
+        var mlng = fruitMarkers[i].position.lng();
+        var dLat  = rad(mlat - lat);
+        var dLong = rad(mlng - lng);
+        var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(rad(lat)) * Math.cos(rad(lat)) * Math.sin(dLong/2) * Math.sin(dLong/2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        var d = R * c;
+        distances[i] = d;
+        if ( closest == -1 || d < distances[closest] ) {
+            closest = i;
+        }
+    }
+    //alert("array length" + fruitMarkers.length + "closest index" + closest);
+
+    alert(fruitMarkers[closest].title);
+}
 
 function middle() {
   var totalLat = 0;
