@@ -1,9 +1,21 @@
+geocoder = new google.maps.Geocoder();
+
 function sayhi() {
   alert("pickles");
 }
+
 function postBackgroundColor() {
   document.body.style.backgroundColor = "#F5E1BD";
 
+}
+
+function getCoordinates(address, callback){
+  var coordinates;
+  geocoder.geocode({address: address}, function (results, status){
+    coordinatesObj = results[0].geometry.location;
+    coordinates = [coordinatesObj.nb, coordinatesObj.ob];
+    callback(coordinates);
+  })
 }
 
 
