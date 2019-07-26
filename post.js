@@ -18,6 +18,3 @@ function mapData() {
   // form.Content.innerHTML = "";
 
 }
-lat long
-
-fruit accessibility phone number email speical instruction source
