@@ -96,7 +96,7 @@ function initMarkers(){
 
   createMarker(37.407166, -122.113427, "Olive", "Public", "n/a", "n/a", "Tree in front of apartments on the right of Del Medio Park.", "www.fallingfruit.com");
   createMarker(37.394243, -122.087748, "Avocado", "Unknown", "n/a", "n/a", "Large tree at the front of a house, unclear if it's on public or private land.", "www.fallingfruit.com");
-  createMarker(37.414607, -122.119804, "Lemon", "Private", "n/a", "n/a", "Small tree that overhangs sidewalk, owners let you pick if knock you ask.", "www.fallingfruit.com");
+  createMarker(37.395110, -122.057683, "Apricot", "Private", "n/a", "n/a", "Huge abandoned orchard of apricots, behind Huawei and MobileIron parking lot.", "www.fallingfruit.com");
 
 }
 
