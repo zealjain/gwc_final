@@ -15,12 +15,13 @@ function fetchJSON(path, callback) {
 function incorrect() {
   document.getElementById("after_submit").style.visibility = "visible";
 }
+var signin = 1;
 function check() {
   fetchJSON('fruitful.json', function(data) {
     var email = document.form.email.value;
     var password = document.form.psw.value;
     for (var i = 0; i <data.length; i++) {
-      if (email == data[i].email && password == data[i].password) {
+      if (email === data[i].email && password === data[i].password) {
         var correct = 1;
         var account_index = i;
       }
