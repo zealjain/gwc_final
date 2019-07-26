@@ -56,6 +56,15 @@ function removeMarker(marker){
   }
 }
 
+function findMarkerByLat(lat){
+  for(var i = 0; i < this.fruitMarkers.length; i++){
+    var currMarker = this.fruitMarkers[i];
+    if(currMarker.position.lat()== lat) {
+      return marker;
+    }
+  }
+}
+
 function initMarkers(){
   createMarker(37.464239, -122.146301, "Orange", "Private", "n/a", "n/a", "Two orange trees with very juicy oranges. Owner doesn't mind if you pick the oranges on the street.", "www.fallingfruit.com");
   createMarker(37.463744, -122.119619, "Wild Radish", "Public", "n/a", "n/a", "Radish along San Francisquito Trail by the creek", "www.inaturalist.org");
