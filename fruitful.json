@@ -1,4 +1,4 @@
-accounts : {
+{ "person" : "",
   "zealjain" : {
     "fname" : "Zeal",
     "lname" : "Jain",
