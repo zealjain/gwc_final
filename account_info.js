@@ -17,49 +17,43 @@ function incorrect() {
 }
 var signin = 0;
 function check() {
-  fetchJSON('fruitful.json', function(fruitful) {
-    for (var i = 0; i <fruitful.accounts.length; i++) {
+  fetchJSON('fruitful.json', function(data) {
+    for (var i = 0; i <data.length; i++) {
       var email = document.form.email.value;
       var password = document.form.psw.value;
-      if (email == fruitful.accounts[i].email && password == fruitful.accounts[i].password) {
+      if (email == data[i].email && password == data[i].password) {
         var correct = 1;
         var account_index = i;
       }
     }
     if (correct == 1) {
-      fruitful.accounts[account_index].status = "in";
+      data[account_index].status = "in";
       window.location.href = "account.html";
     } else {
       document.getElementById("after_submit").style.visibility = "visible";
     }
-  });
-  fetchJSON('loggedin.json',function(loggedin) {
-    person[0] = account_index;
+    data.person[0] = account_index;
   });
 }
 
 
 function signout() {
-  fetchJSON('fruitful.json', function(fruitful) {
-    fetchJSON('loggedin.json', function(loggedin) {
-      var account_index = person[0];
-      fruituful.accounts[account_index].status = 'out';
-      window.location.href = "profile.html";
-    });
+  fetchJSON('fruitful.json', function(data) {
+    var account_index = data.person[0];
+    data[account_index].status = 'out';
+    window.location.href = "profile.html";
   });
 }
 
 window.onload = function init() {
-  fetchJSON("fruitful.json", function(fruitful) {
-    fetchJSON("loggedin.json", function(loggedin) {
-      var account_index = person[0];
-      if (fruitful.accounts[account_index].status == "out") {
-        alert("lol");
-        document.getElementById("lol").innerHTML = "<a href='profile.html'>Sign in</a>";
-      } else {
-        alert("ok");
-        document.getElementById('lol').innerHTML = "<a href='profile.html'><img src='profile.png' alt='Profile Logo' width=40px height=40px ></a>";
-      }
-    });
+  fetchJSON("fruitful.json", function(data) {
+    var account_index = data.person[0];
+    if (data[account_index].status == "out") {
+      alert("lol");
+      document.getElementById("lol").innerHTML = "<a href='profile.html'>Sign in</a>";
+    } else {
+      alert("ok");
+      document.getElementById('lol').innerHTML = "<a href='profile.html'><img src='profile.png' alt='Profile Logo' width=40px height=40px ></a>";
+    }
   });
 }
