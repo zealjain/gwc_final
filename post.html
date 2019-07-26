@@ -5,50 +5,7 @@
     <meta charset="utf-8">
     <title>Fruitful</title>
     <link rel="stylesheet" href="postStyle.css">
-    <script type= "text/javascript">
-    function mapData() {
-      var latitude = document.getElementbyId('addressFruit');
-      var longitude document.getElementbyId('addressFruit');
-      var fruitType = document.getElementbyId('fruitType');
-      var accesibility = document.getElementbyId9('accessibility');
-      var phoneNum =document.getElementbyId('phoneNum');
-      var email = document.getElementbyId('email');
-      var instructions = document.getElementbyId('notes');
-      var source = document.getElementbyId('source');
-  }
-  function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, email, instructions, source) {
-    //add marker
-    var marker = new google.maps.Marker({
-      position: {
-        lat: latitude,
-        lng: longitude,
-      },
-      title: fruitType,
-      map: map
-    });
-
-    fruitMarkers.push(marker);
-
-    //create info window
-    //TODO: add tabs for contact info
-    var tab = "  -  ";
-    var infoWindow = new google.maps.InfoWindow({
-      content: '<h2>' + fruitType + ' </h2>' + '<body>' + 'Instructions: ' + instructions + '<br> Contact:<br>'+ tab + 'Phone number: ' + phoneNum + '<br>'+ tab +  'Email: ' + email +
-        '<br><br><i>Attribution: ' + source + '</i></body>'
-    });
-
-      marker.addListener('click', function() {
-      map.setZoom(15);
-      map.setCenter(marker.getPosition());
-    });
-
-    marker.addListener('click', function() {
-      infoWindow.open(map, marker);
-
-    });
-  }
-
-  </script>
+    <script src = "post.js"> </script>
     <script src = "map.js"> </script>
 
 
@@ -106,14 +63,14 @@
 
         <label for="fruitType" class="labels labelstyle">Fruit Type</label> <p>
         <div class="right">
-          <input type="text" placeholder="Enter Your Fruit Type (eg. apple, banana)" id= "fruitType" required /><br/>
+          <input type="text" placeholder="Enter Your Fruit Type (ex. apple, banana)" id= "fruitType" required /><br/>
         </div>
 
         <p>
 
-        <label for="address" class="labels labelstyle">Address</label> <p>
+        <label for="address" class="labels labelstyle">Location</label> <p>
         <div class="right">
-          <input class="input" type="text" placeholder="Enter fruit pick up address" name="addressEnter" id="addressFruit" required><br/>
+          <input class="input" type="text" placeholder="ex. 111 Example Ave, Portland, Oregon 97201, USA" name="addressEnter" id="addressFruit" required><br/>
         </div>
 
         <p>
@@ -149,7 +106,7 @@
     </form>
           <div class="postcancel">
             <button type="button" onclick="window.location.href='index.html'" class="backbtn">« Back</button>
-            <button type="button" onclick="mapData(), createMarker()" class= "postbtn">Post!</button>
+            <button type="button" onclick="mapData()" class="postbtn">Post!</button>
             <!-- <button type="button" onclick="createMarker()" class="postbtn">Continue.</button> -->
           </div class = "newContainer">
           <h4> Stay Fruity! </h4>
@@ -158,7 +115,7 @@
   </form>
 
 
-  <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script type="text/javascript">
 
   var geocoder = new google.maps.Geocoder();
@@ -172,14 +129,9 @@
       alert(latitude);
     }
   });
-  </script> -->
+  </script>
 </body>
-
-<footer>
-  <p>Created By Dhriti, Julianne, Zeal, Surabhi, and Michelle </p>
-</footer>
-
-</html>
+  </html>
 
 
 <!-- onclick="document.getElementById('id01').style.display='none'" -->
