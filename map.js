@@ -69,15 +69,15 @@ function findMarkerByLat(lat){
 
 function initMarkers(){
   createMarker(37.464239, -122.146301, "Orange", "Private", "n/a", "n/a", "Two orange trees with very juicy oranges. Owner doesn't mind if you pick the oranges on the street.", "www.fallingfruit.com");
-  createMarker(37.463744, -122.119619, "Wild Radish", "Public", "n/a", "n/a", "Radish along San Francisquito Trail by the creek", "www.inaturalist.org");
-  createMarker(37.437770, -122.119931, "Lemon", "Private", "n/a", "n/a", "Small tree in front yard, ripe in April. Ask owner before picking", "www.fallingfruit.com");
+  createMarker(37.463744, -122.119619, "Wild Radish", "Public", "n/a", "n/a", "Radish along San Francisquito Trail by the creek.", "www.inaturalist.org");
+  createMarker(37.437770, -122.119931, "Lemon", "Private", "n/a", "n/a", "Small tree in front yard, ripe in April. Ask owner before picking.", "www.fallingfruit.com");
   createMarker(37.432489, -122.127782, "Strawberry", "Public", "n/a", "n/a", "Easy to access, grows on land between sidewalk near Safeway parking lot.", "www.fallingfruit.com");
   createMarker(37.424561, -122.121957 , "Japanese Permission and Loquat", "Private", "n/a", "n/a", "Permission overhangs fence to public area but loquat is on front yard. Both contain good quality fruit but on private property so ask permission before picking.", "www.fallingfruit.com");
-  createMarker(37.472015, -122.236929, "Apple, Pear, Fig, Mandarin, Cherry, Apricot", "Public", "n/a", "n/a", "Behing McGarvey Baseball field wall, trees are small", "www.fallingfruit.com");
+  createMarker(37.472015, -122.236929, "Apple, Pear, Fig, Mandarin, Cherry, Apricot", "Public", "n/a", "n/a", "Behing McGarvey Baseball field wall, trees are small.", "www.fallingfruit.com");
   createMarker(37.431356, -122.175982, "Rosemary", "Unkown", "n/a", "n/a", "Dozen of large rosemary bushes, part of LKSC Herb Garden. Best around Jan-Dec.", "www.fallingfruit.com");
-  createMarker(37.421207, -122.170120, "Orange", "Public", "n/a", "n/a", "Tree at the front of basketball court", "www.fallingfruit.com");
+  createMarker(37.421207, -122.170120, "Orange", "Public", "n/a", "n/a", "Tree at the front of basketball court.", "www.fallingfruit.com");
   createMarker(37.425297, -122.165412, "Strawberry", "Public", "n/a", "n/a", "Many small bushes ripe from Sept-Jan. Located in Stanford University.", "www.fallingfruit.com");
-  createMarker(37.402117,-122.1568901, "Fennel", "Public", "n/a", "n/a", "Lots of large, green bulbs along the pedestrian/bike path", "www.fallingfruit.com");
+  createMarker(37.402117,-122.1568901, "Fennel", "Public", "n/a", "n/a", "Lots of large, green bulbs along the pedestrian/bike path.", "www.fallingfruit.com");
   createMarker(37.384501, -122.120774, "Mulberry", "Public", "n/a", "n/a", "Tree on corner of the street, lots of fruit.", "www.fallingfruit.com");
   createMarker(37.415349, -122.121246, "Orange", "Private", "n/a", "n/a", "Orange tree in front yard, ask owner before picking.", "www.fallingfruit.com");
   createMarker(37.415349, -122.121246, "Olive", "Public", "n/a", "n/a", "Tree at the front of Robles Park in fair condition. Many more trees further in the park.", "www.fallingfruit.com");
@@ -93,11 +93,12 @@ function initMarkers(){
   createMarker(37.430880, -122.112355, "Lemon", "Private", "n/a", "n/a", "A few trees along sidewalk, some hang to public area. Ripe in April.", "www.fallingfruit.com");
   createMarker(37.414833, -122.121723, "Fig", "Private", "n/a", "n/a", "Many ripe figs around Sept-Oct. In private backyard but tree overhangs to Robles Park.", "www.fallingfruit.com");
   createMarker(37.414607, -122.119804, "Lemon", "Private", "n/a", "n/a", "Small tree that overhangs sidewalk, owners let you pick if knock you ask.", "www.fallingfruit.com");
-
   createMarker(37.407166, -122.113427, "Olive", "Public", "n/a", "n/a", "Tree in front of apartments on the right of Del Medio Park.", "www.fallingfruit.com");
   createMarker(37.394243, -122.087748, "Avocado", "Unknown", "n/a", "n/a", "Large tree at the front of a house, unclear if it's on public or private land.", "www.fallingfruit.com");
-  createMarker(37.395110, -122.057683, "Apricot", "Private", "n/a", "n/a", "Huge abandoned orchard of apricots, behind Huawei and MobileIron parking lot.", "www.fallingfruit.com");
-
+  createMarker(37.395110, -122.057683, "Apricot", "Private", "n/a", "n/a", "Huge abandoned orchard of apricots, behind Huawei and MobileIron parking lot. Lots of fruit from June-July.", "www.fallingfruit.com");
+  createMarker(37.348603, -122.03547, "Macadamia tree", "Private", "n/a", "n/a", "Huge abandoned orchard of apricots, behind Huawei and MobileIron parking lot. Lots of fruit from June-July.", "www.fallingfruit.com");
+  createMarker(37.348581, -122.035824, "Lemon", "Private", "n/a", "n/a", "Tree in private backyard but sometimes fruit falls on ground or overhangs backyard.", "www.fallingfruit.com");
+  createMarker(37.321622, -122.037965, "Black Mulberry", "Private", "n/a", "n/a", "Behind Staples parking lot, fruit overhangs from backyard.", "www.fallingfruit.com");
 }
 
 //Convert user input address into lat, long
