@@ -92,6 +92,11 @@ function initMarkers(){
   createMarker(37.378335, -122.028976, "Avocado", "Public", "n/a", "n/a", "Tree overhangs Caltrain fence to public area", "www.fallingfruit.com");
   createMarker(37.430880, -122.112355, "Lemon", "Private", "n/a", "n/a", "A few trees along sidewalk, some hang to public area. Ripe in April.", "www.fallingfruit.com");
   createMarker(37.414833, -122.121723, "Fig", "Private", "n/a", "n/a", "Many ripe figs around Sept-Oct. In private backyard but tree overhangs to Robles Park.", "www.fallingfruit.com");
+  createMarker(37.414607, -122.119804, "Lemon", "Private", "n/a", "n/a", "Small tree that overhangs sidewalk, owners let you pick if knock you ask.", "www.fallingfruit.com");
+
+  createMarker(37.407166, -122.113427, "Olive", "Public", "n/a", "n/a", "Tree in front of apartments on the right of Del Medio Park.", "www.fallingfruit.com");
+  createMarker(37.394243, -122.087748, "Avocado", "Unknown", "n/a", "n/a", "Large tree at the front of a house, unclear if it's on public or private land.", "www.fallingfruit.com");
+  createMarker(37.414607, -122.119804, "Lemon", "Private", "n/a", "n/a", "Small tree that overhangs sidewalk, owners let you pick if knock you ask.", "www.fallingfruit.com");
 
 }
 
@@ -196,7 +201,7 @@ function findClosestMarker(position) {
     }
     //alert("array length" + fruitMarkers.length + "closest index" + closest);
 
-    alert(fruitMarkers[closest].title);
+    alert("The closest tree to you is " + fruitMarkers[closest].title);
 }
 
 function middle() {
