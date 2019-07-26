@@ -1,6 +1,9 @@
+geocoder = new google.maps.Geocoder();
+
 function sayhi() {
   alert("pickles");
 }
+
 function postBackgroundColor() {
   document.body.style.backgroundColor = "#F5E1BD";
 
