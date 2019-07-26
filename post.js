@@ -13,7 +13,7 @@ function mapData() {
   var phoneNum =document.getElementbyId('phoneNum');
   var email = document.getElementbyId('email');
   var instructions = document.getElementbyId('notes');
-  alert("Okay! All your data has been entered press 'Continue'")
+  // alert("Okay! All your data has been entered press 'Continue'")
   // form.Content.innerHTML = "";
 
 }
