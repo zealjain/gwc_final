@@ -46,7 +46,14 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
     infoWindow.open(map, marker);
 
   });
+}
 
+function removeMarker(marker){
+  var indecOf = this.fruitMarkers.indexOf(marker);
+  if (indexOf !== -1){
+    this.fruitMarkers.splice(indexOf, 1);
+    marker.setMap(null);
+  }
 }
 
 function initMarkers(){
