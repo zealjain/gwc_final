@@ -46,7 +46,23 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
     infoWindow.open(map, marker);
 
   });
+}
 
+function removeMarker(marker){
+  var indecOf = this.fruitMarkers.indexOf(marker);
+  if (indexOf !== -1){
+    this.fruitMarkers.splice(indexOf, 1);
+    marker.setMap(null);
+  }
+}
+
+function findMarkerByLat(lat){
+  for(var i = 0; i < this.fruitMarkers.length; i++){
+    var currMarker = this.fruitMarkers[i];
+    if(currMarker.position.lat()== lat) {
+      return marker;
+    }
+  }
 }
 
 function initMarkers(){
