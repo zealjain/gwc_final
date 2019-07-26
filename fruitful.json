@@ -22,9 +22,11 @@
     "status" : "out",
     "posts" : {
       "1" : {
-      "fruitType" : "Strawberries",
-      "address":"10335 Judy Avenue",
-      "phoneNumber": "(669)333-4380",
-      "notes" : "I have huge strawberries and they're organic too!"
+        "fruitType" : "Strawberries",
+        "address":"10335 Judy Avenue",
+        "phoneNumber": "(669)333-4380",
+        "notes" : "I have huge strawberries and they're organic too!"
+      }
+    }
   }
 }
