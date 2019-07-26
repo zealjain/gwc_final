@@ -2,6 +2,7 @@ var map;
 var markers = [];
 var fruitMarkers = [];
 
+
 function initMap() {
   //first init map
   map = new google.maps.Map(document.getElementById('map'), {
@@ -22,8 +23,9 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
   var marker = new google.maps.Marker({
     position: {
       lat: latitude,
-      lng: longitude
+      lng: longitude,
     },
+    title: fruitType,
     map: map
   });
 
@@ -48,22 +50,22 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
   });
 }
 
-// function removeMarker(marker){
-//   var indecOf = this.fruitMarkers.indexOf(marker);
-//   if (indexOf !== -1){
-//     this.fruitMarkers.splice(indexOf, 1);
-//     marker.setMap(null);
-//   }
-// }
-//
-// function findMarkerByLat(lat){
-//   for(var i = 0; i < this.fruitMarkers.length; i++){
-//     var currMarker = this.fruitMarkers[i];
-//     if(currMarker.position.lat()== lat) {
-//       return marker;
-//     }
-//   }
-// }
+function removeMarker(marker){
+  var indecOf = this.fruitMarkers.indexOf(marker);
+  if (indexOf !== -1){
+    this.fruitMarkers.splice(indexOf, 1);
+    marker.setMap(null);
+  }
+}
+
+function findMarkerByLat(lat){
+  for(var i = 0; i < this.fruitMarkers.length; i++){
+    var currMarker = this.fruitMarkers[i];
+    if(currMarker.position.lat()== lat) {
+      return marker;
+    }
+  }
+}
 
 function initMarkers(){
   createMarker(37.464239, -122.146301, "Orange", "Private", "n/a", "n/a", "Two orange trees with very juicy oranges. Owner doesn't mind if you pick the oranges on the street.", "www.fallingfruit.com");
@@ -88,6 +90,9 @@ function initMarkers(){
   createMarker(37.363528, -122.042417, "Orange", "Private", "n/a", "n/a", "Tree located on private property but overhangs to sidewalk. Ask owner for permission to pick but lots of fruit on ground.", "www.fallingfruit.com");
   createMarker(37.32675000, -122.062954, "Apricot", "Public", "n/a", "n/a", "Multiple trees located in Varian Park, open to public. Good yeild.", "user");
   createMarker(37.378335, -122.028976, "Avocado", "Public", "n/a", "n/a", "Tree overhangs Caltrain fence to public area", "www.fallingfruit.com");
+  createMarker(37.430880, -122.112355, "Lemon", "Private", "n/a", "n/a", "A few trees along sidewalk, some hang to public area. Ripe in April.", "www.fallingfruit.com");
+  createMarker(37.414833, -122.121723, "Fig", "Private", "n/a", "n/a", "Many ripe figs around Sept-Oct. In private backyard but tree overhangs to Robles Park.", "www.fallingfruit.com");
+
 }
 
 //Convert user input address into lat, long
@@ -110,6 +115,7 @@ function initAutocomplete() {
   //var searchBox = new google.maps.places.SearchBox(input3);
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input3);
 
+
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
     searchBox.setBounds(map.getBounds());
@@ -120,7 +126,6 @@ function initAutocomplete() {
   // more details for that place.
   searchBox.addListener('places_changed', function() {
     var places = searchBox.getPlaces();
-
     if (places.length == 0) {
       return;
     }
@@ -132,6 +137,9 @@ function initAutocomplete() {
         console.log("Returned place contains no geometry");
         return;
       }
+
+      displayClosest(place.geometry.location);
+
       var icon = {
         url: place.icon,
         size: new google.maps.Size(180, 180),
@@ -159,7 +167,37 @@ function initAutocomplete() {
   });
 }
 
+function displayClosest(position){
+  findClosestMarker(position);
+  // google.maps.event.addListener(map, 'click', find_closest_marker);
+}
 
+function rad(x) {return x*Math.PI/180;}
+
+function findClosestMarker(position) {
+    var lat = position.lat();
+    var lng = position.lng();
+    var R = 6371; // radius of earth in km
+    var distances = [];
+    var closest = -1;
+    for( i=0;i< fruitMarkers.length; i++ ) {
+        var mlat = fruitMarkers[i].position.lat();
+        var mlng = fruitMarkers[i].position.lng();
+        var dLat  = rad(mlat - lat);
+        var dLong = rad(mlng - lng);
+        var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.cos(rad(lat)) * Math.cos(rad(lat)) * Math.sin(dLong/2) * Math.sin(dLong/2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        var d = R * c;
+        distances[i] = d;
+        if ( closest == -1 || d < distances[closest] ) {
+            closest = i;
+        }
+    }
+    //alert("array length" + fruitMarkers.length + "closest index" + closest);
+
+    alert(fruitMarkers[closest].title);
+}
 
 function middle() {
   var totalLat = 0;
