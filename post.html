@@ -6,14 +6,16 @@
     <title>Fruitful</title>
     <link rel="stylesheet" href="postStyle.css">
     <script src = "post.js"> </script>
+    <script src = "map.js"> </script>
+
 
   </head>
 
 <!-- Nav Bar  -->
 
   <header>
-  <img src="https://afroleft.com/content/images/2015/08/fruitful-logo-iteration3-2.jpg" alt="Fruitful logo" id="header-img">
-  <nav id="navbar">
+    <a href="index.html"><img src="https://afroleft.com/content/images/2015/08/fruitful-logo-iteration3-2.jpg" alt="Fruitful logo" id="header-img"></a>
+    <ul>  <nav id="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="pick.html">Pick</a></li>
@@ -31,28 +33,7 @@
   <body>
 
 
-<!-- --------------------------dhriti trying to figure out user input --------------------------------- -->
-    <script type= "text/javascript" >
-  function writeName(){
-  var welcomeMsg = document.getElementById('welcome');
-  var name = document.getElementById('name');
-  var formContent = document.getElementById('entername');
-
-  welcomeMsg.innerHTML = "Welcome "+name.value+".<br/>";
-  // We append .value to the end of name so that it sets the variable name
-  // to be equal to a property which is the value, not the object.
-
-  formContent.innerHTML = ""; // this removes the form text input box after name has been entered.
-
-  }
-</script>
-<p id="welcome"></p>
-<form id="entername">
- What is your name:<input type="text" id="name"/><br/>
- <input type="button" value="Submit" onclick="writeName();"/>
-</form>
-<!-- ------------------------------------------------------------------------------------------------------- -->
-    <!-- <script type= "text/javascript" >
+<!-- <script type= "text/javascript" >
       postBackgroundColor()
     </script> -->
     <div class="container">
@@ -74,54 +55,69 @@
 
       <div class="container">
 
-<script type = "text/javascrpt"> <
-        function juliannesFunction() {
-          alert(address) }
-</script>
 
         <h2 class="section_title">POST!</h2>
         <hr>
+    <p id = "posting" ></p>
     <form id="postfruit">
-      <div id="form">
+
         <label for="fruitType" class="labels labelstyle">Fruit Type</label> <p>
         <div class="right">
-          <input class="input" type="text" placeholder="Enter Your Fruit Type (eg. apple, banana)" name="fruitType" required>
+          <input type="text" placeholder="Enter Your Fruit Type (eg. apple, banana)" id= "fruitType" required /><br/>
         </div>
+
         <p>
 
         <label for="address" class="labels labelstyle">Address</label> <p>
         <div class="right">
-          <input class="input" type="text" placeholder="Enter fruit pick up address" name="addressEnter" id="addressFruit" required>
+          <input class="input" type="text" placeholder="Enter fruit pick up address" name="addressEnter" id="addressFruit" required><br/>
         </div>
+
         <p>
 
         <label for="phoneNumber" class="labels labelstyle">Enter Phone Number</label> <p>
         <div class="right">
-          <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" required>
+          <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id = "phoneNum" required><br/>
         </div>
-        <p>
 
-        <label for="email" class="labels labelstyle">Email</label> <p>
-        <div class="right">
-          <input class="input" type="text" placeholder="Enter Email" name="email" required>
-        </div>
         <p>
 
         <label for="notes" class="labels labelstyle"> Any addition Notes or Special Instructions?  </label> <p>
         <div class="right">
-          <textarea id="commentsbox" class="input" type="text" placeholder="Notes" name="Notes" not required></textarea>
+          <textarea id="commentsbox" class="input" type="text" placeholder="Notes" name="Notes" id = notes not required></textarea>
         </div>
+
         <p>
+
     </form>
           <div class="postcancel">
             <button type="button" onclick="window.location.href='index.html'" class="backbtn">« Back</button>
             <button type="button" onclick="mapData()" class="postbtn">Post!</button>
+            <!-- <button type="button" onclick="createMarker()" class="postbtn">Continue.</button> -->
           </div class = "newContainer">
           <h4> Stay Fruity! </h4>
         </div>
       </div>
   </form>
-</html>
+
+
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript">
+
+  var geocoder = new google.maps.Geocoder();
+  var address = document.getElementbyId('addressFruit');
+
+  geocoder.geocode( { 'addressFruit': address}, function(results, status) {
+
+    if (status == google.maps.GeocoderStatus.OK) {
+      var latitude = results[0].geometry.location.lat();
+      var longitude = results[0].geometry.location.lng();
+      alert(latitude);
+    }
+  });
+  </script>
+</body>
+  </html>
 
 
 <!-- onclick="document.getElementById('id01').style.display='none'" -->

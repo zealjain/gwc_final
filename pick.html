@@ -9,7 +9,7 @@
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="pick.css">
   <script src="map.js"></script>
-  <title>Fruitful</title>
+  <title>Fruitful Pick Your Fruit</title>
   <style>
     /* Set the size of the div element that contains the map */
     #map {
@@ -22,13 +22,12 @@
 </head>
 
 <body>
-
   <header>
     <nav id="navbar">
-          <img src="https://afroleft.com/content/images/2015/08/fruitful-logo-iteration3-2.jpg" alt="Fruitful logo" id="header-img">
+      <a href="index.html"><img src="https://afroleft.com/content/images/2015/08/fruitful-logo-iteration3-2.jpg" alt="Fruitful logo" id="header-img"></a>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">Pick</a></li>
+        <li><a href="pick.html">Pick</a></li>
         <li><a href="post.html">Post</a></li>
         <li><a href="profile.html">Sign In</a></li>
       </ul>
@@ -36,14 +35,13 @@
   </header>
 
   <div id="Title_page" class="Section_header">
-    <h1 class="Title">Pick</h1>
+    <h1 class="Title">Pick Your Fruit</h1>
   </div>
-
-  <center>
-    <p>
-      Enter your location in the search bar below to find fruit to pick near you
-    </p>
-  </center>
+  <div class="map_text">
+      <p>
+        Enter your location in the search bar below to find fruit to pick near you
+      </p>
+  </div>
 
   <!-- <ul>
       <li><a href="home.html"><img src="favicon.png" style="width:30px;height:35px"></a></li>
@@ -60,10 +58,12 @@
   </style>
   <div id="map"> </div>
   <input id= "pac-input" class="controls" type ="text" placeholder="Search Bar">
+
+
   <script>
     function initMap() {
       var options = {
-        zoom: 8;
+        zoom: 8,
         center: {lat:42.3601, lng:-71.0589}
       }
 
