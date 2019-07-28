@@ -39,13 +39,8 @@ function check() {
 
 
 function signout() {
-  fetchJSON('fruitful.json', function(data) {
-    var account_index = data[0];
-    account_index = parseInt(account_index);
-    data.accounts[account_index].status = 'out';
-    signin = "none";
-    window.location.href = "profile.html";
-  });
+  var signin = "none";
+  window.location.href = "profile.html";
 }
 
 window.onload = function init() {
@@ -54,7 +49,7 @@ window.onload = function init() {
     if (signin === "none") {
       document.getElementById("lol").innerHTML = "<a href='profile.html'>Sign in</a>";
     } else {
-      document.getElementById('lol').innerHTML = "<a href='profile.html'><img src='profile.png' alt='Profile Logo' width=40px height=40px ></a>";
+      document.getElementById('lol').innerHTML = "<a href='account.html'><img src='profile.png' alt='Profile Logo' width=40px height=40px ></a>";
     }
   });
 }
