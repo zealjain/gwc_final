@@ -27,11 +27,13 @@ p2 {
 
 /* Nav Bar */
 #header-img {
-width: 18em;
+width: 12em;
 height: 7em;
 float: left;
 padding: 0em;
+margin-left: 1.1em;
 }
+
 
 header {
   margin: 0em;
