@@ -27,11 +27,13 @@ p2 {
 
 /* Nav Bar */
 #header-img {
-width: 18em;
+width: 12em;
 height: 7em;
 float: left;
 padding: 0em;
+margin-left: 1.1em;
 }
+
 
 header {
   margin: 0em;
@@ -90,7 +92,7 @@ a:hover {
 /* Footer */
 footer {
   margin-top: 3em;
-  background-color: #D6CDE2;
+  background-color: #A1544B;
   text-align: center;
   color: white;
   width: 100%;
