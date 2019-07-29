@@ -84,7 +84,7 @@ function mapData() {
   alert(email);
 
   //special instructions
-  var instructions = document.getElementByName("notes").value;
+  var instructions = document.getElementById("notes").value;
   alert(instructions);
   // var instructions = getSelection();
   // alert(instructions);
