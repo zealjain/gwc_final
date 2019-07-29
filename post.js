@@ -39,11 +39,11 @@ function mapData() {
   alert(latitude + "," + longitude);
   var fruitType = document.getElementById("fruitType").value;
   alert(fruitType);
-  var accesibility = document.getElementById("accessibility").innerHTML;
-  var phoneNum =document.getElementById("phoneNum").innerHTML;
-  var email = document.getElementById("email").innerHTML;
-  var instructions = document.getElementById("notes").innerHTML;
-  var source = document.getElementById("source").innerHTML;
+  var accesibility = document.getElementById("accessibility").value;
+  var phoneNum =document.getElementById("phoneNum").value;
+  var email = document.getElementById("email").value;
+  var instructions = document.getElementById("notes").value;
+  var source = document.getElementById("source").value;
   alert("Okay! All your data has been entered press 'Continue'")
   // form.Content.innerHTML = "";
 }
