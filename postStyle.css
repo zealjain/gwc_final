@@ -14,6 +14,15 @@ html {
   margin-right: 3em;
 }
 
+#header-img {
+width: 12em;
+height: 7em;
+float: left;
+padding: 0em;
+margin-left: 1.1em;
+}
+
+
 .section_title {
   font-family: SignPainter;
 }
@@ -23,13 +32,7 @@ label input {
 }
 
  /* Nav Bar */
- #header-img {
- width: 18em;
- height: 7em;
- float: left;
- padding: 0em;
- }
-
+ 
  /* Title Page */
  #Title_page {
    text-align: center;
