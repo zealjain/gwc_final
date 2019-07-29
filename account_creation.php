@@ -29,37 +29,57 @@
        exit();
      }
      else {
-       $userformdata = array(
-         'uid' => $username,
-         'name' => $name,
-         'lname' => $lname,
-         'address' => $address,
-         'email' => $email,
-         'pwd' => $password
-        );
 
-       //user data file name
-        $userFile = "./userdata.json";
-
-        //load local Json get_included_file
-        $jsonuserdata = file_get_contents($userFile) ;
-
-         //Push newly added user in to array
-        array_push($user_arr_data, $userformdata) ;
-
-
-
-       //Convert updated arrow in to Jason
-       $jsonuserdata = json_encode($userformdata, JSON_PRETTY_PRINT) ;
-
-
-       //Write json data in to userdata.json
-
-       if(file_put_contents($userFile, $jsonuserdata)){
-          header("Location: ../signup.php?signup=success")
-       }else {
-         echo "error daving data" ;
+       $sql = "SELECT uidUsers FROM users WHERE uidUsers=? AND pwdUsers="
+       $stmt = mysqli_stmt_init($conn);
+       if (!mysqli_stmt_prepare($stmt, $sql)) {
+         header("Location: ../signup.php?error=sqlerror");
+         exit();
        }
+       else {
+         mysqli_stmt_bind_param($stmt, "s", $username);
+         mysqli_stmt_execute($stmt);
+         mysqli_stmt_store_result($stmt);
+         $resultCheck = mysqli_stmt_num_rows();
+         if ($resultCheck > 0) {
+           header("Location: ../signup.php?error=usertaken&email=".$email);
+           exit();
+         }
+         else {
+           $sql = "INSERT INTO users () VALUES ()";
+         }
+       }
+       // $userformdata = array(
+       //   'uid' => $username,
+       //   'name' => $name,
+       //   'lname' => $lname,
+       //   'address' => $address,
+       //   'email' => $email,
+       //   'pwd' => $password
+       //  );
+       //
+       // //user data file name
+       //  $userFile = "./userdata.json";
+       //
+       //  //load local Json get_included_file
+       //  $jsonuserdata = file_get_contents($userFile) ;
+       //
+       //   //Push newly added user in to array
+       //  array_push($user_arr_data, $userformdata) ;
+       //
+       //
+       //
+       // //Convert updated arrow in to Jason
+       // $jsonuserdata = json_encode($userformdata, JSON_PRETTY_PRINT) ;
+       //
+       //
+       // //Write json data in to userdata.json
+       //
+       // if(file_put_contents($userFile, $jsonuserdata)){
+       //    header("Location: ../signup.php?signup=success")
+       // }else {
+       //   echo "error daving data" ;
+       // }
      }
      // LEARN HOW TO LOOP THROUGH JSON FILE TO CHECK IF USERNAME IS TAKEN
      // else {
