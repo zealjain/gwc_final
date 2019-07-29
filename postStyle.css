@@ -5,14 +5,6 @@
   src: url(signpainterhousescriptregular.ttf);
 }
 
-footer {
-  margin-top: 3em;
-  background-color: #E0C798;
-  padding: 2.5em;
-  text-align: center;
-  color: white;
-}
-
 html {
   font-family: 'Raleway', sans-serif;
 }
@@ -104,6 +96,10 @@ input[type=text], input[type=notes] {
   background: #f1f1f1;
 }
 
+#form-section {
+  width: 80%;
+  margin: 0 auto;
+}
 
 button {
   padding: 10px 16px;
@@ -134,10 +130,10 @@ h4 {
 
 }
 
-
 div {
   display: block;
 }
+
 .returning {
   float: left;
   width: 50%;
@@ -256,6 +252,15 @@ hr {
   content: "";
   clear: both;
   display: table;
+}
+
+ #footer {
+  margin-top: 3em;
+  background-color: #E0C798;
+  padding: 2.5em;
+  text-align: center;
+  color: white;
+  width: 100%;
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
