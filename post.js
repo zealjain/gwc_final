@@ -37,13 +37,33 @@ function mapData() {
   var latitude = tempPosition.lat();
   var longitude = tempPosition.lng();
   alert(latitude + "," + longitude);
+
+  //fruit
   var fruitType = document.getElementById("fruitType").value;
   alert(fruitType);
+
+  //accessibility
   var accesibility = document.getElementById("accessibility").value;
+  alert(accesibility);
+
+  //phone Number
   var phoneNum =document.getElementById("phoneNum").value;
+  alert(phoneNum);
+
+  //email
   var email = document.getElementById("email").value;
+  alert(email);
+
+  //special instructions
   var instructions = document.getElementById("notes").value;
+  alert(instructions);
+  // var instructions = getSelection();
+  // alert(instructions);
+
+  //name
   var source = document.getElementById("source").value;
+  alert(source);
+  //done
   alert("Okay! All your data has been entered press 'Continue'")
   // form.Content.innerHTML = "";
 }
