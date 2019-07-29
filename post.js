@@ -9,12 +9,8 @@ geocoder = new google.maps.Geocoder();
 //
 // }
 
-<<<<<<< HEAD
-function getCoordinates(address, callback) {
-=======
 //Geocode function
 function getCoordinates(address, callback){
->>>>>>> 59a3a5e7350c99a1792bf40234b48ef1c77d2ace
   var coordinates;
   geocoder.geocode({address: address}, function (results, status){
     coordinatesObj = results[0].geometry.location;
