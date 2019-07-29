@@ -1,14 +1,15 @@
 geocoder = new google.maps.Geocoder();
+//
+// function sayhi() {
+//   alert("pickles");
+// }
 
-function sayhi() {
-  alert("pickles");
-}
+// function postBackgroundColor() {
+//   document.body.style.backgroundColor = "#F5E1BD";
+//
+// }
 
-function postBackgroundColor() {
-  document.body.style.backgroundColor = "#F5E1BD";
-
-}
-
+//Geocode function
 function getCoordinates(address, callback){
   var coordinates;
   geocoder.geocode({address: address}, function (results, status){
@@ -21,7 +22,7 @@ function getCoordinates(address, callback){
 
 
 function mapData() {
-  // var latitude = document.getElementbyId('addressFruit').value;
+  var address = document.getElementbyId('addressFruit').value;
   // var longitude document.getElementbyId('addressFruit').value;
   var fruitType = document.getElementbyId("fruitType").value;
   var accesibility = document.getElementbyId("accessibility").value;
