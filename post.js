@@ -84,8 +84,10 @@ function mapData() {
   alert(email);
 
   //special instructions
-  var instructions = getSelection();
+  var instructions = document.getElementByName("notes").value;
   alert(instructions);
+  // var instructions = getSelection();
+  // alert(instructions);
 
   //name
   var source = document.getElementById("source").value;
