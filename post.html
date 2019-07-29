@@ -10,7 +10,6 @@
   <script type="text/javascript" src="post.js"> </script>
   <script src="map.js"> </script>
 
-
 </head>
 
 <!-- Nav Bar  -->
@@ -28,107 +27,146 @@
     </nav>
 </header>
 
-  <body>
-
-<div id="Title_page" class="Section_header">
-  <h1 class="Title">Post</h1>
-</div>
-
-
 <body>
-  <script>
-  getCoordinates('1045 mission street', function(coordinates){alert(coordinates)})
-  </script>
 
-  <!-- <script type= "text/javascript" >
+  <div id="Title_page" class="Section_header">
+    <h1 class="Title">Post</h1>
+  </div>
+
+
+  <body>
+    <script>
+      //getCoordinates('1045 mission street', function(coordinates){alert(coordinates)})
+    </script>
+
+    <!-- <script type= "text/javascript" >
       postBackgroundColor()
     </script> -->
-  <div class="container">
+    <div class="container">
 
-    <!-- The Modal (contains the Sign Up form) -->
-    </>
+      <!-- The Modal (contains the Sign Up form) -->
+      </>
+      <div class="container">
+
+
+  </body>
+
+
+  <h1 id="header">Do you have some extra Fruit that can make others fruitFULL?</h1>
+
+  <!-- //The Modal (contains the Sign Up form)
+    //<div id="id01" class="modal"> -->
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+  <form class="modal-content" action="/action_page.php">
+
     <div class="container">
 
 
-</body>
+      <h2 class="section_title">POST!</h2>
+      <hr>
+      <p id="posting"></p>
+      <form id="postfruit">
 
-
-<h1 id="header">Do you have some extra Fruit that can make others fruitFULL?</h1>
-
-<!-- //The Modal (contains the Sign Up form)
-    //<div id="id01" class="modal"> -->
-<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
-<form class="modal-content" action="/action_page.php">
-
-  <div class="container">
-
-
-    <h2 class="section_title">POST!</h2>
-    <hr>
-    <p id="posting"></p>
-    <form id="postfruit">
-
-      <label for="fruitType" class="labels labelstyle">Fruit Type</label>
-      <p>
-        <div class="right">
-          <input type="text" placeholder="Enter Your Fruit Type (ex. apple, banana)" id="fruitType" required /><br />
-        </div>
-
+        <label for="fruitType" class="labels labelstyle">Fruit Type</label>
         <p>
+          <div class="right">
+            <input type="text" placeholder="Enter Your Fruit Type (ex. apple, banana)" id="fruitType" required /><br />
+          </div>
 
-          <label for="address" class="labels labelstyle">Location</label>
+          <label for="accessibility" class="labels labelstyle">Accessibility</label>
           <p>
             <div class="right">
-              <input class="input" type="text" placeholder="ex. 111 Example Ave, Portland, Oregon 97201, USA" name="addressEnter" id="addressFruit" required><br />
+              <input class="input" type="text" placeholder="On unknown, private, or public land" name="accesibility" id="source" required><br />
             </div>
 
+          <p>
+
+            <label for="address" class="labels labelstyle">Location</label>
             <p>
+              <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+              <script>
 
-              <label for="phoneNumber" class="labels labelstyle">Enter Phone Number</label>
-              <p>
-                <div class="right">
-                  <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id="phoneNum" required><br />
-                </div>
+                function initAutocomplete() {
 
-                <label for="email" class="labels labelstyle">Enter Email</label>
+                  // Create the search box and link it to the UI element.
+                  var input = document.getElementById('pac-input');
+                  var searchBox = new google.maps.places.SearchBox(input);
+                  // Listen for the event fired when the user selects a prediction and retrieve
+                  // more details for that place.
+                  searchBox.addListener('places_changed', function() {
+                    var places = searchBox.getPlaces();
+
+                    if (places.length == 0) {
+                      return;
+                    }
+
+                    // For each place, get the icon, name and location.
+                    var bounds = new google.maps.LatLngBounds();
+                    places.forEach(function(place) {
+                      if (!place.geometry) {
+                        console.log("Returned place contains no geometry");
+                        return;
+                      }
+                      var position = place.geometry.location
+                      setPosition(position);
+                    });
+                  });
+                }
+
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initAutocomplete" async defer></script>
+
+
+              <!-- <div class="right">
+                <input class="input" type="text" placeholder="ex. 111 Example Ave, Portland, Oregon 97201, USA" name="addressEnter" id="addressFruit" required><br />
+              </div>
+              <p> -->
+                <label for="source" class="labels labelstyle">Your Name</label>
                 <p>
                   <div class="right">
-                    <input class="input" type="text" placeholder="fruitful@gmail.com" name="phoneNumber" id="email" required><br />
+                    <input class="input" type="text" placeholder="First Last" name="username" id="source" required><br />
                   </div>
 
-                  <label for="source" class="labels labelstyle">Enter Your Name</label>
+
+                <label for="phoneNumber" class="labels labelstyle">Phone Number</label>
+                <p>
+                  <div class="right">
+                    <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id="phoneNum" required><br />
+                  </div>
+
+                  <label for="email" class="labels labelstyle">Email</label>
                   <p>
                     <div class="right">
-                      <input class="input" type="text" placeholder="First Last" name="username" id="source" required><br />
+                      <input class="input" type="text" placeholder="fruitful@gmail.com" name="phoneNumber" id="email" required><br />
                     </div>
 
-                    <p>
-
-                      <label for="notes" class="labels labelstyle">Notes/Special Instructions? </label>
                       <p>
-                        <div class="right">
-                          <textarea id="commentsbox" class="input" type="text" placeholder="(ex. ripe season, amount to pick)" name="Notes" id=notes not required></textarea>
-                        </div>
 
-                        <label>
-                          <input type="checkbox" checked="checked" name="remember" id="accessibility" style="margin-bottom:15px"> Public Post
-                        </label>
-
+                        <label for="notes" class="labels labelstyle">Notes/Special Instructions? </label>
                         <p>
+                          <div class="right">
+                            <textarea id="commentsbox" class="input" type="text" placeholder="(ex. ripe season, amount to pick)" name="Notes" id=notes not required></textarea>
+                          </div>
 
-    </form>
-          <div class="postcancel">
-            <button type="button" onclick="window.location.href='index.html'" class="backbtn">« Back</button>
-            <button type="button" onclick= "mapData(), createMarker()" class= "postbtn">Post!</button>
-            <!-- <button type="button" onclick="createMarker()" class="postbtn">Continue.</button> -->
-          </div>
-          <h4> Stay Fruity! </h4>
+                          <!-- <label>
+                            <input type="checkbox" checked="checked" name="remember" id="accessibility" style="margin-bottom:15px"> Public Post
+                          </label> -->
+
+                          <p>
+
+      </form>
+      <div class="postcancel">
+        <button type="button" onclick="window.location.href='index.html'" class="backbtn">« Back</button>
+        <button type="button" onclick="mapData()" class="postbtn">Post!</button>
+        <!-- <button type="button" onclick="createMarker()" class="postbtn">Continue.</button> -->
+      </div>
+      <h4> Stay Fruity! </h4>
     </div>
-  </div>
-</section>
+    </div>
+    </section>
 
-<!-- geocoding -->
-<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <!-- geocoding -->
+    <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script type="text/javascript">
 
   var geocoder = new google.maps.Geocoder();
