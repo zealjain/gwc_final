@@ -4,10 +4,10 @@ function sayhi() {
   alert("pickles");
 }
 
-function postBackgroundColor() {
-  document.body.style.backgroundColor = "#F5E1BD";
-
-}
+// function postBackgroundColor() {
+//   document.body.style.backgroundColor = "#F5E1BD";
+//
+// }
 
 function getCoordinates(address, callback){
   var coordinates;
