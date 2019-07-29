@@ -29,6 +29,35 @@ function getPosition(){
   return position;
 }
 
+function getSelection () {
+          var selection = "";
+
+          var textarea = document.getElementById("notes");
+          if ('selectionStart' in textarea) {
+                  // check whether some text is selected in the textarea
+              if (textarea.selectionStart != textarea.selectionEnd) {
+                  selection = textarea.value.substring  (textarea.selectionStart, textarea.selectionEnd);
+              }
+          }
+          else {  // Internet Explorer before version 9
+                  // create a range from the current selection
+              var textRange = document.selection.createRange ();
+                  // check whether the selection is within the textarea
+              var rangeParent = textRange.parentElement ();
+              if (rangeParent === textarea) {
+                  selection = textRange.text;
+
+              }
+          }
+
+          if (selection == "") {
+              alert ("No text is selected.");
+          }
+          else {
+              return selection;
+          }
+      }
+
 function mapData() {
   alert("map data running")
   //var address = document.getElementbyId('addressFruit').innerHTML;
@@ -40,10 +69,15 @@ function mapData() {
   var fruitType = document.getElementById("fruitType").value;
   alert(fruitType);
   var accesibility = document.getElementById("accessibility").value;
+  alert(accesibility);
   var phoneNum =document.getElementById("phoneNum").value;
+  alert(phoneNum);
   var email = document.getElementById("email").value;
-  var instructions = document.getElementById("notes").value;
+  alert(email);
+  var instructions = getSelection();
+  alert(notes);
   var source = document.getElementById("source").value;
+  alert(source);
   alert("Okay! All your data has been entered press 'Continue'")
   // form.Content.innerHTML = "";
 }
