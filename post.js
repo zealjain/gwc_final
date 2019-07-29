@@ -9,7 +9,7 @@ function sayhi() {
 //
 // }
 
-function getCoordinates(address, callback){
+function getCoordinates(address, callback) {
   var coordinates;
   geocoder.geocode({address: address}, function (results, status){
     coordinatesObj = results[0].geometry.location;
