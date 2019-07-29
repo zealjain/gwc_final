@@ -22,14 +22,14 @@ function getCoordinates(address, callback){
 
 
 function mapData() {
-  var address = document.getElementbyId('addressFruit').value;
+  var address = document.getElementbyId('addressFruit').innerHTML;
   // var longitude document.getElementbyId('addressFruit').value;
-  var fruitType = document.getElementbyId("fruitType").value;
-  var accesibility = document.getElementbyId("accessibility").value;
-  var phoneNum =document.getElementbyId("phoneNum").value;
-  var email = document.getElementbyId("email").value;
-  var instructions = document.getElementbyId("notes").value;
-  var source = document.getElementbyId("source").value;
+  var fruitType = document.getElementbyId("fruitType").innerHTML;
+  var accesibility = document.getElementbyId("accessibility").innerHTML;
+  var phoneNum =document.getElementbyId("phoneNum").innerHTML;
+  var email = document.getElementbyId("email").innerHTML;
+  var instructions = document.getElementbyId("notes").innerHTML;
+  var source = document.getElementbyId("source").innerHTML;
   // alert("Okay! All your data has been entered press 'Continue'")
   // form.Content.innerHTML = "";
 }
