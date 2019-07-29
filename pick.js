@@ -111,6 +111,10 @@ function initMarkers() {
   createMarker(37.352322, -121.899261, "Avocado", "Public", "n/a", "n/a", "Located on the curb", "www.fallingfruit.org");
   createMarker(37.341901, -121.998008, "Lemon", "Private", "n/a", "n/a", "Lots of fruit. Lots of branches. Possibly more than one type.", "www.fallingfruit.org");
   createMarker(37.342957, -121.996141, "Lemon", "Private", "n/a", "n/a", "Small tree on side of the front yard. Fruit hangs to sidewalk.", "www.fallingfruit.org");
+  createMarker(37.396647, -122.005001, "Loquat", "Private", "n/a", "n/a", "2 trees by John W. Christian Greenbelt between Hiddenlake Dr. and Meadowlake Dr.", "www.fallingfruit.org");
+  createMarker(37.352358, -122.020665, "Mandarin", "Private", "n/a", "n/a", "Small mandarin tree hangs over the wall, many juicy fruits.", "www.fallingfruit.org");
+  createMarker(37.333239, -121.956938, "Strawberry", "Public", "n/a", "n/a", "Strawberry tree in Everett Alvarez Jr Park.", "www.fallingfruit.org");
+  createMarker(37.348310, -121.940886, "Orange", "Public", "n/a", "n/a", "Tree is next to Santa Clara university student housing, quite tall but lots of fruit.", "www.fallingfruit.org");
 }
 
 
