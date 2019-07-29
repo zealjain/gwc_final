@@ -115,7 +115,13 @@ function initMarkers() {
   createMarker(37.352358, -122.020665, "Mandarin", "Private", "n/a", "n/a", "Small mandarin tree hangs over the wall, many juicy fruits.", "www.fallingfruit.org");
   createMarker(37.333239, -121.956938, "Strawberry", "Public", "n/a", "n/a", "Strawberry tree in Everett Alvarez Jr Park.", "www.fallingfruit.org");
   createMarker(37.348310, -121.940886, "Orange", "Public", "n/a", "n/a", "Tree is next to Santa Clara university student housing, quite tall but lots of fruit.", "www.fallingfruit.org");
+  createMarker(37.300956, -121.927866, "Orange", "Public", "n/a", "n/a", "Tree is in aparment area facing Southwest Expy.", "www.fallingfruit.org");
+  createMarker(37.300956, -121.927866, "Cherry", "Public", "n/a", "n/a", "4 cherry trees in the island of the road. Quite tall and visible fruit.", "www.fallingfruit.org");
+  createMarker(37.392577, -121.927435, "Cherry", "Public", "n/a", "n/a", "2 cherry trees in the side of the road.", "www.fallingfruit.org");
+  createMarker(37.362971, -121.913699, "Strawberry", "Public", "n/a", "n/a", "Tree on side of the sidewalk, quite tall.", "www.fallingfruit.org");
+
 }
+
 
 
 //Convert user input address into lat, long
