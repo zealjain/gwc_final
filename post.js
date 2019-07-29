@@ -85,11 +85,12 @@ function mapData() {
 
   //special instructions
   var instructions = getSelection();
-  alert(notes);
+  alert(instructions);
 
   //name
   var source = document.getElementById("source").value;
   alert(source);
+  //done
   alert("Okay! All your data has been entered press 'Continue'")
   // form.Content.innerHTML = "";
 }
