@@ -103,7 +103,6 @@ function initMarkers(){
   createMarker(37.359388, -121.911904, "Grapefruit", "Private", "n/a", "n/a", "This source is private. Ask for permission before you pick.", "www.fallingfruit.org");
   createMarker(37.361245, -121.910283, "Apple", "Private", "n/a", "n/a", "Big fruit, green with red streaks", "www.fallingfruit.org");
   createMarker(37.352322, -121.899261, "Avocado", "Public", "n/a", "n/a", "Located on the curb", "www.fallingfruit.org");
-
 }
 
 //Convert user input address into lat, long
