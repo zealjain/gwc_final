@@ -53,6 +53,9 @@ function mapData() {
   //email
   var email = document.getElementById("email").value;
   alert(email);
+  
+  var source = document.getElementById("source").value;
+  alert(source);'
 
   //special instructions
   var instructions = document.getElementById("notes").value;
@@ -61,8 +64,7 @@ function mapData() {
   // alert(instructions);
 
   //name
-  var source = document.getElementById("source").value;
-  alert(source);
+
   //done
   alert("Okay! All your data has been entered press 'Continue'")
   // form.Content.innerHTML = "";
