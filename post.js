@@ -9,6 +9,7 @@ function postBackgroundColor() {
 
 }
 
+//Geocode function
 function getCoordinates(address, callback){
   var coordinates;
   geocoder.geocode({address: address}, function (results, status){
