@@ -32,7 +32,7 @@ label input {
 }
 
  /* Nav Bar */
- 
+
  /* Title Page */
  #Title_page {
    text-align: center;
@@ -265,6 +265,66 @@ hr {
   color: white;
   width: 100%;
 }
+
+
+    #description {
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    #infowindow-content .title {
+      font-weight: bold;
+    }
+
+    #infowindow-content {
+      display: none;
+    }
+
+    #map #infowindow-content {
+      display: inline;
+    }
+
+    .pac-card {
+      margin: 10px 10px 0 0;
+      border-radius: 2px 0 0 2px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      outline: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      background-color: #fff;
+      font-family: Roboto;
+    }
+
+    #pac-container {
+      padding-bottom: 12px;
+      margin-right: 12px;
+    }
+
+    .pac-controls {
+      display: inline-block;
+      padding: 5px 11px;
+    }
+
+    .pac-controls label {
+      font-family: Roboto;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    #pac-input {
+      width: 100%;
+      padding: 12px;
+      margin: 5px 0px 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    #pac-input:focus {
+      border-color: #4d90fe;
+    }
+
 
 /* Change styles for cancel button and signup button on extra small screens */
 /* @media screen and (max-width: 300px) {
