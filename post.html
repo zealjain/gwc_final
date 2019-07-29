@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<link rel="shortcut icon" type="image/png" href="Assets/favicon.png">
 
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <meta charset="utf-8">
-    <title>Fruitful</title>
-    <link rel="stylesheet" href="postStyle.css">
-    <!-- <script type= "text/javascript"> </script> -->
-    <script type="text/javascript" src = "post.js"> </script>
-    <script src = "map.js"> </script>
-  </head>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Fruitful</title>
+  <link rel="stylesheet" href="postStyle.css">
+  <!-- <script type= "text/javascript"> </script> -->
+  <script type="text/javascript" src="post.js"> </script>
+  <script src="map.js"> </script>
+
+
+</head>
 
 <!-- Nav Bar  -->
 
-  <header>
+<header>
+  <a href="index.html"><img src="https://afroleft.com/content/images/2015/08/fruitful-logo-iteration3-2.jpg" alt="Fruitful logo" id="header-img"></a>
+  <ul>
     <nav id="navbar">
-      <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="pick.html">Pick</a></li>
@@ -24,76 +26,95 @@
         <li><a href="profile.html">Sign In</a></li>
       </ul>
     </nav>
-  </header>
+</header>
 
   <body>
 
-  <div id="Title_page" class="Section_header">
-    <h1 class="Title">Post</h1>
-  </div>
+<div id="Title_page" class="Section_header">
+  <h1 class="Title">Post</h1>
+</div>
 
-<section id="form-section">
-  <div id="Form-item">
-   <h1 id="header">Do you have some extra Fruit that can make others fruitFULL?</h1>
 
-    <!-- //The Modal (contains the Sign Up form)
+<body>
+  <script>
+  getCoordinates('1045 mission street', function(coordinates){alert(coordinates)})
+  </script>
+
+  <!-- <script type= "text/javascript" >
+      postBackgroundColor()
+    </script> -->
+  <div class="container">
+
+    <!-- The Modal (contains the Sign Up form) -->
+    </>
+    <div class="container">
+
+
+</body>
+
+
+<h1 id="header">Do you have some extra Fruit that can make others fruitFULL?</h1>
+
+<!-- //The Modal (contains the Sign Up form)
     //<div id="id01" class="modal"> -->
-    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
-    <form class="modal-content" action="/action_page.php">
+<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+<form class="modal-content" action="/action_page.php">
 
-      <div class="container">
+  <div class="container">
 
 
-        <h2 class="section_title">POST!</h2>
-        <hr>
-    <p id ="posting" ></p>
+    <h2 class="section_title">POST!</h2>
+    <hr>
+    <p id="posting"></p>
     <form id="postfruit">
 
-        <label for="fruitType" class="labels labelstyle">Fruit Type</label> <p>
+      <label for="fruitType" class="labels labelstyle">Fruit Type</label>
+      <p>
         <div class="right">
-          <input type="text" placeholder="Enter Your Fruit Type (ex. apple, banana)" id= "fruitType" required /><br/>
+          <input type="text" placeholder="Enter Your Fruit Type (ex. apple, banana)" id="fruitType" required /><br />
         </div>
 
         <p>
 
-        <label for="address" class="labels labelstyle">Location</label> <p>
-        <div class="right">
-          <input class="input" type="text" placeholder="ex. 111 Example Ave, Portland, Oregon 97201, USA" name="addressEnter" id="addressFruit" required><br/>
-        </div>
+          <label for="address" class="labels labelstyle">Location</label>
+          <p>
+            <div class="right">
+              <input class="input" type="text" placeholder="ex. 111 Example Ave, Portland, Oregon 97201, USA" name="addressEnter" id="addressFruit" required><br />
+            </div>
 
-        <p>
+            <p>
 
-        <label for="phoneNumber" class="labels labelstyle">Enter Phone Number</label> <p>
-        <div class="right">
-          <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id = "phoneNum" required><br/>
-        </div>
+              <label for="phoneNumber" class="labels labelstyle">Enter Phone Number</label>
+              <p>
+                <div class="right">
+                  <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id="phoneNum" required><br />
+                </div>
 
-        <label for="email" class="labels labelstyle">Enter Email</label> <p>
-        <div class="right">
-          <input class="input" type="text" placeholder="fruitful@gmail.com" name="phoneNumber" id = "email" required><br/>
-        </div>
+                <label for="email" class="labels labelstyle">Enter Email</label>
+                <p>
+                  <div class="right">
+                    <input class="input" type="text" placeholder="fruitful@gmail.com" name="phoneNumber" id="email" required><br />
+                  </div>
 
-        <label for="source" class="labels labelstyle">Enter Your Name</label> <p>
-        <div class="right">
-          <input class="input" type="text" placeholder="First Last" name="username" id = "source" required><br/>
-        </div>
+                  <label for="source" class="labels labelstyle">Enter Your Name</label>
+                  <p>
+                    <div class="right">
+                      <input class="input" type="text" placeholder="First Last" name="username" id="source" required><br />
+                    </div>
 
-        <p>
+                    <p>
 
-        <label for="accessibility" id = "accessiblity" class="access settings">Accessibility ( Private property/Public Property/ Apartments...etc.) </label> <p>
+                      <label for="notes" class="labels labelstyle">Notes/Special Instructions? </label>
+                      <p>
+                        <div class="right">
+                          <textarea id="commentsbox" class="input" type="text" placeholder="(ex. ripe season, amount to pick)" name="Notes" id=notes not required></textarea>
+                        </div>
 
-        <div class="right">
-          <textarea id="commentsbox" class="input" type="text" placeholder="(ex. ripe season, amount to pick)" name="Notes" id = notes not required></textarea>
-        </div>
+                        <label>
+                          <input type="checkbox" checked="checked" name="remember" id="accessibility" style="margin-bottom:15px"> Public Post
+                        </label>
 
-        <p>
-
-        <label for="notes" class="labels labelstyle">Notes/Special Instructions? </label> <p>
-        <div class="right">
-          <textarea id="commentsbox" class="input" type="text" placeholder="(ex. ripe season, amount to pick)" name="Notes" id = notes not required></textarea>
-        </div>
-
-        <p>
+                        <p>
 
     </form>
           <div class="postcancel">
@@ -107,7 +128,7 @@
 </section>
 
 <!-- geocoding -->
-  <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script type="text/javascript">
 
   var geocoder = new google.maps.Geocoder();
