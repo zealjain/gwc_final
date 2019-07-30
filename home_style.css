@@ -7,6 +7,10 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 h1 {
   text-align: center;
 }
@@ -31,7 +35,7 @@ header {
   margin: 0em;
   /* position: fixed; */
   padding: 0.2em;
-  width: 100%
+  width: 100%;
 }
 
 header::after {
