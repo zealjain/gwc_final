@@ -177,14 +177,22 @@ h1 {
   justify-content: space-evenly;
 }
 
-.neutral_box {
+.dhritiBox {
   background-color: #E0C798;
 }
 
-.orange_box {
+.michelleBox {
   background-color: #A1544B;
 }
 
-.green_box {
+.zealBox{
+  background-color: #868C4C;
+}
+
+.julianneBox{
+  background-color: #868C4C;
+}
+
+.surabhiBox{
   background-color: #868C4C;
 }
