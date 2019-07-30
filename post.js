@@ -23,6 +23,8 @@ function mapData() {
   var accesibility = document.getElementById("accessibility").value;
   alert(accesibility);
 
+  // contact information 
+
   //phone Number
   var phoneNum = document.getElementById("phoneNum").value;
   alert(phoneNum);
