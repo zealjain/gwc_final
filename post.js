@@ -21,11 +21,11 @@ var postiton;
 //   })
 // }
 
-function setPosition(newPosition){
+function setPosition(newPosition) {
   this.position = newPosition;
 }
 
-function getPosition(){
+function getPosition() {
   return position;
 }
 
@@ -47,23 +47,22 @@ function mapData() {
   alert(accesibility);
 
   //phone Number
-  var phoneNum =document.getElementById("phoneNum").value;
+  var phoneNum = document.getElementById("phoneNum").value;
   alert(phoneNum);
 
   //email
   var email = document.getElementById("email").value;
   alert(email);
-  
-  var source = document.getElementById("source").value;
-  alert(source);'
 
-  //special instructions
   var instructions = document.getElementById("notes").value;
   alert(instructions);
-  // var instructions = getSelection();
-  // alert(instructions);
 
-  //name
+  var source = document.getElementById("source").value;
+  alert(source);
+
+  //special instructions
+
+
 
   //done
   alert("Okay! All your data has been entered press 'Continue'")

@@ -56,7 +56,7 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
 }
 
 function removeMarker(marker) {
-  var indecOf = this.fruitMarkers.indexOf(marker);
+  var indexOf = this.fruitMarkers.indexOf(marker);
   if (indexOf !== -1) {
     this.fruitMarkers.splice(indexOf, 1);
     marker.setMap(null);
@@ -119,9 +119,11 @@ function initMarkers() {
   createMarker(37.300956, -121.927866, "Cherry", "Public", "n/a", "n/a", "4 cherry trees in the island of the road. Quite tall and visible fruit.", "www.fallingfruit.org");
   createMarker(37.392577, -121.927435, "Cherry", "Public", "n/a", "n/a", "2 cherry trees in the side of the road.", "www.fallingfruit.org");
   createMarker(37.362971, -121.913699, "Strawberry", "Public", "n/a", "n/a", "Tree on side of the sidewalk, quite tall.", "www.fallingfruit.org");
+  createMarker(37.359172, -121.909804, "Prickly Pear", "Public", "n/a", "n/a", "Cactus on the ground next to sidewalk", "www.fallingfruit.org");
+  createMarker(37.349203, -121.880986, "Mulberry", "Private", "n/a", "n/a", "Owner is happy to share if you ask. Easy to pick and very sweet. Ripe from April-June.", "www.fallingfruit.org");
+  createMarker(37.350448, -121.869709, "Loquat", "Public", "n/a", "n/a", "3 trees by sidewalk, owner is happy to share. Very good fruit from May-June.", "www.nextdoor.com");
 
 }
-
 
 
 //Convert user input address into lat, long

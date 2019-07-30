@@ -60,66 +60,62 @@
               <input class="input" type="text" placeholder="On unknown, private, or public land" name="accessibility" id="accessibility" required><br />
             </div>
 
-          <p>
-
-            <label for="address" class="labels labelstyle">Location</label>
             <p>
-              <input id="pac-input" class="controls" type="text" placeholder="Enter location">
-              <script>
 
-                function initAutocomplete() {
+              <label for="address" class="labels labelstyle">Location</label>
+              <p>
+                <input id="pac-input" class="controls" type="text" placeholder="Enter address closest to the tree">
+                <script>
+                  function initAutocomplete() {
+                    // Create the search box and link it to the UI element.
+                    var input = document.getElementById('pac-input');
+                    var searchBox = new google.maps.places.SearchBox(input);
+                    // Listen for the event fired when the user selects a prediction and retrieve
+                    // more details for that place.
+                    searchBox.addListener('places_changed', function() {
+                      var places = searchBox.getPlaces();
 
-                  // Create the search box and link it to the UI element.
-                  var input = document.getElementById('pac-input');
-                  var searchBox = new google.maps.places.SearchBox(input);
-                  // Listen for the event fired when the user selects a prediction and retrieve
-                  // more details for that place.
-                  searchBox.addListener('places_changed', function() {
-                    var places = searchBox.getPlaces();
-
-                    if (places.length == 0) {
-                      return;
-                    }
-
-                    // For each place, get the icon, name and location.
-                    var bounds = new google.maps.LatLngBounds();
-                    places.forEach(function(place) {
-                      if (!place.geometry) {
-                        console.log("Returned place contains no geometry");
+                      if (places.length == 0) {
                         return;
                       }
-                      var position = place.geometry.location
-                      setPosition(position);
+                      // For each place, get the icon, name and location.
+                      var bounds = new google.maps.LatLngBounds();
+                      places.forEach(function(place) {
+                        if (!place.geometry) {
+                          console.log("Returned place contains no geometry");
+                          return;
+                        }
+                        var position = place.geometry.location
+                        setPosition(position);
+                      });
                     });
-                  });
-                }
-
-              </script>
-              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initAutocomplete" async defer></script>
+                  }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initAutocomplete" async defer></script>
 
 
-              <!-- <div class="right">
+                <!-- <div class="right">
                 <input class="input" type="text" placeholder="ex. 111 Example Ave, Portland, Oregon 97201, USA" name="addressEnter" id="addressFruit" required><br />
               </div>
               <p> -->
                 <label for="source" class="labels labelstyle">Your Name</label>
                 <p>
                   <div class="right">
-                    <input class="input" type="text" placeholder="First Last" name="username" id="source" required><br/>
+                    <input class="input" type="text" placeholder="First Last" name="username" id="source" required><br />
                   </div>
 
 
-                <label for="phoneNumber" class="labels labelstyle">Phone Number</label>
-                <p>
-                  <div class="right">
-                    <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id="phoneNum" required><br />
-                  </div>
-
-                  <label for="email" class="labels labelstyle">Email</label>
+                  <label for="phoneNumber" class="labels labelstyle">Phone Number</label>
                   <p>
                     <div class="right">
-                      <input class="input" type="text" placeholder="fruitful@gmail.com" name="phoneNumber" id="email" required><br />
+                      <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id="phoneNum" required><br />
                     </div>
+
+                    <label for="email" class="labels labelstyle">Email</label>
+                    <p>
+                      <div class="right">
+                        <input class="input" type="text" placeholder="fruitful@gmail.com" name="phoneNumber" id="email" required><br />
+                      </div>
 
                       <p>
 
