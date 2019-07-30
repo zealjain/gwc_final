@@ -49,6 +49,6 @@ function mapData() {
 }
 
 function getConfirmation() {
-  var response = confirm("By pressing OK you are agreeing to our Terms and Conditions");
+  var response = confirm("Your info has been entered. By pressing OK you are agreeing to our Terms and Conditions");
   return response;
 }
