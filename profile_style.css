@@ -68,8 +68,8 @@ a:hover {
   margin: 0em;
 }
 
-#Title {
-  font-size: 4em;
+.Title {
+  font-size: 8em;
   font-family: SignPainter;
   margin: 0em;
   text-align: center;
