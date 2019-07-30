@@ -10,7 +10,7 @@ html {
 h1 {
   font-size: 200%;
   font-family: SignPainter;
-  color: #A1544B;
+  /* color: #A1544B; */
 }
 
 h2 {
@@ -50,12 +50,12 @@ header::after {
   display: table;
 }
 
-nav ul{
+.nav-ul {
   list-style: none;
   float: right;
   margin-right: 2em;
 }
-nav li{
+.nav-li{
   display: inline;
   margin: 1em;
   padding: 0.5em;
@@ -74,6 +74,22 @@ a:hover {
   font-weight: bold;
 }
 
+/* sidebar */
+#sidebar {
+  position: absolute;
+  margin-top: 2.5em;
+}
+
+.side-ul {
+  list-style: none;
+  margin-right: 2em;
+}
+.side-li{
+  margin: 1em;
+  padding: 0.5em;
+}
+
+
 /* Title Page */
 
 #Title {
@@ -91,13 +107,13 @@ a:hover {
 }
 
 #profile-photo-div {
-  width: 11em;
-  height: 11em;
+  width: 12em;
+  height: 12em;
 }
 
 #photo {
-  width: 11em;
-  height: 11em;
+  width: 12em;
+  height: 12em;
 }
 
 .profile-item {
@@ -110,19 +126,21 @@ a:hover {
 
 .more-info {
   width: 30em;
-  height: 9em;
+  height: 12em;
 }
 
 /* Your Posts */
 .post {
   border-style: solid;
   border-width: 1px;
+  border-color: gray;
   width: 50%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
   margin: 0 auto;
+  margin-top: 1em;
 }
 
 .map-icon {
@@ -146,7 +164,7 @@ a:hover {
 
 footer {
   margin-top: 3em;
-  background-color: #E0C798;
+  background-color: #A1544B;
   padding: 2.5em;
   text-align: center;
   color: white;
