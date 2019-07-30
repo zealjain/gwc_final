@@ -42,7 +42,7 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
     map.setZoom(15);
     map.setCenter(marker.getPosition());
   });
-//on click opens info window
+  //on click opens info window
   marker.addListener('click', function() {
     infoWindow.open(map, marker);
 
@@ -118,7 +118,7 @@ function initMarkers() {
   createMarker(37.359172, -121.909804, "Prickly Pear", "Public", "n/a", "n/a", "Cactus on the ground next to sidewalk", "www.fallingfruit.org");
   createMarker(37.349203, -121.880986, "Mulberry", "Private", "n/a", "n/a", "Owner is happy to share if you ask. Easy to pick and very sweet. Ripe from April-June.", "www.fallingfruit.org");
   createMarker(37.350448, -121.869709, "Loquat", "Public", "n/a", "n/a", "3 trees by sidewalk, owner is happy to share. Very good fruit from May-June.", "www.nextdoor.com");
-  createMarker(37.855270, -122.285739, "Sugar Maple", "Public", "n/a", "n/a" )
+  createMarker(37.855270, -122.285739, "Sugar Maple", "Public", "n/a", "n/a")
 }
 
 
@@ -185,7 +185,7 @@ function initAutocomplete() {
 
       var icon = {
         url: 'Assets/home_marker.png',
-      //size: new google.maps.Size(180, 180),
+        //size: new google.maps.Size(180, 180),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(50, 50)
@@ -283,8 +283,4 @@ function middle() {
 
   // ADDED THE FOLLOWING
   return middleMarker.position;
-}
-
-function clearPage() {
-  window.location.reload();
 }

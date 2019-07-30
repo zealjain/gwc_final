@@ -28,6 +28,6 @@ function mapData() {
 }
 
 function getConfirmation() {
-  var response = confirm("Your info has been entered. By pressing OK you are agreeing to our Terms and Conditions");
+  var response = confirm("Your posting is getting approved by admin. By completing the post you are agreeing to our terms and conditions.");
   return response;
 }
