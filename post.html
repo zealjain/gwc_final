@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="postStyle.css">
   <!-- <script type= "text/javascript"> </script> -->
   <script type="text/javascript" src="post.js"> </script>
-  <script src="map.js"> </script>
+  <script src="pick.js"> </script>
 
 </head>
 
@@ -48,23 +48,22 @@
       <p id="posting"></p>
       <form id="postfruit">
 
-        <label for="fruitType" class="labels labelstyle">Fruit Type</label>
+        <label for="fruitType" class="labels labelstyle">Fruit Type*</label>
         <p>
           <div class="right">
-            <input type="text" placeholder="Enter Your Fruit Type (ex. apple, banana)" id="fruitType" required /><br />
+            <input type="text" placeholder="(ex. apple, banana)" id="fruitType" required /><br />
           </div>
 
-          <label for="accessibility" class="labels labelstyle">Accessibility</label>
+          <label for="accessibility" class="labels labelstyle">Accessibility*</label>
           <p>
             <div class="right">
-              <input class="input" type="text" placeholder="On unknown, private, or public land" name="accessibility" id="accessibility" required><br />
+              <input class="input" type="text" placeholder="(On unknown, private, or public land)" name="accessibility" id="accessibility" required><br />
             </div>
-
             <p>
 
-              <label for="address" class="labels labelstyle">Location</label>
+              <label for="address" class="labels labelstyle">Location*</label>
               <p>
-                <input id="pac-input" class="controls" type="text" placeholder="Enter address closest to the tree">
+                <input id="pac-input" class="controls" type="text" placeholder="(Address closest to the tree)">
                 <script>
                   function initAutocomplete() {
                     // Create the search box and link it to the UI element.
@@ -93,25 +92,20 @@
                 </script>
                 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initAutocomplete" async defer></script>
 
-
-                <!-- <div class="right">
-                <input class="input" type="text" placeholder="ex. 111 Example Ave, Portland, Oregon 97201, USA" name="addressEnter" id="addressFruit" required><br />
-              </div>
-              <p> -->
-                <label for="source" class="labels labelstyle">Your Name</label>
+                <label for="source" class="labels labelstyle">Name*</label>
                 <p>
                   <div class="right">
-                    <input class="input" type="text" placeholder="First Last" name="username" id="source" required><br />
+                    <input class="input" type="text" placeholder="(First Last)" name="username" id="source" required><br />
                   </div>
 
 
                   <label for="phoneNumber" class="labels labelstyle">Phone Number</label>
                   <p>
                     <div class="right">
-                      <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id="phoneNum" required><br />
+                      <input class="input" type="text" placeholder="(---) --- - ----" name="phoneNumber" id="phoneNum"><br />
                     </div>
 
-                    <label for="email" class="labels labelstyle">Email</label>
+                    <label for="email" class="labels labelstyle">Email*</label>
                     <p>
                       <div class="right">
                         <input class="input" type="text" placeholder="fruitful@gmail.com" name="phoneNumber" id="email" required><br />
@@ -119,10 +113,10 @@
 
                       <p>
 
-                        <label for="notes" class="labels labelstyle">Notes/Special Instructions? </label>
+                        <label for="notes" class="labels labelstyle">Notes/Special Instructions* </label>
                         <p>
                           <div class="right">
-                            <textarea id="notes" type="text" placeholder="(ex. ripe season, amount to pick)" required></textarea>
+                            <textarea id="notes" type="text" placeholder="(ripe season, amount to pick, etc)" required></textarea>
                           </div>
 
                           <!-- <label>

@@ -60,11 +60,11 @@ function mapData() {
   var source = document.getElementById("source").value;
   alert(source);
 
-  //special instructions
+  getConfirmation();
 
+}
 
-
-  //done
-  alert("Okay! All your data has been entered press 'Continue'")
-  // form.Content.innerHTML = "";
+function getConfirmation() {
+  var response = confirm("Is all data correct? Press OK to Continue");
+  return response;
 }
