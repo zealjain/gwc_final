@@ -94,6 +94,8 @@ a:hover {
 
 h1 {
   text-align: center;
+  font-family: SignPainter;
+  font-size: 400%;
 }
 
 .Header_title {
