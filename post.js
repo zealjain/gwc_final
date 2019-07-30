@@ -53,15 +53,16 @@ function mapData() {
   //email
   var email = document.getElementById("email").value;
   alert(email);
-  
+
+  var instructions = document.getElementById("notes").value;
+  alert(instructions);
+
   var source = document.getElementById("source").value;
   alert(source);'
 
   //special instructions
-  var instructions = document.getElementById("notes").value;
-  alert(instructions);
-  // var instructions = getSelection();
-  // alert(instructions);
+
+
 
   //name
 
