@@ -1,15 +1,9 @@
 var map;
 var markers = [];
 var fruitMarkers = [];
-var geocoder;
-
-function saybye() {
-  alert("chicken");
-}
 
 function initMap() {
   //first init map
-  geocoder = new google.maps.Geocoder();
   map = new google.maps.Map(document.getElementById('map'), {
     center: {
       lat: 37.326431,
@@ -33,27 +27,29 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
     map: map
   });
 
+  //add marker to list
   fruitMarkers.push(marker);
 
-  //create info window
-  //TODO: add tabs for contact info
+  //create info window for marker
   var tab = "  -  ";
   var infoWindow = new google.maps.InfoWindow({
     content: '<h2>' + fruitType + ' </h2>' + '<body>' + '<b>Accessibility:</b> ' + accessibility + '<br><b>Instructions: </b>' + instructions + '<br> <b>Contact:<br></b>' + tab + 'Phone number: ' + phoneNum + '<br>' + tab + 'Email: ' + email +
       '<br><br><i>Attribution: ' + source + '</i></body>'
   });
 
+  //on click zoom in
   marker.addListener('click', function() {
     map.setZoom(15);
     map.setCenter(marker.getPosition());
   });
-
+//on click opens info window
   marker.addListener('click', function() {
     infoWindow.open(map, marker);
 
   });
 }
 
+//removes marker from array
 function removeMarker(marker) {
   var indexOf = this.fruitMarkers.indexOf(marker);
   if (indexOf !== -1) {
@@ -62,6 +58,7 @@ function removeMarker(marker) {
   }
 }
 
+//find marker in array given float lat
 function findMarkerByLat(lat) {
   for (var i = 0; i < this.fruitMarkers.length; i++) {
     var currMarker = this.fruitMarkers[i];
@@ -71,6 +68,7 @@ function findMarkerByLat(lat) {
   }
 }
 
+//initial data points
 function initMarkers() {
   createMarker(37.464239, -122.146301, "Orange", "Private", "n/a", "n/a", "Two orange trees with very juicy oranges. Owner doesn't mind if you pick the oranges on the street.", "www.fallingfruit.org");
   createMarker(37.463744, -122.119619, "Wild Radish", "Public", "n/a", "n/a", "Radish along San Francisquito Trail by the creek.", "www.inaturalist.org");
@@ -125,24 +123,25 @@ function initMarkers() {
 
 
 //Convert user input address into lat, long
-function geocode(address) {
-  alert("geocode running");
-  geocoder.geocode({
-    address: address
-  }, function(results, status) {
-    if (status == google.maps.GeocoderStatus.OK) {
-      var position = results[0].geometry.location;
-      map.setCenter(results[0].geometry.location); //center the map over the result
-      //place a marker at the location
-      var marker = new google.maps.Marker({
-        map: map,
-        position: results[0].geometry.location
-      });
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
-  });
-}
+
+// function geocode(address) {
+//   alert("geocode running");
+//   geocoder.geocode({
+//     address: address
+//   }, function(results, status) {
+//     if (status == google.maps.GeocoderStatus.OK) {
+//       var position = results[0].geometry.location;
+//       map.setCenter(results[0].geometry.location); //center the map over the result
+//       //place a marker at the location
+//       var marker = new google.maps.Marker({
+//         map: map,
+//         position: results[0].geometry.location
+//       });
+//     } else {
+//       alert('Geocode was not successful for the following reason: ' + status);
+//     }
+//   });
+// }
 
 function initAutocomplete() {
 
@@ -241,7 +240,6 @@ function findClosestMarker(position) {
     }
   }
   //alert("array length" + fruitMarkers.length + "closest index" + closest);
-
   alert("The closest tree to you is " + fruitMarkers[closest].title);
 }
 

@@ -108,8 +108,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* align-items: center; */
-  /* background-color: blue; */
+  align-items: center;
+  background-color: blue;
 }
 
 #About {
@@ -135,7 +135,7 @@ h1 {
   font-size: 1.5em;
   padding-left: 2em;
   padding-right: 2em;
-  /* background-color: purple; */
+  background-color: purple;
 }
 
 /* How To  */
@@ -183,15 +183,26 @@ h1 {
 }
 
 .dhritiBox {
-  background-color: #E0C798;
-}
+  background-color: #868C4C;
+  float: left;
+  }
 
 .michelleBox {
-  background-color: #A1544B;
+  background-color: #868C4C;
+  float: left;
+
+
 }
+
+/* cream color: #E0C798
+red color: #A1544B
+green color:#868C4C */
+
 
 .zealBox{
   background-color: #868C4C;
+  float: left;
+
 }
 
 .julianneBox{
