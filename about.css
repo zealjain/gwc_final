@@ -140,6 +140,18 @@ h1 {
 
 /* How To  */
 
+#About_Title {
+  margin-bottom: 1.1em;
+}
+
+.AboutUsBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
+
 .Circle {
   background-color: white ;
   text-align: center;
@@ -161,20 +173,13 @@ h1 {
 
 .box_item {
   text-align: center;
-  width: 22em;
-  height: 23em;
+  width: 25em;
+  height: 26em;
   margin: 0.5em;
 }
 
 .aboutUsText {
   padding: 2em;
-}
-
-.AboutUsBoxes {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-  justify-content: space-evenly;
 }
 
 .dhritiBox {
@@ -190,9 +195,18 @@ h1 {
 }
 
 .julianneBox{
-  background-color: #868C4C;
+  background-color: #E0C798;
 }
 
 .surabhiBox{
-  background-color: #868C4C;
+  background-color: #A1544B;
+}
+
+footer {
+  margin-top: 3em;
+  background-color: #E0C798;
+  padding: 2.5em;
+  text-align: center;
+  color: white;
+  width: 100%;
 }
