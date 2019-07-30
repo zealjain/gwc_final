@@ -1,26 +1,5 @@
 var postiton;
 
-//geocoder = new google.maps.Geocoder();
-//
-// function sayhi() {
-//   alert("pickles");
-// }
-
-// function postBackgroundColor() {
-//   document.body.style.backgroundColor = "#F5E1BD";
-//
-// }
-
-//Geocode function
-// function getCoordinates(address, callback){
-//   var coordinates;
-//   geocoder.geocode({address: address}, function (results, status){
-//     coordinatesObj = results[0].geometry.location;
-//     coordinates = [coordinatesObj.nb, coordinatesObj.ob];
-//     callback(coordinates);
-//   })
-// }
-
 function setPosition(newPosition) {
   this.position = newPosition;
 }
@@ -31,8 +10,6 @@ function getPosition() {
 
 function mapData() {
   alert("map data running")
-  //var address = document.getElementbyId('addressFruit').innerHTML;
-  // var longitude document.getElementbyId('addressFruit').value;
   var tempPosition = getPosition();
   var latitude = tempPosition.lat();
   var longitude = tempPosition.lng();
@@ -54,9 +31,11 @@ function mapData() {
   var email = document.getElementById("email").value;
   alert(email);
 
+  //notes section
   var instructions = document.getElementById("notes").value;
   alert(instructions);
 
+  //name or username
   var source = document.getElementById("source").value;
   alert(source);
 
