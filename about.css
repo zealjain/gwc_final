@@ -1,0 +1,88 @@
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.Header_title {
+  margin-top: 2em;
+  font-family: SignPainter;
+  font-size: 3.5em;
+}
+
+/* Nav Bar */
+
+#header-img {
+width: 12em;
+height: 7em;
+float: left;
+padding: 0em;
+margin-left: 1.1em;
+}
+
+header {
+  margin: 0em;
+  /* position: fixed; */
+  padding: 0.2em;
+  width: 100%
+}
+
+header::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+nav ul{
+  list-style: none;
+  float: right;
+  margin-right: 2em;
+}
+nav li{
+  display: inline;
+  margin: 1em;
+  padding: 0.5em;
+  display: inline-block;
+}
+
+a {
+  color: inherit;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+/* Title Page */
+
+#Title_page {
+  text-align: center;
+  background-color: #ffffff;
+  background-image: url(https://images.unsplash.com/photo-1518171802599-4cd16785f93a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1697&q=80);
+  background-size: cover;
+  padding: 2em;
+  margin:0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  justify-content: center;
+}
+
+.Title {
+  font-size: 10em;
+  font-family: SignPainter;
+  margin: 0em;
+}
+
+#Title_back {
+  background-color: white;
+  padding: 3em;
+  border-radius: 5px;
+}
