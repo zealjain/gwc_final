@@ -109,7 +109,6 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  background-color: blue;
 }
 
 #About {
@@ -135,10 +134,21 @@ h1 {
   font-size: 1.5em;
   padding-left: 2em;
   padding-right: 2em;
-  background-color: purple;
 }
 
 /* How To  */
+
+#About_Title {
+  margin-bottom: 1.1em;
+}
+
+.AboutUsBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
 
 .Circle {
   background-color: white ;
@@ -161,20 +171,13 @@ h1 {
 
 .box_item {
   text-align: center;
-  width: 22em;
-  height: 23em;
+  width: 25em;
+  height: 26em;
   margin: 0.5em;
 }
 
 .aboutUsText {
   padding: 2em;
-}
-
-.AboutUsBoxes {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-  justify-content: space-evenly;
 }
 
 .dhritiBox {
@@ -201,79 +204,18 @@ green color:#868C4C */
 }
 
 .julianneBox{
-  background-color: #868C4C;
-  float: left;
-
+  background-color: #E0C798;
 }
 
 .surabhiBox{
-  background-color: #868C4C;
-  float: left;
-
+  background-color: #A1544B;
 }
 
-
-
-
-
-
-
-
-
-
-@media (max-width: 1400px) {
-  #About_text {
-    font-size: 1.4em;
-    width: 50em;
-    height: 18em;
-  }
-  #About_image {
-    display: none;
-  }
-}
-
-@media (max-width: 1100px) {
-  .Title {
-    font-size: 5em;
-    text-align: center;
-  }
-  #About_image {
-    display: none;
-  }
-  #About_text {
-    font-size: 1.25em;
-    width: 50em;
-    height: 18em;
-  }
-}
-
-
-@media (max-width: 800px) {
-  #About_text {
-    font-size: 1em;
-  }
-  #Title_page {
-    padding: 0.5em;
-  }
-  #header-img {
-  width: 12em;
-  height: 6.5em;
-  float: left;
-  padding: 0em;
-  margin: 0px;
-  }
-}
-
-@media (max-width: 700px) {
-  #About_image {
-    display: none;
-  }
-  #About_text {
-    font-size: 0.9em;
-    width: 50em;
-    height: 18em;
-  }
-  #header-img {
-    float: right;
-  }
+footer {
+  margin-top: 3em;
+  background-color: #E0C798;
+  padding: 2.5em;
+  text-align: center;
+  color: white;
+  width: 100%;
 }
