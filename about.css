@@ -108,8 +108,8 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* align-items: center; */
-  /* background-color: blue; */
+  align-items: center;
+  background-color: blue;
 }
 
 #About {
@@ -135,7 +135,7 @@ h1 {
   font-size: 1.5em;
   padding-left: 2em;
   padding-right: 2em;
-  /* background-color: purple; */
+  background-color: purple;
 }
 
 /* How To  */
@@ -178,12 +178,17 @@ h1 {
 }
 
 .dhritiBox {
-  background-color: #E0C798;
+  background-color: #868C4C;
 }
 
 .michelleBox {
-  background-color: #A1544B;
+  background-color: #868C4C;
 }
+
+/* cream color: #E0C798
+red color: #A1544B
+green color:#868C4C */
+
 
 .zealBox{
   background-color: #868C4C;
@@ -195,4 +200,70 @@ h1 {
 
 .surabhiBox{
   background-color: #868C4C;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1400px) {
+  #About_text {
+    font-size: 1.4em;
+    width: 50em;
+    height: 18em;
+  }
+  #About_image {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .Title {
+    font-size: 5em;
+    text-align: center;
+  }
+  #About_image {
+    display: none;
+  }
+  #About_text {
+    font-size: 1.25em;
+    width: 50em;
+    height: 18em;
+  }
+}
+
+
+@media (max-width: 800px) {
+  #About_text {
+    font-size: 1em;
+  }
+  #Title_page {
+    padding: 0.5em;
+  }
+  #header-img {
+  width: 12em;
+  height: 6.5em;
+  float: left;
+  padding: 0em;
+  margin: 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  #About_image {
+    display: none;
+  }
+  #About_text {
+    font-size: 0.9em;
+    width: 50em;
+    height: 18em;
+  }
+  #header-img {
+    float: right;
+  }
 }
