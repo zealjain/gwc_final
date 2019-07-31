@@ -14,7 +14,7 @@ function initMap() {
   });
 
   initMarkers();
-  //readData();
+  readData();
   initAutocomplete();
 }
 
@@ -82,6 +82,7 @@ function readData(){
 // });
 
 var postsRef = firebase.database().ref('userPosts/');
+alert(postsRef);
 postsRef.on('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
       var childData = childSnapshot.val();
