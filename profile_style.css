@@ -14,10 +14,11 @@ html {
 
 /* Nav Bar */
 #header-img {
-width: 18em;
+width: 12em;
 height: 7em;
 float: left;
 padding: 0em;
+margin-left: 1.1em;
 }
 
 header {
@@ -68,11 +69,35 @@ a:hover {
 }
 
 .Title {
-  font-size: 10em;
+  font-size: 8em;
   font-family: SignPainter;
   margin: 0em;
+  text-align: center;
 }
 
+.intro-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#profile-photo {
+  width: 9em;
+  height: 9em;
+  background-color: yellow;
+}
+
+#photo {
+  width: 9em;
+  height: 9em;
+}
+
+.more-info {
+  width: 30em;
+  height: 9em;
+  background-color: blue;
+}
 
 * {box-sizing: border-box}
 /* Full-width input fields */
@@ -133,6 +158,9 @@ button:hover {
   opacity:1;
 }
 
+.username {
+  font-family: Raleway;
+}
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn{

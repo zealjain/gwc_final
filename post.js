@@ -1,34 +1,33 @@
-geocoder = new google.maps.Geocoder();
+var postiton;
 
-function sayhi() {
-  alert("pickles");
+function setPosition(newPosition) {
+  this.position = newPosition;
 }
 
-function postBackgroundColor() {
-  document.body.style.backgroundColor = "#F5E1BD";
-
+function getPosition() {
+  return position;
 }
-
-function getCoordinates(address, callback){
-  var coordinates;
-  geocoder.geocode({address: address}, function (results, status){
-    coordinatesObj = results[0].geometry.location;
-    coordinates = [coordinatesObj.nb, coordinatesObj.ob];
-    callback(coordinates);
-  })
-}
-
-
 
 function mapData() {
-  // var latitude = document.getElementbyId('addressFruit').value;
-  // var longitude document.getElementbyId('addressFruit').value;
-  var fruitType = document.getElementbyId("fruitType").value;
-  var accesibility = document.getElementbyId("accessibility").value;
-  var phoneNum =document.getElementbyId("phoneNum").value;
-  var email = document.getElementbyId("email").value;
-  var instructions = document.getElementbyId("notes").value;
-  var source = document.getElementbyId("source").value;
-  // alert("Okay! All your data has been entered press 'Continue'")
-  // form.Content.innerHTML = "";
+  var tempPosition = getPosition();
+  var lat = tempPosition.lat();
+  var lng = tempPosition.lng();
+  var fruitType = document.getElementById("fruitType").value;
+  var accessibility = document.getElementById("accessibility").value;
+  var phoneNum = document.getElementById("phoneNum").value;
+  var email = document.getElementById("email").value;
+  var instructions = document.getElementById("notes").value;
+  var source = document.getElementById("source").value;
+
+  var confirm = getConfirmation();
+  if(confirm == true){
+    createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
+    window.location.href = 'pick.html';
+  }
+
+}
+
+function getConfirmation() {
+  var response = confirm("Your posting is getting approved by admin. By completing the post you are agreeing to our terms and conditions.");
+  return response;
 }

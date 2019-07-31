@@ -5,22 +5,24 @@
   src: url(signpainterhousescriptregular.ttf);
 }
 
-footer {
-  margin-top: 3em;
-  background-color: #E0C798;
-  padding: 2.5em;
-  text-align: center;
-  color: white;
-}
-
 html {
   font-family: 'Raleway', sans-serif;
 }
 
 #header {
-  margin-left: 3em;
-  margin-right: 3em;
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-top: 1.2em;
 }
+
+#header-img {
+width: 12em;
+height: 7em;
+float: left;
+padding: 0em;
+margin-left: 1.1em;
+}
+
 
 .section_title {
   font-family: SignPainter;
@@ -31,12 +33,6 @@ label input {
 }
 
  /* Nav Bar */
- #header-img {
- width: 18em;
- height: 7em;
- float: left;
- padding: 0em;
- }
 
  /* Title Page */
  #Title_page {
@@ -104,6 +100,10 @@ input[type=text], input[type=notes] {
   background: #f1f1f1;
 }
 
+#form-section {
+  width: 80%;
+  margin: 0 auto;
+}
 
 button {
   padding: 10px 16px;
@@ -122,7 +122,7 @@ h1 {
 }
 h2 {
   font-size: 200%;
-  text-align: center;
+  text-align: left;
   font-family: SignPainter;
 
 }
@@ -134,10 +134,10 @@ h4 {
 
 }
 
-
 div {
   display: block;
 }
+
 .returning {
   float: left;
   width: 50%;
@@ -190,7 +190,7 @@ textarea {
   padding: 16px;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 50%;
 }
 
 .newContainer {
@@ -257,6 +257,75 @@ hr {
   clear: both;
   display: table;
 }
+
+ #footer {
+  margin-top: 1em;
+  background-color: #E0C798;
+  padding: 2.5em;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+
+    #description {
+      font-family: Roboto;
+      font-size: 15px;
+      font-weight: 300;
+    }
+
+    #infowindow-content .title {
+      font-weight: bold;
+    }
+
+    #infowindow-content {
+      display: none;
+    }
+
+    #map #infowindow-content {
+      display: inline;
+    }
+
+    .pac-card {
+      margin: 10px 10px 0 0;
+      border-radius: 2px 0 0 2px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      outline: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      background-color: #fff;
+      font-family: Roboto;
+    }
+
+    #pac-container {
+      padding-bottom: 12px;
+      margin-right: 12px;
+    }
+
+    .pac-controls {
+      display: inline-block;
+      padding: 5px 11px;
+    }
+
+    .pac-controls label {
+      font-family: Roboto;
+      font-size: 13px;
+      font-weight: 300;
+    }
+
+    #pac-input {
+      width: 100%;
+      padding: 12px;
+      margin: 5px 0px 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    #pac-input:focus {
+      border-color: #4d90fe;
+    }
+
 
 /* Change styles for cancel button and signup button on extra small screens */
 /* @media screen and (max-width: 300px) {

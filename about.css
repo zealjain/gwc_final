@@ -1,14 +1,5 @@
-@font-face {
-  font-family: SignPainter;
-  src: url(signpainterhousescriptregular.ttf);
-}
-
 html {
   font-family: 'Raleway', sans-serif;
-}
-
-body {
-  margin: 0;
 }
 
 h1 {
@@ -16,7 +7,7 @@ h1 {
 }
 
 .Header_title {
-  margin-top: 1.1em;
+  margin-top: 2em;
   font-family: SignPainter;
   font-size: 3.5em;
 }
@@ -35,7 +26,7 @@ header {
   margin: 0em;
   /* position: fixed; */
   padding: 0.2em;
-  width: 100%;
+  width: 100%
 }
 
 header::after {
@@ -73,7 +64,7 @@ a:hover {
 #Title_page {
   text-align: center;
   background-color: #ffffff;
-  background-image: url(https://images.unsplash.com/photo-1524222717473-730000096953?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+  background-image: url(https://images.unsplash.com/photo-1518171802599-4cd16785f93a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1697&q=80);
   background-size: cover;
   padding: 2em;
   margin:0em;
@@ -95,14 +86,29 @@ a:hover {
   padding: 3em;
   border-radius: 5px;
 }
-/* About Section */
+
+@font-face {
+  font-family: SignPainter;
+  src: url(signpainterhousescriptregular.ttf);
+}
+
+h1 {
+  text-align: center;
+  font-family: SignPainter;
+  font-size: 400%;
+}
+
+.Header_title {
+  margin-top: 1.1em;
+  font-family: SignPainter;
+  font-size: 3.5em;
+}
 
 .About_section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* align-items: center; */
-  /* background-color: blue; */
+  align-items: center;
 }
 
 #About {
@@ -128,10 +134,21 @@ a:hover {
   font-size: 1.5em;
   padding-left: 2em;
   padding-right: 2em;
-  /* background-color: purple; */
 }
 
 /* How To  */
+
+#About_Title {
+  margin-bottom: 1.1em;
+}
+
+.AboutUsBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
 
 .Circle {
   background-color: white ;
@@ -147,39 +164,51 @@ a:hover {
   justify-content: center;
 }
 
-.step_number {
+.photo {
   font-size: 1.8em;
   font-weight: bold;
 }
 
 .box_item {
   text-align: center;
-  width: 22em;
-  height: 23em;
+  width: 25em;
+  height: 26em;
   margin: 0.5em;
 }
 
-.How_to_text {
+.aboutUsText {
   padding: 2em;
 }
 
-.How_to_boxes {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-  justify-content: space-evenly;
+.dhritiBox {
+  background-color: #868C4C;
+  float: left;
+  }
+
+.michelleBox {
+  background-color: #868C4C;
+  float: left;
+
+
 }
 
-.neutral_box {
+/* cream color: #E0C798
+red color: #A1544B
+green color:#868C4C */
+
+
+.zealBox{
+  background-color: #868C4C;
+  float: left;
+
+}
+
+.julianneBox{
   background-color: #E0C798;
 }
 
-.orange_box {
+.surabhiBox{
   background-color: #A1544B;
-}
-
-.green_box {
-  background-color: #868C4C;
 }
 
 footer {
@@ -189,61 +218,4 @@ footer {
   text-align: center;
   color: white;
   width: 100%;
-}
-
-@media (max-width: 1400px) {
-  #About_text {
-    font-size: 1.4em;
-    width: 50em;
-    height: 18em;
-  }
-  #About_image {
-    display: none;
-  }
-}
-
-@media (max-width: 1100px) {
-  .Title {
-    font-size: 5em;
-    text-align: center;
-  }
-  #About_image {
-    display: none;
-  }
-  #About_text {
-    font-size: 1.25em;
-    width: 50em;
-    height: 18em;
-  }
-}
-
-
-@media (max-width: 800px) {
-  #About_text {
-    font-size: 1em;
-  }
-  #Title_page {
-    padding: 0.5em;
-  }
-  #header-img {
-  width: 12em;
-  height: 6.5em;
-  float: left;
-  padding: 0em;
-  margin: 0px;
-  }
-}
-
-@media (max-width: 700px) {
-  #About_image {
-    display: none;
-  }
-  #About_text {
-    font-size: 0.9em;
-    width: 50em;
-    height: 18em;
-  }
-  #header-img {
-    float: right;
-  }
 }

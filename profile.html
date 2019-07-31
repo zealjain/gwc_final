@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <!-- Favicon  -->
+    <link rel="shortcut icon" type="image/png" href="Assets/favicon.png">
     <title>Fruitful</title>
     <link rel="stylesheet" href="profile_style.css">
     <script src="account_info.js" ></script>
@@ -9,12 +11,13 @@
 
   <header>
   <nav id="navbar">
-    <a href="index.html"><img src="https://afroleft.com/content/images/2015/08/fruitful-logo-iteration3-2.jpg" alt="Fruitful logo" id="header-img"></a>
+    <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
     <ul>
       <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
       <li><a href="pick.html">Pick</a></li>
       <li><a href="post.html">Post</a></li>
-      <li id="lol" ></li>
+      <li><a href="profile.html">Sign In</a></li>
     </ul>
   </nav>
   </header>
@@ -37,7 +40,7 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" id="psw" required>
           </form>
-        <button class="signupbtn" id="submit" onclick="check();">Log In</button>
+        <button class="signupbtn" id="submit" onclick="window.location.href='account.html'" onclick="check();">Log In</button>
         </div>
         <div id = "after_submit">
           Your password or email is invalid.
@@ -48,9 +51,14 @@
       <div class="column-inner">
         <h1>New to Fruitful?</h1>
         <h2>By creating an account with Fruitful, you will be able to post what fruit trees you have available for the community to use and request fruit from other households.</h2>
-        <button class="signupbtn" onclick="window.location.href='account_create.html'">Create an Account</button>
+        <button class="signupbtn" onclick="window.location.href='signup_form.html'">Create an Account</button>
       </div>
     </div>
   </div>
   </body>
+<!--
+  <footer>
+    <p>Created By Dhriti, Julianne, Zeal, Surabhi, and Michelle </p>
+  </footer>
+   -->
 </html>

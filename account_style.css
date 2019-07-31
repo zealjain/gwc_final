@@ -1,0 +1,179 @@
+@font-face {
+  font-family: SignPainter;
+  src: url(signpainterhousescriptregular.ttf);
+}
+
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-size: 200%;
+  font-family: SignPainter;
+  /* color: #A1544B; */
+}
+
+h2 {
+  font-size: 100%;
+  font-weight: 900;
+  margin: 0;
+}
+
+.center {
+  text-align: center;
+  font-family: Raleway;
+}
+
+.italics {
+  font-style: italic;
+}
+
+/* Nav Bar */
+#header-img {
+width: 12em;
+height: 7em;
+float: left;
+padding: 0em;
+margin-left: 1.1em;
+}
+
+header {
+  margin: 0em;
+  /* position: fixed; */
+  padding: 0.2em;
+  width: 100%
+}
+
+header::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.nav-ul {
+  list-style: none;
+  float: right;
+  margin-right: 2em;
+}
+.nav-li{
+  display: inline;
+  margin: 1em;
+  padding: 0.5em;
+  display: inline-block;
+}
+
+a {
+  color: inherit;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+/* sidebar */
+#sidebar {
+  position: absolute;
+  margin-top: 2.5em;
+}
+
+.side-ul {
+  list-style: none;
+  margin-right: 2em;
+}
+.side-li{
+  margin: 1em;
+  padding: 0.5em;
+}
+
+
+/* Title Page */
+
+#Title {
+  font-size: 4em;
+  font-family: SignPainter;
+  margin: 0em;
+  text-align: center;
+}
+
+#intro-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#profile-photo-div {
+  width: 12em;
+  height: 12em;
+}
+
+#photo {
+  width: 12em;
+  height: 12em;
+}
+
+.profile-item {
+  margin: 2em;
+}
+
+.username {
+  font-family: Raleway;
+}
+
+.more-info {
+  width: 30em;
+  height: 12em;
+}
+
+/* Your Posts */
+.post {
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.map-icon {
+  width: 4em;
+  height: 4em;
+  margin: 1em;
+  margin-left: 1.5em;
+}
+
+.post-info {
+  height: 4em;
+  width: 65%;
+  margin: 1em;
+}
+
+.post-info-text {
+  margin-top: 0.1em;
+}
+
+/* footer */
+
+footer {
+  margin-top: 3em;
+  background-color: #A1544B;
+  padding: 2.5em;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+  width: 90%;
+}

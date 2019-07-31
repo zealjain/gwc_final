@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<link rel="shortcut icon" type="image/png" href="Assets/favicon.png">
-
   <head>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    <!-- Favicon  -->
-    <link rel="shortcut icon" type="image/png" href="Assets/favicon.png">
-    <title>Log In</title>
+    <title>Create an Account</title>
     <link rel="stylesheet" href="profile_style.css">
     <script async src="create_accountTC.js"></script>
+    <link rel="shortcut icon" type="image/png" href="Assets/favicon.png">
+
   </head>
 
   <header>
@@ -16,6 +14,7 @@
     <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
     <ul>
       <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
       <li><a href="pick.html">Pick</a></li>
       <li><a href="post.html">Post</a></li>
       <li><a href="profile.html">Sign In</a></li>
@@ -24,17 +23,23 @@
   </header>
 
   <body>
-    <form id="form" method="POST" action="create_account.php">
+    <form id="form" method="POST" action="account_creation.php">
       <div class="container">
         <h1>CREATE ACCOUNT</h1>
         <p>Please fill in this form to create an account.</p>
         <hr>
 
+        <label for="uid"><b>Username</b></label>
+        <input type="text" placeholder="Enter A Username" name= "uid" required>
+
         <label for="fname"><b>First Name</b></label>
-        <input type="text" placeholder="Enter Your First Name" name="fname" required>
+        <input type="text" placeholder="Enter Your First Name" name= "fname" required>
 
         <label for="lname"><b>Last Name</b></label>
-        <input type="text" placeholder="Enter Your Last Name" name="lname" required>
+        <input type="text" placeholder="Enter Your Last Name" name= "lname" required>
+
+        <label for="fname"><b>Home Address</b></label>
+        <input type="text" placeholder="Enter Your Home Address" name= "address" required>
 
         <label for="email"><b>Email</b></label>
         <input type="email" placeholder="Enter Email" name="email" required>
@@ -49,7 +54,7 @@
           <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
         </label>
 
-        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue" id="myBtn">Terms & Conditions</a>.</p>
+        <p>By creating an account you agree to our <a href="#myModal" style="color:dodgerblue" id="myBtn">Terms & Privacy</a>.</p>
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -89,7 +94,7 @@
 
         <div class="clearfix">
           <button type="button" onclick="window.location.href='profile.html'" class="cancelbtn">« Back</button>
-          <button type="submit" class="signupbtn">Sign Up</button>
+          <button type="submit" name="signup-submit" class="signupbtn">Sign Up</button>
         </div>
       </div>
     </form>
@@ -100,3 +105,57 @@
 
   </body>
 </html>
+<!-- //load local Json get_included_file
+ //$jsonuserdata = file_get_contents($userFile) ;
+
+//Convert Jason in to arry
+//if($jsonuserdata == NULL ){
+  //$user_arr_data = json_decode($jsonuserdata, true) ;
+//}else {
+  //echo "jason data is null" ;
+//} -->
+
+  <!-- //$user_arr_data = array() ; //empty array
+//Get form data
+
+//header("Content-Type: application/html; charset=UTF-8");
+
+// $fname = $_POST['fname'] ;
+// $lname = $_POST['lname'] ;
+// $email = $_POST['email'] ;
+
+// $userformdata = array(
+//   'fname' => $_POST['fname'],
+//   'lname'=> $_POST['lname'],
+//   'email'=> $_POST['email'],
+//   'password' => $_POST['psw']
+//  );
+
+// //user data file name
+//  $userFile = "./userdata.json";
+
+ // //load local Json get_included_file
+ //  $jsonuserdata = file_get_contents($userFile) ;
+
+//for (i in length of json array):
+    //if $email = jsonfile[i].email
+      // $Userexisterror = "Your email already has account" ;
+      // $lname1 = "bhupali";
+//  $user_arr_data = json_decode($jsonuserdata, true) ;
+
+  //Push newly added user in to array
+//  array_push($user_arr_data, $userformdata) ;
+
+
+
+//Convert updated arrow in to Jason
+//$jsonuserdata = json_encode($userformdata, JSON_PRETTY_PRINT) ;
+
+
+//Write json data in to userdata.json
+
+// if(file_put_contents($userFile, $jsonuserdata)){
+//    echo "!!!user data saved" ;
+// }else {
+//   echo "error daving data" ;
+// } -->
