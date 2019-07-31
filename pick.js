@@ -2,7 +2,7 @@ var map;
 var markers = [];
 var fruitMarkers = [];
 
-
+//test
 function saybye(){
   alert("chicken");
 }
