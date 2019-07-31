@@ -13,14 +13,13 @@ function initMap() {
     mapTypeId: 'roadmap'
   });
 
-  initMarkers();
+  //initMarkers();
   initAutocomplete();
   readData();
 }
 
 function readData() {
   var postsRef = firebase.database().ref('userPosts/');
-  alert(postsRef);
   postsRef.once('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
       var childData = childSnapshot.val();
@@ -32,12 +31,14 @@ function readData() {
       var email = childData.email;
       var instructions = childData.instructions;
       var source = childData.source;
+      console.log("fruit: " + fruitType);
       createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
     });
   });
 }
 
 function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, email, instructions, source) {
+  console.log("createMarker running");
   var marker = new google.maps.Marker({
     position: {
       lat: latitude,
@@ -67,6 +68,7 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
     infoWindow.open(map, marker);
 
   });
+
 }
 
 //removes marker from array
