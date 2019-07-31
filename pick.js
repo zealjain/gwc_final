@@ -141,28 +141,6 @@ function initMarkers() {
   createMarker(37.855270, -122.285739, "Sugar Maple", "Public", "n/a", "n/a")
 }
 
-
-//Convert user input address into lat, long
-
-// function geocode(address) {
-//   alert("geocode running");
-//   geocoder.geocode({
-//     address: address
-//   }, function(results, status) {
-//     if (status == google.maps.GeocoderStatus.OK) {
-//       var position = results[0].geometry.location;
-//       map.setCenter(results[0].geometry.location); //center the map over the result
-//       //place a marker at the location
-//       var marker = new google.maps.Marker({
-//         map: map,
-//         position: results[0].geometry.location
-//       });
-//     } else {
-//       alert('Geocode was not successful for the following reason: ' + status);
-//     }
-//   });
-// }
-
 function initAutocomplete() {
 
   // Create the search box and link it to the UI element.
