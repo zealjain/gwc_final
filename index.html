@@ -25,6 +25,26 @@
   </header>
 
   <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDVY6luhT9xdzKVrRFmrDYbLoPTWkO7YjA",
+        authDomain: "fruitful-e5f3d.firebaseapp.com",
+        databaseURL: "https://fruitful-e5f3d.firebaseio.com",
+        projectId: "fruitful-e5f3d",
+        storageBucket: "",
+        messagingSenderId: "463316453186",
+        appId: "1:463316453186:web:5dddb9e20e36e6d5"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <section id="Title_page">
       <div id="Title_back">
         <h1 class="Title">Fruitful</h1>
