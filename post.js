@@ -28,7 +28,6 @@ function mapData() {
     //readData();
     window.location.href = 'pick.html';
   }
-
 }
 
 function writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source) {
@@ -41,7 +40,7 @@ function writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, inst
     phoneNum: phoneNum,
     email: email,
     instructions: instructions,
-    source: source,
+    source: source
   });
   alert("finished writing");
 }

@@ -14,8 +14,38 @@ function initMap() {
   });
 
   initMarkers();
-  readData();
   initAutocomplete();
+}
+
+function readData(){
+//   var userId = firebase.auth().currentUser.uid;
+//   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+//   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
+//   // ...
+// });
+//
+// var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
+// starCountRef.on('value', function(snapshot) {
+//   updateStarCount(postElement, snapshot.val());
+// });
+
+var postsRef = firebase.database().ref('userPosts/');
+alert(postsRef);
+postsRef.on('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      var childData = childSnapshot.val();
+      console.log(childData.instructions);
+      // var lat = childData.lat;
+      // var lng = childData.lng;
+      // var fruitType = childData.fruitType;
+      // var accessibility = childData.accessibility;
+      // var phoneNum = childData.phoneNum;
+      // var email = childData.email;
+      // var instructions = childData.instructions;
+      // var source = childData.source;
+      // createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
+    });
+});
 }
 
 function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, email, instructions, source) {
@@ -67,37 +97,6 @@ function findMarkerByLat(lat) {
       return marker;
     }
   }
-}
-
-function readData(){
-//   var userId = firebase.auth().currentUser.uid;
-//   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-//   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-//   // ...
-// });
-//
-// var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
-// starCountRef.on('value', function(snapshot) {
-//   updateStarCount(postElement, snapshot.val());
-// });
-
-var postsRef = firebase.database().ref('userPosts/');
-alert(postsRef);
-postsRef.on('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-      var childData = childSnapshot.val();
-      console.log(childData.instructions);
-      // var lat = childData.lat;
-      // var lng = childData.lng;
-      // var fruitType = childData.fruitType;
-      // var accessibility = childData.accessibility;
-      // var phoneNum = childData.phoneNum;
-      // var email = childData.email;
-      // var instructions = childData.instructions;
-      // var source = childData.source;
-      // createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
-    });
-});
 }
 
 //initial data points
