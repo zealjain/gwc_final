@@ -219,9 +219,9 @@ textarea {
   border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 1em;
-  background-color: #A1544B;
+  background-color: #868C4C;
   border: none;
-  color: white;
+  font-weight: bolder;
 }
 
 footer {
