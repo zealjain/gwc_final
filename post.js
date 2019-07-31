@@ -25,7 +25,7 @@ function mapData() {
   var confirm = getConfirmation();
   if(confirm == true){
     //createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
-    readData();
+    //readData();
     //window.location.href = 'pick.html';
   }
 }
@@ -41,12 +41,6 @@ function writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, inst
     email: email,
     instructions: instructions,
     source: source
-  }, function(error) {
-    if (error) {
-      console.log("failed to write");
-    } else {
-      console.log("data successfully saved")
-    }
   });
   console.log("finished writing");
 }
