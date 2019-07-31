@@ -154,8 +154,8 @@ h1 {
   background-color: white ;
   text-align: center;
   border-radius: 70%;
-  width: 4em;
-  height: 4em;
+  width: 10em;
+  height: 10em;
   margin: 0 auto;
   margin-top: 2em;
   display: flex;
@@ -164,20 +164,28 @@ h1 {
   justify-content: center;
 }
 
+.name {
+  font-weight: bolder;
+}
+
 .photo {
-  font-size: 1.8em;
-  font-weight: bold;
+  text-align: center;
+  border-radius: 70%;
+  width: 10em;
+  height: 10em;
+  /* margin: 0 auto; */
+  /* margin-top: 2em; */
 }
 
 .box_item {
   text-align: center;
   width: 25em;
-  height: 26em;
+  height: 30em;
   margin: 0.5em;
 }
 
 .aboutUsText {
-  padding: 2em;
+  padding: 0em 2em;
 }
 
 .dhritiBox {
@@ -204,11 +212,11 @@ green color:#868C4C */
 }
 
 .julianneBox{
-  background-color: #E0C798;
+  background-color: #868C4C;
 }
 
 .surabhiBox{
-  background-color: #A1544B;
+  background-color: #868C4C;
 }
 
 footer {
