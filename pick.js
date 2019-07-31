@@ -13,25 +13,14 @@ function initMap() {
     mapTypeId: 'roadmap'
   });
 
-  initMarkers();
+  //initMarkers();
   initAutocomplete();
+  readData();
 }
 
-function readData(){
-//   var userId = firebase.auth().currentUser.uid;
-//   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-//   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-//   // ...
-// });
-//
-// var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
-// starCountRef.on('value', function(snapshot) {
-//   updateStarCount(postElement, snapshot.val());
-// });
-
-var postsRef = firebase.database().ref('userPosts/');
-alert(postsRef);
-postsRef.on('value', function(snapshot) {
+function readData() {
+  var postsRef = firebase.database().ref('userPosts/');
+  postsRef.once('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
       var childData = childSnapshot.val();
       var lat = childData.lat;
@@ -42,12 +31,14 @@ postsRef.on('value', function(snapshot) {
       var email = childData.email;
       var instructions = childData.instructions;
       var source = childData.source;
+      console.log("fruit: " + fruitType);
       createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
     });
-});
+  });
 }
 
 function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, email, instructions, source) {
+  console.log("createMarker running");
   var marker = new google.maps.Marker({
     position: {
       lat: latitude,
@@ -77,6 +68,7 @@ function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, e
     infoWindow.open(map, marker);
 
   });
+
 }
 
 //removes marker from array
@@ -150,28 +142,6 @@ function initMarkers() {
   createMarker(37.350448, -121.869709, "Loquat", "Public", "n/a", "n/a", "3 trees by sidewalk, owner is happy to share. Very good fruit from May-June.", "www.nextdoor.com");
   createMarker(37.855270, -122.285739, "Sugar Maple", "Public", "n/a", "n/a")
 }
-
-
-//Convert user input address into lat, long
-
-// function geocode(address) {
-//   alert("geocode running");
-//   geocoder.geocode({
-//     address: address
-//   }, function(results, status) {
-//     if (status == google.maps.GeocoderStatus.OK) {
-//       var position = results[0].geometry.location;
-//       map.setCenter(results[0].geometry.location); //center the map over the result
-//       //place a marker at the location
-//       var marker = new google.maps.Marker({
-//         map: map,
-//         position: results[0].geometry.location
-//       });
-//     } else {
-//       alert('Geocode was not successful for the following reason: ' + status);
-//     }
-//   });
-// }
 
 function initAutocomplete() {
 
@@ -310,7 +280,5 @@ function middle() {
   });
   map.panTo(middleMarker.getPosition());
 
-
-  // ADDED THE FOLLOWING
   return middleMarker.position;
 }

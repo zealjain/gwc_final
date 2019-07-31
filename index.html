@@ -25,6 +25,26 @@
   </header>
 
   <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDVY6luhT9xdzKVrRFmrDYbLoPTWkO7YjA",
+        authDomain: "fruitful-e5f3d.firebaseapp.com",
+        databaseURL: "https://fruitful-e5f3d.firebaseio.com",
+        projectId: "fruitful-e5f3d",
+        storageBucket: "",
+        messagingSenderId: "463316453186",
+        appId: "1:463316453186:web:5dddb9e20e36e6d5"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <section id="Title_page">
       <div id="Title_back">
         <h1 class="Title">Fruitful</h1>
@@ -105,6 +125,44 @@
 
       </div>
     </section>
+
+<!-- Contact From Attempt #2
+============================= -->
+
+    <div id = "Contact_form">
+      <h1 class="Header_title">Contact Us</h1>
+      <form id="frm1" action="contact-form-handler.php" method="post">
+        <div class="form">
+          <input class="input" type="text" name="name" placeholder="Name">
+          <br>
+          <input class="input" type="email" name="email" placeholder="Email">
+          <br>
+          <textarea class="input" cols="90" rows="5" name="message" placeholder="Message"></textarea>
+          </div>
+          <button type="button" name="submit" value="SUBMIT MESSAGE" id="Submit-info"> Submit </button>
+      </form>
+    </div>
+
+<!--
+    <section id="CTA">
+      <div class="contact-title">
+        <h1>Contact Us</h1>
+      </div>
+
+      <div class="form">
+        <form id="contact-form" action="contact-form-handler.php" method="post">
+          <input class="form-control" type="text" name="name" value="name" placeholder="Name">
+          <br>
+          <input class="form-control" type="email" name="email" value="email" placeholder="Email">
+          <br>
+          <textarea class="form-control" name="message" rows="8" cols="80" placeholder="Message"></textarea>
+          <br>
+          <button><input class="form-control submit" type="submit" name="submit" value=""SEND MESSAGE placeholder="Submit"> Submit<button>
+        </form>
+      </div>
+
+    </section> -->
+
     <footer>
       <p>Created By Dhriti, Julianne, Zeal, Surabhi, and Michelle </p>
     </footer>
