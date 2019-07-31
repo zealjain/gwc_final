@@ -15,23 +15,13 @@ function initMap() {
 
   initMarkers();
   initAutocomplete();
+  readData();
 }
 
-function readData(){
-//   var userId = firebase.auth().currentUser.uid;
-//   return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-//   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-//   // ...
-// });
-//
-// var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
-// starCountRef.on('value', function(snapshot) {
-//   updateStarCount(postElement, snapshot.val());
-// });
-
-var postsRef = firebase.database().ref('userPosts/');
-alert(postsRef);
-postsRef.on('value', function(snapshot) {
+function readData() {
+  var postsRef = firebase.database().ref('userPosts/');
+  alert(postsRef);
+  postsRef.once('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
       var childData = childSnapshot.val();
       var lat = childData.lat;
@@ -44,7 +34,7 @@ postsRef.on('value', function(snapshot) {
       var source = childData.source;
       createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
     });
-});
+  });
 }
 
 function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, email, instructions, source) {
@@ -310,7 +300,5 @@ function middle() {
   });
   map.panTo(middleMarker.getPosition());
 
-
-  // ADDED THE FOLLOWING
   return middleMarker.position;
 }
