@@ -108,8 +108,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* align-items: center; */
-  /* background-color: blue; */
+  align-items: center;
 }
 
 #About {
@@ -135,10 +134,21 @@ h1 {
   font-size: 1.5em;
   padding-left: 2em;
   padding-right: 2em;
-  /* background-color: purple; */
 }
 
 /* How To  */
+
+#About_Title {
+  margin-bottom: 1.1em;
+}
+
+.AboutUsBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
 
 .Circle {
   background-color: white ;
@@ -154,15 +164,15 @@ h1 {
   justify-content: center;
 }
 
-.step_number {
+.photo {
   font-size: 1.8em;
   font-weight: bold;
 }
 
 .box_item {
   text-align: center;
-  width: 22em;
-  height: 23em;
+  width: 25em;
+  height: 26em;
   margin: 0.5em;
 }
 
@@ -170,23 +180,27 @@ h1 {
   padding: 2em;
 }
 
-.AboutUsBoxes {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-  justify-content: space-evenly;
-}
-
 .dhritiBox {
-  background-color: #E0C798;
-}
+  background-color: #868C4C;
+  float: left;
+  }
 
 .michelleBox {
-  background-color: #A1544B;
+  background-color: #868C4C;
+  float: left;
+
+
 }
+
+/* cream color: #E0C798
+red color: #A1544B
+green color:#868C4C */
+
 
 .zealBox{
   background-color: #868C4C;
+  float: left;
+
 }
 
 .julianneBox{
@@ -195,4 +209,13 @@ h1 {
 
 .surabhiBox{
   background-color: #868C4C;
+}
+
+footer {
+  margin-top: 3em;
+  background-color: #E0C798;
+  padding: 2.5em;
+  text-align: center;
+  color: white;
+  width: 100%;
 }

@@ -1,4 +1,5 @@
 var postiton;
+var database = firebase.database();
 
 function setPosition(newPosition) {
   this.position = newPosition;
@@ -19,15 +20,31 @@ function mapData() {
   var instructions = document.getElementById("notes").value;
   var source = document.getElementById("source").value;
 
+  writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
+
   var confirm = getConfirmation();
   if(confirm == true){
-    createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
+    //createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
+    readData();
     window.location.href = 'pick.html';
   }
 
 }
 
+function writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source) {
+  firebase.database().ref('userPosts/' + email).set({
+    lat: lat,
+    lng: lng,
+    fruitType: fruitType,
+    accessibility: accessibility,
+    phoneNum: phoneNum,
+    email: email,
+    instructions: instructions,
+    source: source
+  });
+}
+
 function getConfirmation() {
-  var response = confirm("Your info has been entered. By pressing OK you are agreeing to our Terms and Conditions");
+  var response = confirm("Your posting is getting approved by admin. By completing the post you are agreeing to our terms and conditions.");
   return response;
 }
