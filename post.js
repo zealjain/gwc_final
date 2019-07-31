@@ -26,12 +26,12 @@ function mapData() {
   if(confirm == true){
     //createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
     readData();
-    window.location.href = 'pick.html';
+    //window.location.href = 'pick.html';
   }
-
 }
 
 function writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source) {
+  console.log(firebase.database().ref('userPosts/' + email));
   firebase.database().ref('userPosts/' + email).set({
     lat: lat,
     lng: lng,
@@ -41,7 +41,14 @@ function writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, inst
     email: email,
     instructions: instructions,
     source: source
+  }, function(error) {
+    if (error) {
+      console.log("failed to write");
+    } else {
+      console.log("data successfully saved")
+    }
   });
+  console.log("finished writing");
 }
 
 function getConfirmation() {

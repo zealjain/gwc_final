@@ -182,6 +182,88 @@ a:hover {
   background-color: #868C4C;
 }
 
+/* CTA
+================== */
+#Contact_form {
+  text-align: center;
+  background-size: cover;
+  padding: 4em;
+}
+
+input {
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0.8em;
+  margin: 0.3em;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.input {
+  width: 30em;
+  margin: 0.7em;
+}
+
+.form {
+  list-style: none;
+}
+
+textarea {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0.8em;
+}
+
+#Submit-info {
+  padding: 12px;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 1em;
+  background-color: #ffe500;
+  border: none;
+}
+/* .CTA {
+  margin: 0;
+  padding: 5em;
+  text-align: center;
+  background-color: #E0C798;
+  background-size: cover;
+  background-position: center;
+  font-family: Raleway;
+}
+
+.contact-title {
+  margin-top: 100px;
+  font-size: 32px;
+}
+
+.form {
+  margin-top: 50px
+}
+
+.form-control {
+  width: 600px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+input {
+  height: 45px;
+}
+
+form .submit {
+  background: #FFF;
+  border-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  height: 10px;
+  width: 10%;
+  text-align: center;
+} */
+
 footer {
   margin-top: 3em;
   background-color: #E0C798;
