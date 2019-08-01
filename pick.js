@@ -312,7 +312,7 @@ function mapData() {
 
   var confirm = getConfirmation();
   if (confirm == true) {
-    window.location.href = 'pick.html';
+    //window.location.href = 'pick.html';
   }
 }
 
@@ -332,6 +332,6 @@ function writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, inst
 }
 
 function getConfirmation() {
-  var response = confirm("By completing the post you are agreeing to our terms and conditions.");
+  var response = confirm("Your post has been completed. Go to the Pick page to see your changes.");
   return response;
 }
