@@ -15,7 +15,7 @@ function initMap() {
     mapTypeId: 'roadmap'
   });
 
-  initMarkers();
+  //initMarkers();
   initAutocomplete();
   readData();
 }
@@ -39,6 +39,7 @@ function readData() {
 }
 
 function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, email, instructions, source) {
+  console.log("creating marker");
   var marker = new google.maps.Marker({
     position: {
       lat: latitude,
