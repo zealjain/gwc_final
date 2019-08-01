@@ -24,24 +24,24 @@
 
 <body>
 
-          <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
 
-          <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
 
-          <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-              apiKey: "AIzaSyDxGYuC8AVIcEPhL2e_cF9XOK9wa52MKZY",
-              authDomain: "fruitful-b2731.firebaseapp.com",
-              databaseURL: "https://fruitful-b2731.firebaseio.com",
-              projectId: "fruitful-b2731",
-              storageBucket: "",
-              messagingSenderId: "979191474142",
-              appId: "1:979191474142:web:926310068a420bc7"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-          </script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDxGYuC8AVIcEPhL2e_cF9XOK9wa52MKZY",
+      authDomain: "fruitful-b2731.firebaseapp.com",
+      databaseURL: "https://fruitful-b2731.firebaseio.com",
+      projectId: "fruitful-b2731",
+      storageBucket: "",
+      messagingSenderId: "979191474142",
+      appId: "1:979191474142:web:926310068a420bc7"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
   <header>
     <nav id="navbar">
@@ -68,32 +68,34 @@
 
   <!--The div element for the map -->
   <div id="map-section">
-  <style>
-    #map {
-      height: 600px;
-      width: 88%;
-    }
-  </style>
-  <div id="map"> </div>
-  <input id= "pac-input" class="controls" type ="text" placeholder="Search Bar">
-
-
-  <script>
-    function initMap() {
-      var options = {
-        zoom: 8;
-        center: {lat:42.3601, lng:-71.0589}
+    <style>
+      #map {
+        height: 600px;
+        width: 88%;
       }
+    </style>
+    <div id="map"> </div>
+    <input id="pac-input" class="controls" type="text" placeholder="Search Bar">
 
-    var map = new
-    google.map.Map(document.getElementById('map'), options);
 
-  }
+    <script>
+      function initMap() {
+        var options = {
+          zoom: 8;
+          center: {
+            lat: 42.3601,
+            lng: -71.0589
+          }
+        }
+
+        var map = new
+        google.map.Map(document.getElementById('map'), options);
+
+      }
     </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initMap"
-             async defer></script>
-    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initMap" async defer></script>
+  </div>
 
   <footer>
     <p>Created By Dhriti, Julianne, Zeal, Surabhi, and Michelle </p>

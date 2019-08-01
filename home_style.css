@@ -22,13 +22,12 @@ h1 {
 }
 
 /* Nav Bar */
-
 #header-img {
-width: 12em;
-height: 7em;
-float: left;
-padding: 0em;
-margin-left: 1.1em;
+  width: 12em;
+  height: 7em;
+  float: left;
+  padding: 0em;
+  margin-left: 1.1em;
 }
 
 header {
@@ -44,12 +43,13 @@ header::after {
   display: table;
 }
 
-nav ul{
+nav ul {
   list-style: none;
   float: right;
   margin-right: 2em;
 }
-nav li{
+
+nav li {
   display: inline;
   margin: 1em;
   padding: 0.5em;
@@ -69,14 +69,13 @@ a:hover {
 }
 
 /* Title Page */
-
 #Title_page {
   text-align: center;
   background-color: #ffffff;
   background-image: url(https://images.unsplash.com/photo-1524222717473-730000096953?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
   background-size: cover;
   padding: 2em;
-  margin:0em;
+  margin: 0em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,8 +94,8 @@ a:hover {
   padding: 3em;
   border-radius: 5px;
 }
-/* About Section */
 
+/* About Section */
 .About_section {
   display: flex;
   flex-wrap: wrap;
@@ -132,9 +131,8 @@ a:hover {
 }
 
 /* How To  */
-
 .Circle {
-  background-color: white ;
+  background-color: white;
   text-align: center;
   border-radius: 70%;
   width: 4em;
@@ -239,6 +237,7 @@ footer {
     width: 50em;
     height: 18em;
   }
+
   #About_image {
     display: none;
   }
@@ -249,9 +248,11 @@ footer {
     font-size: 5em;
     text-align: center;
   }
+
   #About_image {
     display: none;
   }
+
   #About_text {
     font-size: 1.25em;
     width: 50em;
@@ -259,20 +260,21 @@ footer {
   }
 }
 
-
 @media (max-width: 800px) {
   #About_text {
     font-size: 1em;
   }
+
   #Title_page {
     padding: 0.5em;
   }
+
   #header-img {
-  width: 12em;
-  height: 6.5em;
-  float: left;
-  padding: 0em;
-  margin: 0px;
+    width: 12em;
+    height: 6.5em;
+    float: left;
+    padding: 0em;
+    margin: 0px;
   }
 }
 
@@ -280,11 +282,13 @@ footer {
   #About_image {
     display: none;
   }
+
   #About_text {
     font-size: 0.9em;
     width: 50em;
     height: 18em;
   }
+
   #header-img {
     float: right;
   }

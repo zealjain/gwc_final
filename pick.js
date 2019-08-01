@@ -314,7 +314,7 @@ function mapData() {
   writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
 
   var confirm = getConfirmation();
-  if(confirm == true){
+  if (confirm == true) {
     window.location.href = 'pick.html';
   }
 }

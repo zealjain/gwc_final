@@ -30,11 +30,11 @@ h2 {
 
 /* Nav Bar */
 #header-img {
-width: 12em;
-height: 7em;
-float: left;
-padding: 0em;
-margin-left: 1.1em;
+  width: 12em;
+  height: 7em;
+  float: left;
+  padding: 0em;
+  margin-left: 1.1em;
 }
 
 header {
@@ -55,7 +55,8 @@ header::after {
   float: right;
   margin-right: 2em;
 }
-.nav-li{
+
+.nav-li {
   display: inline;
   margin: 1em;
   padding: 0.5em;
@@ -84,14 +85,13 @@ a:hover {
   list-style: none;
   margin-right: 2em;
 }
-.side-li{
+
+.side-li {
   margin: 1em;
   padding: 0.5em;
 }
 
-
 /* Title Page */
-
 #Title {
   font-size: 4em;
   font-family: SignPainter;
@@ -161,7 +161,6 @@ a:hover {
 }
 
 /* footer */
-
 footer {
   margin-top: 3em;
   background-color: #A1544B;

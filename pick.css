@@ -27,13 +27,12 @@ p2 {
 
 /* Nav Bar */
 #header-img {
-width: 12em;
-height: 7em;
-float: left;
-padding: 0em;
-margin-left: 1.1em;
+  width: 12em;
+  height: 7em;
+  float: left;
+  padding: 0em;
+  margin-left: 1.1em;
 }
-
 
 header {
   margin: 0em;
@@ -118,7 +117,6 @@ html, body {
   margin: 0;
   padding: 0;
 }
-
 
 /* Set the size of the div element that contains the map */
 #map {
