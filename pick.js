@@ -4,7 +4,6 @@ var fruitMarkers = [];
 var postiton;
 var database = firebase.database();
 
-
 function initMap() {
   //first init map
   map = new google.maps.Map(document.getElementById('map'), {
@@ -18,7 +17,6 @@ function initMap() {
 
   initMarkers();
   initAutocomplete();
-  console.log("autocomplete done");
   readData();
 }
 
@@ -35,7 +33,6 @@ function readData() {
       var email = childData.email;
       var instructions = childData.instructions;
       var source = childData.source;
-      console.log("fruit: " + fruitType);
       createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
     });
   });
@@ -143,7 +140,6 @@ function initMarkers() {
   createMarker(37.359172, -121.909804, "Prickly Pear", "Public", "n/a", "n/a", "Cactus on the ground next to sidewalk", "www.fallingfruit.org");
   createMarker(37.349203, -121.880986, "Mulberry", "Private", "n/a", "n/a", "Owner is happy to share if you ask. Easy to pick and very sweet. Ripe from April-June.", "www.fallingfruit.org");
   createMarker(37.350448, -121.869709, "Loquat", "Public", "n/a", "n/a", "3 trees by sidewalk, owner is happy to share. Very good fruit from May-June.", "www.nextdoor.com");
-  createMarker(37.855270, -122.285739, "Sugar Maple", "Public", "n/a", "n/a")
 }
 
 function initAutocomplete() {
