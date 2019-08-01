@@ -23,6 +23,26 @@
 </head>
 
 <body>
+
+          <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+          <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+
+          <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyDxGYuC8AVIcEPhL2e_cF9XOK9wa52MKZY",
+              authDomain: "fruitful-b2731.firebaseapp.com",
+              databaseURL: "https://fruitful-b2731.firebaseio.com",
+              projectId: "fruitful-b2731",
+              storageBucket: "",
+              messagingSenderId: "979191474142",
+              appId: "1:979191474142:web:926310068a420bc7"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+          </script>
+
   <header>
     <nav id="navbar">
       <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
@@ -45,7 +65,7 @@
       Enter your location in the search bar below to find fruit to pick near you
     </p>
   </center>
-  
+
   <!--The div element for the map -->
   <div id="map-section">
   <style>
