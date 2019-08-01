@@ -42,7 +42,6 @@ function readData() {
 }
 
 function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, email, instructions, source) {
-  console.log("createMarker running");
   var marker = new google.maps.Marker({
     position: {
       lat: latitude,
@@ -316,9 +315,7 @@ function mapData() {
 
   var confirm = getConfirmation();
   if(confirm == true){
-    //createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
-    //readData();
-    //window.location.href = 'pick.html';
+    window.location.href = 'pick.html';
   }
 }
 
@@ -338,6 +335,6 @@ function writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, inst
 }
 
 function getConfirmation() {
-  var response = confirm("Your posting is getting approved by admin. By completing the post you are agreeing to our terms and conditions.");
+  var response = confirm("By completing the post you are agreeing to our terms and conditions.");
   return response;
 }
