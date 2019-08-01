@@ -15,7 +15,7 @@ function initMap() {
     mapTypeId: 'roadmap'
   });
 
-  //initMarkers();
+  initMarkers();
   initAutocomplete();
   readData();
 }
