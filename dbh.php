@@ -1,3 +1,6 @@
+<!-- If one wanted to connect info to mySQL database,
+this is a php file that connects the database. -->
+
 <?php
 $url = parse_url(getenv("mysql://b030d8f71e70b5:314bb055@us-cdbr-iron-east-02.cleardb.net/heroku_7431d3ae5da2615?reconnect=true"));
 
