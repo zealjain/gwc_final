@@ -2,6 +2,7 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- Favicon  -->
 <link rel="shortcut icon" type="image/png" href="Assets/favicon.png">
 <html lang="en" dir="ltr">
@@ -16,13 +17,19 @@
 <header>
   <nav id="navbar">
     <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="pick.html">Pick</a></li>
-        <li><a href="post.html">Post</a></li>
-        <li><a href="profile.html">Sign In</a></li>
-    </ul>
+    <a href="javascript:void(0);" class="icon" onclick="hamburger_toggle()">
+    <i class="fa fa-bars"></i>
+    </a>
+    <div class="break">
+      <br>
+    </div>
+      <ul id="myLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="pick.html">Pick</a></li>
+          <li><a href="post.html">Post</a></li>
+          <li><a href="profile.html">Sign In</a></li>
+      </ul>
   </nav>
 
 </header>

@@ -23,9 +23,10 @@ h1 {
 
 /* Nav Bar */
 #header-img {
+  display: inline-block;
   width: 12em;
   height: 7em;
-  float: left;
+  /* float: left; */
   padding: 0em;
   margin-left: 1.1em;
 }
@@ -50,10 +51,9 @@ nav ul {
 }
 
 nav li {
-  display: inline;
+  display: inline-block;
   margin: 1em;
   padding: 0.5em;
-  display: inline-block;
 }
 
 a {
@@ -67,10 +67,14 @@ a:link {
 a:hover {
   font-weight: bold;
 }
+
 .icon {
   display: none;
 }
 
+.break {
+  display: none;
+}
 /* Title Page */
 #Title_page {
   text-align: center;
@@ -262,6 +266,29 @@ footer {
     height: 18em;
   }
 
+  #myLinks {
+    display: none;
+    float: left;
+    margin-top: 0;
+  }
+
+  nav li {
+    /* margin: 1em; */
+    /* padding: 0.5em; */
+    display: block;
+  }
+
+  .icon {
+    display: inline-block;
+    margin-top: 2.7em;
+    margin-right: 2em;
+    float: right;
+  }
+
+  .break {
+    display: inline-block;
+  }
+
 }
 
 @media (max-width: 800px) {
@@ -295,5 +322,13 @@ footer {
 
   #header-img {
     float: right;
+  }
+
+  .icon {
+    display: inline-block;
+    float: left;
+    margin-top: 2.1em;
+    margin-left: 2em;
+    padding: 0.5em;
   }
 }
