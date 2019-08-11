@@ -20,6 +20,7 @@ function initMap() {
   readData();
 }
 
+//reads data from firebase real time database
 function readData() {
   var postsRef = firebase.database().ref('userPosts/');
   postsRef.once('value', function(snapshot) {
@@ -33,11 +34,13 @@ function readData() {
       var email = childData.email;
       var instructions = childData.instructions;
       var source = childData.source;
+      //takes data to create markers
       createMarker(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source);
     });
   });
 }
 
+//creates a marker on map using information
 function createMarker(latitude, longitude, fruitType, accessibility, phoneNum, email, instructions, source) {
   console.log("creating marker");
   var marker = new google.maps.Marker({
@@ -143,6 +146,7 @@ function initMarkers() {
   createMarker(37.350448, -121.869709, "Loquat", "Public", "n/a", "n/a", "3 trees by sidewalk, owner is happy to share. Very good fruit from May-June.", "www.nextdoor.com");
 }
 
+//creates search box on map with autocomplete
 function initAutocomplete() {
 
   // Create the search box and link it to the UI element.
@@ -210,9 +214,10 @@ function initAutocomplete() {
   });
 }
 
+//displays closest marker to a location
 function displayClosest(position) {
-  findClosestMarker(position);
-  // google.maps.event.addListener(map, 'click', find_closest_marker);
+  var closestMarker = findClosestMarker(position);
+  alert("The closest tree to you is " + fruitMarkers[closest].title);
 }
 
 function rad(x) {
@@ -239,8 +244,7 @@ function findClosestMarker(position) {
       closest = i;
     }
   }
-  //alert("array length" + fruitMarkers.length + "closest index" + closest);
-  alert("The closest tree to you is " + fruitMarkers[closest].title);
+  return fruitMarkers[closest].title;
 }
 
 function middle() {
@@ -284,11 +288,6 @@ function middle() {
 }
 
 
-
-//add
-// var postiton;
-// var database = firebase.database();
-
 function setPosition(newPosition) {
   this.position = newPosition;
 }
@@ -297,6 +296,7 @@ function getPosition() {
   return position;
 }
 
+//gets data from post form to write into database
 function mapData() {
   var tempPosition = getPosition();
   var lat = tempPosition.lat();
@@ -312,10 +312,13 @@ function mapData() {
 
   var confirm = getConfirmation();
   if (confirm == true) {
+    //data does not write to database if page is redirected
     //window.location.href = 'pick.html';
   }
 }
 
+//formats data and writes to database
+//source/name is the key
 function writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, instructions, source) {
   console.log(firebase.database().ref('userPosts/' + source));
   firebase.database().ref('userPosts/' + source).set({
@@ -331,6 +334,7 @@ function writeUserData(lat, lng, fruitType, accessibility, phoneNum, email, inst
   console.log("finished writing");
 }
 
+//confirms posting
 function getConfirmation() {
   var response = confirm("Your post has been completed. Go to the Pick page to see your changes.");
   return response;

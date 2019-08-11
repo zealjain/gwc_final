@@ -59,12 +59,13 @@
 
       <div class="container">
 
-
+        <!-- title and subtitle go in containers -->
         <h2 class="section_title">Post</h2>
         <p>All information you enter will be publicly avaliable. </p>
         <hr>
         <p id="posting"></p>
         <form id="postfruit">
+          <!-- this is the form -->
 
           <label for="fruitType" class="labels labelstyle">Fruit Type*</label>
           <p>
@@ -83,6 +84,7 @@
                 <p>
                   <input id="pac-input" class="controls" type="text" placeholder="Address closest to the tree">
                   <script>
+// this is the searchbox that lets you pick a location
                     function initAutocomplete() {
                       // Create the search box and link it to the UI element.
                       var input = document.getElementById('pac-input');
@@ -109,7 +111,7 @@
                     }
                   </script>
                   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFa5amzSYezacpQVUQENxUykI_T4O1sGI&libraries=places&callback=initAutocomplete" async defer></script>
-
+<!-- this is continuing the form  -->
                   <label for="source" class="labels labelstyle">Name*</label>
                   <p>
                     <div class="right">
@@ -138,7 +140,7 @@
                             </div>
 
                             <p>
-
+<!-- these are the buttons that either post or cancel you information -->
         </form>
         <div class="postcancel">
           <button type="button" onclick="window.location.href='index.html'" class="backbtn">« Back</button>
@@ -150,7 +152,7 @@
       </section>
 
 </body>
-
+<!-- this is the footer -->
 <div id="footer">
   <footer>
     <p>Created By Dhriti, Julianne, Zeal, Surabhi, and Michelle </p>
