@@ -22,59 +22,100 @@ h1 {
 }
 
 /* Nav Bar */
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 #header-img {
   display: inline-block;
   width: 12em;
   height: 7em;
-  /* float: left; */
+  float: left;
   padding: 0em;
   margin-left: 1.1em;
 }
 
+
 header {
-  margin: 0em;
-  /* position: fixed; */
-  padding: 0.2em;
-  width: 100%;
+  position: relative;
 }
 
 header::after {
+  content:'';
   clear: both;
-  content: '';
-  display: table;
+  display: block;
 }
 
-nav ul {
+.site-nav {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background: #464655;
+  height: 0px;
+  overflow: hidden;
+}
+
+.site-nav--open {
+  height: auto;
+}
+
+.site-nav ul {
   list-style: none;
-  float: right;
-  margin-right: 2em;
+  margin: 0;
+  padding:0;
 }
 
-nav li {
-  display: inline-block;
-  margin: 1em;
-  padding: 0.5em;
+.site-nav li {
+  border-bottom: 1px solid #575766;
 }
 
-a {
-  color: inherit;
+.site-nav li:last-child {
+  border-bottom: none;
 }
 
-a:link {
+.site-nav a {
   text-decoration: none;
+  color: #EBEBD3;
+  display: block;
+  padding: 2em 6em;
 }
 
-a:hover {
-  font-weight: bold;
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #E4B363;
+  color: #464655;
 }
 
-.icon {
-  display: none;
+.menu-toggle {
+  position: absolute;
+  padding: 1em;
+  top: 2.3em;
+  right: 1em;
+  cursor: pointer;
 }
 
-.break {
-  display: none;
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #EBEBD3;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
 }
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
 /* Title Page */
 #Title_page {
   text-align: center;
@@ -266,29 +307,6 @@ footer {
     height: 18em;
   }
 
-  #myLinks {
-    display: none;
-    float: left;
-    margin-top: 0;
-  }
-
-  nav li {
-    /* margin: 1em; */
-    /* padding: 0.5em; */
-    display: block;
-  }
-
-  .icon {
-    display: inline-block;
-    margin-top: 2.7em;
-    margin-right: 2em;
-    float: right;
-  }
-
-  .break {
-    display: inline-block;
-  }
-
 }
 
 @media (max-width: 800px) {
@@ -320,15 +338,4 @@ footer {
     height: 18em;
   }
 
-  #header-img {
-    float: right;
-  }
-
-  .icon {
-    display: inline-block;
-    float: left;
-    margin-top: 2.1em;
-    margin-left: 2em;
-    padding: 0.5em;
-  }
 }

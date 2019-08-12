@@ -9,29 +9,33 @@
 
 <head>
   <link rel="stylesheet" href="home_style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="home_script.js"></script>
   <meta charset="utf-8">
   <title>Fruitful</title>
 </head>
 
 <header>
-  <nav id="navbar">
-    <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
-    <a href="javascript:void(0);" class="icon" onclick="hamburger_toggle()">
-    <i class="fa fa-bars"></i>
-    </a>
-    <div class="break">
-      <br>
-    </div>
-      <ul id="myLinks">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="pick.html">Pick</a></li>
-          <li><a href="post.html">Post</a></li>
-          <li><a href="profile.html">Sign In</a></li>
-      </ul>
-  </nav>
 
+  <div class="container">
+
+    <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home site-nav--icon"></i>Home</a></li>
+            <li><a href="about.html"><i class="fa fa-info site-nav--icon"></i>About Us</a></li>
+            <li><a href="pick.html"><i class="fa fa-leaf site-nav--icon"></i>Pick</a></li>
+            <li><a href="post.html"><i class="fa fa-pencil site-nav--icon"></i>Post</a></li>
+            <li><a href="profile.html"><i class="fa fa-user site-nav--icon"></i>Sign In</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-toggle">
+      <div class="hamburger"></div>
+    </div>
+
+  </div>
 </header>
 
 <body>
