@@ -36,10 +36,12 @@ h1 {
   float: left;
   padding: 0em;
   margin-left: 1.1em;
+  margin-top: 1.5em;
 }
 
 header {
   position: relative;
+  height: 10em;
 }
 
 header::after {
@@ -91,7 +93,7 @@ header::after {
 .menu-toggle {
   position: absolute;
   padding: 1em;
-  top: 2.3em;
+  top: 3.9em;
   right: 1em;
   cursor: pointer;
 }
@@ -102,13 +104,13 @@ header::after {
   content: '';
   display: block;
   background: black;
-  height: 3px;
-  width: 1.75em;
+  height: 4px;
+  width: 2.25em;
   border-radius: 3px;
 }
 
 .hamburger::before {
-  transform: translateY(-6px);
+  transform: translateY(-7px);
 }
 
 .hamburger::after {
@@ -344,7 +346,11 @@ footer {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1000px) {
+  header {
+    height: auto;
+  }
+
  .menu-toggle {
    display: none;
  }
