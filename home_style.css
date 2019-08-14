@@ -38,7 +38,6 @@ h1 {
   margin-left: 1.1em;
 }
 
-
 header {
   position: relative;
 }
@@ -53,7 +52,7 @@ header::after {
   position: absolute;
   top: 100%;
   right: 0%;
-  background: #464655;
+  background: #A1544B;
   height: 0px;
   overflow: hidden;
 }
@@ -69,7 +68,7 @@ header::after {
 }
 
 .site-nav li {
-  border-bottom: 1px solid #575766;
+  border-bottom: 1px solid #F5E1BD;
 }
 
 .site-nav li:last-child {
@@ -78,7 +77,7 @@ header::after {
 
 .site-nav a {
   text-decoration: none;
-  color: #EBEBD3;
+  color: #F5E1BD;
   display: block;
   padding: 2em 6em;
 }
@@ -102,7 +101,7 @@ header::after {
 .hamburger::after {
   content: '';
   display: block;
-  background: #EBEBD3;
+  background: black;
   height: 3px;
   width: 1.75em;
   border-radius: 3px;
@@ -115,6 +114,7 @@ header::after {
 .hamburger::after {
   transform: translateY(3px);
 }
+
 
 /* Title Page */
 #Title_page {
@@ -280,6 +280,11 @@ footer {
 }
 
 @media (max-width: 1400px) {
+  .Title {
+    font-size: 5em;
+    text-align: center;
+  }
+
   #About_text {
     font-size: 1.4em;
     width: 50em;
@@ -339,3 +344,41 @@ footer {
   }
 
 }
+
+
+@media (min-width: 750px) {
+ .menu-toggle {
+   display: none;
+ }
+
+ .site-nav {
+   height: auto;
+   position: relative;
+   background: transparent;
+   float: right;
+ }
+
+ .site-nav li {
+   display: inline-block;
+   border: none;
+   margin-top: 2.6em;
+ }
+
+ .site-nav li:last-child {
+   margin-right: 2em;
+ }
+
+ .site-nav a {
+   padding: 0;
+   margin-left: 3em;
+   color: black;
+ }
+
+ .site-nav a:hover,
+ .site-nav a:focus {
+   background: transparent;
+ }
+
+ .site-nav--icon {
+   display: none;
+ }

@@ -13,17 +13,26 @@
 <!-- Nav Bar  -->
 
 <header>
-  <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
-  <ul>
-    <nav id="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="pick.html">Pick</a></li>
-        <li><a href="post.html">Post</a></li>
-        <li><a href="profile.html">Sign In</a></li>
-      </ul>
+
+  <div class="container">
+
+    <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="pick.html">Pick</a></li>
+            <li><a href="post.html">Post</a></li>
+            <li><a href="profile.html">Sign In</a></li>
+        </ul>
     </nav>
+
+    <div class="menu-toggle">
+      <div class="hamburger"></div>
+    </div>
+
+  </div>
 </header>
 
 <body>
@@ -57,7 +66,7 @@
     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
     <form class="modal-content" action="/action_page.php">
 
-      <div class="container">
+      <div class="container2">
 
         <!-- title and subtitle go in containers -->
         <h2 class="section_title">Post</h2>
@@ -150,6 +159,9 @@
       </div>
       </div>
       </section>
+
+      <script src="jquery-3.4.1.min.js"></script>
+      <script src="home_script.js"></script>
 
 </body>
 <!-- this is the footer -->

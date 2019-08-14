@@ -14,7 +14,14 @@ html {
 }
 
 /* Nav Bar */
+.container-header {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 #header-img {
+  display: inline-block;
   width: 12em;
   height: 7em;
   float: left;
@@ -23,41 +30,82 @@ html {
 }
 
 header {
-  margin: 0em;
-  /* position: fixed; */
-  padding: 0.2em;
-  width: 100%
+  position: relative;
 }
 
 header::after {
+  content:'';
   clear: both;
-  content: '';
-  display: table;
+  display: block;
 }
 
-nav ul {
+.site-nav {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background: #A1544B;
+  height: 0px;
+  overflow: hidden;
+}
+
+.site-nav--open {
+  height: auto;
+}
+
+.site-nav ul {
   list-style: none;
-  float: right;
-  margin-right: 2em;
+  margin: 0;
+  padding:0;
 }
 
-nav li {
-  display: inline;
-  margin: 1em;
-  padding: 0.5em;
-  display: inline-block;
+.site-nav li {
+  border-bottom: 1px solid #F5E1BD;
 }
 
-a {
-  color: inherit;
+.site-nav li:last-child {
+  border-bottom: none;
 }
 
-a:link {
+.site-nav a {
   text-decoration: none;
+  color: #F5E1BD;
+  display: block;
+  padding: 2em 6em;
 }
 
-a:hover {
-  font-weight: bold;
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #E4B363;
+  color: #464655;
+}
+
+.menu-toggle {
+  position: absolute;
+  padding: 1em;
+  top: 2.3em;
+  right: 1em;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: black;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
 }
 
 /* Title Page */
@@ -188,7 +236,7 @@ button:hover {
 }
 
 /* Add padding to container elements */
-.container {
+.container2 {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
@@ -1117,3 +1165,41 @@ hr {
     margin-left: 0;
   }
 }
+
+@media (min-width: 750px) {
+
+ .menu-toggle {
+   display: none;
+ }
+
+ .site-nav {
+   height: auto;
+   position: relative;
+   background: transparent;
+   float: right;
+ }
+
+ .site-nav li {
+   display: inline-block;
+   border: none;
+   margin-top: 2.6em;
+ }
+
+ .site-nav li:last-child {
+   margin-right: 2em;
+ }
+
+ .site-nav a {
+   padding: 0;
+   margin-left: 3em;
+   color: black;
+ }
+
+ .site-nav a:hover,
+ .site-nav a:focus {
+   background: transparent;
+ }
+
+ .site-nav--icon {
+   display: none;
+ }
