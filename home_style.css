@@ -121,7 +121,7 @@ header::after {
   text-align: center;
   background-color: #ffffff;
   background-image: url(https://images.unsplash.com/photo-1524222717473-730000096953?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
-  background-size: cover;
+  background-size: ;
   padding: 2em;
   margin: 0em;
   display: flex;
@@ -280,10 +280,10 @@ footer {
 }
 
 @media (max-width: 1400px) {
-  .Title {
+  /* .Title {
     font-size: 5em;
     text-align: center;
-  }
+  } */
 
   #About_text {
     font-size: 1.4em;
@@ -298,7 +298,7 @@ footer {
 
 @media (max-width: 1100px) {
   .Title {
-    font-size: 5em;
+    font-size: 8em;
     text-align: center;
   }
 
@@ -346,7 +346,7 @@ footer {
 }
 
 
-@media (min-width: 750px) {
+@media (min-width: 1000px) {
  .menu-toggle {
    display: none;
  }
