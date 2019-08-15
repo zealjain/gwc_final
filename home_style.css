@@ -325,13 +325,13 @@ footer {
     padding: 0.5em;
   }
 
-  #header-img {
+  /* #header-img {
     width: 12em;
     height: 6.5em;
     float: left;
     padding: 0em;
     margin: 0px;
-  }
+  } */
 }
 
 @media (max-width: 700px) {
@@ -350,6 +350,7 @@ footer {
   header {
     height: auto;
   }
+
   #header-img {
     width: 12em;
     height: 7em;
