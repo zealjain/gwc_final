@@ -31,17 +31,17 @@ h1 {
 
 #header-img {
   display: inline-block;
-  width: 12em;
-  height: 7em;
+  width: 18em;
+  height: 12em;
   float: left;
   padding: 0em;
   margin-left: 1.1em;
-  margin-top: 1.5em;
+  margin-top: 2.8em;
 }
 
 header {
   position: relative;
-  height: 10em;
+  height: 18em;
 }
 
 header::after {
@@ -81,7 +81,7 @@ header::after {
   text-decoration: none;
   color: #F5E1BD;
   display: block;
-  padding: 2em 6em;
+  padding: 4em 12em;
 }
 
 .site-nav a:hover,
@@ -93,7 +93,7 @@ header::after {
 .menu-toggle {
   position: absolute;
   padding: 1em;
-  top: 3.9em;
+  top: 7.9em;
   right: 1em;
   cursor: pointer;
 }
@@ -349,6 +349,15 @@ footer {
 @media (min-width: 1000px) {
   header {
     height: auto;
+  }
+  #header-img {
+    width: 12em;
+    height: 7em;
+    margin-top: 0em;
+  }
+
+  .site-nav {
+    margin-top
   }
 
  .menu-toggle {
