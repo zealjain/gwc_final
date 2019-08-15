@@ -216,6 +216,14 @@ textarea {
 }
 
 /* Add padding to container elements */
+.form-title {
+  text-align: center;
+}
+
+.section_title {
+  text-align: center;
+}
+
 .container2 {
   padding: 16px;
   margin-left: auto;
