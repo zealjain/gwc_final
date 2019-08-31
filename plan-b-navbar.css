@@ -1,0 +1,45 @@
+#header-img {
+  display: inline-block;
+  width: 12em;
+  height: 7em;
+  /* float: left; */
+  padding: 0em;
+  margin-left: 1.1em;
+}
+
+header {
+  margin: 0em;
+  /* position: fixed; */
+  padding: 0.2em;
+  width: 100%;
+}
+
+header::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  margin-right: 2em;
+}
+
+nav li {
+  display: inline-block;
+  margin: 1em;
+  padding: 0.5em;
+}
+
+a {
+  color: inherit;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}

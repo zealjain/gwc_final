@@ -6,6 +6,7 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
   <title>Create an Account</title>
+  <link rel="stylesheet" href="navbar_style.css">
   <link rel="stylesheet" href="profile_style.css">
   <script async src="create_accountTC.js"></script>
   <link rel="shortcut icon" type="image/png" href="Assets/favicon.png">
@@ -13,22 +14,32 @@
 </head>
 
 <header>
-  <nav id="navbar">
+
+  <div class="container-header">
+
     <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="pick.html">Pick</a></li>
-      <li><a href="post.html">Post</a></li>
-      <li><a href="profile.html">Sign In</a></li>
-    </ul>
-  </nav>
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="pick.html">Pick</a></li>
+            <li><a href="post.html">Post</a></li>
+            <li><a href="profile.html">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-toggle">
+      <div class="hamburger"></div>
+    </div>
+
+  </div>
 </header>
 
 <body>
   <!-- form for creating an account -->
   <form id="form">
-    <div class="container">
+    <div class="container2">
       <h1>CREATE ACCOUNT</h1>
       <p>Please fill in this form to create an account.</p>
       <hr>
@@ -113,6 +124,9 @@
   <footer>
     <p>Created By Dhriti, Julianne, Zeal, Surabhi, and Michelle </p>
   </footer>
+
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="home_script.js"></script>
 
 </body>
 

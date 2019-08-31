@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <link rel="stylesheet" href="navbar_style.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
   <!-- Favicon  -->
   <link rel="shortcut icon" type="image/png" href="Assets/favicon.png">
@@ -11,16 +12,26 @@
 </head>
 
 <header>
-  <nav id="navbar">
+
+  <div class="container-header">
+
     <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="pick.html">Pick</a></li>
-      <li><a href="post.html">Post</a></li>
-      <li><a href="profile.html">Sign In</a></li>
-    </ul>
-  </nav>
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="pick.html">Pick</a></li>
+            <li><a href="post.html">Post</a></li>
+            <li><a href="profile.html">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-toggle">
+      <div class="hamburger"></div>
+    </div>
+
+  </div>
 </header>
 
 <div id="Title_page" class="Section_header">
@@ -62,6 +73,9 @@
       </div>
     </div>
   </div>
+
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="home_script.js"></script>
 </body>
 <!--
   <footer>

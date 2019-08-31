@@ -3,8 +3,13 @@
   src: url(signpainterhousescriptregular.ttf);
 }
 
-html {
+html, body {
   font-family: 'Raleway', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 body {
@@ -22,51 +27,6 @@ h1 {
 }
 
 /* Nav Bar */
-#header-img {
-  width: 12em;
-  height: 7em;
-  float: left;
-  padding: 0em;
-  margin-left: 1.1em;
-}
-
-header {
-  margin: 0em;
-  /* position: fixed; */
-  padding: 0.2em;
-  width: 100%;
-}
-
-header::after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-nav ul {
-  list-style: none;
-  float: right;
-  margin-right: 2em;
-}
-
-nav li {
-  display: inline;
-  margin: 1em;
-  padding: 0.5em;
-  display: inline-block;
-}
-
-a {
-  color: inherit;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-a:hover {
-  font-weight: bold;
-}
 
 /* Title Page */
 #Title_page {
@@ -232,6 +192,11 @@ footer {
 }
 
 @media (max-width: 1400px) {
+  /* .Title {
+    font-size: 5em;
+    text-align: center;
+  } */
+
   #About_text {
     font-size: 1.4em;
     width: 50em;
@@ -245,7 +210,7 @@ footer {
 
 @media (max-width: 1100px) {
   .Title {
-    font-size: 5em;
+    font-size: 8em;
     text-align: center;
   }
 
@@ -258,6 +223,7 @@ footer {
     width: 50em;
     height: 18em;
   }
+
 }
 
 @media (max-width: 800px) {
@@ -269,13 +235,13 @@ footer {
     padding: 0.5em;
   }
 
-  #header-img {
+  /* #header-img {
     width: 12em;
     height: 6.5em;
     float: left;
     padding: 0em;
     margin: 0px;
-  }
+  } */
 }
 
 @media (max-width: 700px) {
@@ -287,9 +253,5 @@ footer {
     font-size: 0.9em;
     width: 50em;
     height: 18em;
-  }
-
-  #header-img {
-    float: right;
   }
 }
