@@ -8,3 +8,6 @@ To post, navigate to the post page and fill out the form with the corresponding 
 To find fruit in your area, navigate to the pick page and type in your address in the map. If you zoom out, you will be able to see all of the fruits and vegetables nearest to you and all the contact information and special instructions you will need. 
 
 Currently, you cannot create an account on our site however we are working on this feature. If you navigate to the Sign In page you will be able to see the styling of the page and how an account page and sign up form would look. 
+
+Hi! I'm making a change!
+# bigger
