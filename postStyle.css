@@ -3,22 +3,13 @@
   src: url(signpainterhousescriptregular.ttf);
 }
 
-html {
+html, body {
   font-family: 'Raleway', sans-serif;
-}
-
-#header {
-  margin-left: 4em;
-  margin-right: 4em;
-  margin-top: 1.2em;
-}
-
-#header-img {
-  width: 12em;
-  height: 7em;
-  float: left;
-  padding: 0em;
-  margin-left: 1.1em;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 .section_title {
@@ -30,6 +21,7 @@ label input {
 }
 
 /* Nav Bar */
+
 /* Title Page */
 #Title_page {
   text-align: center;
@@ -46,44 +38,6 @@ label input {
   margin: 0em;
 }
 
-header {
-  margin: 0em;
-  /* position: fixed; */
-  padding: 0.2em;
-  width: 100%
-}
-
-header::after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-nav ul {
-  list-style: none;
-  float: right;
-  margin-right: 2em;
-}
-
-nav li {
-  display: inline;
-  margin: 1em;
-  padding: 0.5em;
-  display: inline-block;
-}
-
-a {
-  color: inherit;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-a:hover {
-  font-weight: bold;
-}
-
 div {
   display: block;
 }
@@ -98,7 +52,7 @@ input[type=text], input[type=notes] {
 }
 
 #form-section {
-  width: 80%;
+  /* width: 80%; */
   margin: 0 auto;
 }
 
@@ -126,15 +80,6 @@ h4 {
   font-size: 100%;
   text-align: center;
   font-family: 'Raleway', sans-serif;
-}
-
-div {
-  display: block;
-}
-
-.returning {
-  float: left;
-  width: 50%;
 }
 
 .new {
@@ -180,7 +125,15 @@ textarea {
 }
 
 /* Add padding to container elements */
-.container {
+.form-title {
+  text-align: center;
+}
+
+.section_title {
+  text-align: center;
+}
+
+.container2 {
   padding: 16px;
   margin-left: auto;
   margin-right: auto;
@@ -335,4 +288,3 @@ hr {
     width: 100%;
   }
 } */
-*/

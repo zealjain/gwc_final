@@ -1,5 +1,10 @@
-html {
+html, body {
   font-family: 'Raleway', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -12,52 +17,6 @@ h1 {
   font-size: 3.5em;
 }
 
-/* Nav Bar */
-
-#header-img {
-width: 12em;
-height: 7em;
-float: left;
-padding: 0em;
-margin-left: 1.1em;
-}
-
-header {
-  margin: 0em;
-  /* position: fixed; */
-  padding: 0.2em;
-  width: 100%
-}
-
-header::after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-nav ul{
-  list-style: none;
-  float: right;
-  margin-right: 2em;
-}
-nav li{
-  display: inline;
-  margin: 1em;
-  padding: 0.5em;
-  display: inline-block;
-}
-
-a {
-  color: inherit;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-a:hover {
-  font-weight: bold;
-}
 
 /* Title Page */
 #Title_page {
@@ -221,3 +180,41 @@ footer {
   color: white;
   width: 100%;
 }
+
+@media (min-width: 1000px) {
+
+ .menu-toggle {
+   display: none;
+ }
+
+ .site-nav {
+   height: auto;
+   position: relative;
+   background: transparent;
+   float: right;
+ }
+
+ .site-nav li {
+   display: inline-block;
+   border: none;
+   margin-top: 2.6em;
+ }
+
+ .site-nav li:last-child {
+   margin-right: 2em;
+ }
+
+ .site-nav a {
+   padding: 0;
+   margin-left: 3em;
+   color: black;
+ }
+
+ .site-nav a:hover,
+ .site-nav a:focus {
+   background: transparent;
+ }
+
+ .site-nav--icon {
+   display: none;
+ }

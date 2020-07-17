@@ -1,3 +1,6 @@
+// Javascript file that corresponds to login system html pages
+
+// This fetches json files.
 function fetchJSON(path, callback) {
   var httpRequest = new XMLHttpRequest();
   httpRequest.onreadystatechange = function() {
@@ -12,6 +15,8 @@ function fetchJSON(path, callback) {
   httpRequest.send();
 }
 
+// This function shows the "Your password or email is invalid text" when
+// someone writes incorrect information.
 function incorrect() {
   document.getElementById("after_submit").style.visibility = "visible";
 }

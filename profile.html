@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <link rel="stylesheet" href="navbar_style.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
   <!-- Favicon  -->
   <link rel="shortcut icon" type="image/png" href="Assets/favicon.png">
@@ -11,16 +12,26 @@
 </head>
 
 <header>
-  <nav id="navbar">
+
+  <div class="container-header">
+
     <a href="index.html"><img src="Assets/FruitfulLogo.jpg" alt="Fruitful logo" id="header-img"></a>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="pick.html">Pick</a></li>
-      <li><a href="post.html">Post</a></li>
-      <li><a href="profile.html">Sign In</a></li>
-    </ul>
-  </nav>
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="pick.html">Pick</a></li>
+            <li><a href="post.html">Post</a></li>
+            <li><a href="profile.html">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-toggle">
+      <div class="hamburger"></div>
+    </div>
+
+  </div>
 </header>
 
 <div id="Title_page" class="Section_header">
@@ -29,12 +40,15 @@
 
 <body>
   <div class="container">
+  <!-- for returning users -->
+    <!-- flexbox (the style is borrowed from bootstrap's grid.css) -->
     <div class="returning column column-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
       <div class="column-inner">
         <h1>Registered Neighbor</h1>
         <h2>If you have an account with us, log in using your email address.</h2>
         <div>
           <hr>
+          <!-- sign in form -->
           <form id="form" name="form">
             <label for="email"><b>Email</b></label>
             <input type="email" placeholder="Enter Email" id="email" required>
@@ -48,14 +62,20 @@
         </div>
       </div>
     </div>
+  <!-- for new users -->
+    <!-- flexbox -->
     <div class="new column column-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
       <div class="column-inner">
         <h1>New to Fruitful?</h1>
         <h2>By creating an account with Fruitful, you will be able to post what fruit trees you have available for the community to use and request fruit from other households.</h2>
+        <!-- button takes user to a create account page -->
         <button class="signupbtn" onclick="window.location.href='signup_form.html'">Create an Account</button>
       </div>
     </div>
   </div>
+
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="home_script.js"></script>
 </body>
 <!--
   <footer>
